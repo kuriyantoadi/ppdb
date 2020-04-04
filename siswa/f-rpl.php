@@ -11,8 +11,10 @@
 <body>
 
 <div class="container">
-  <center><h2>Form Pendaftaran Calon Peserta Didik</h2></center>
-  <center><h2>SMKN 1 Kragilan</h2></center>
+  <center><h3>Form Pendaftaran Calon Peserta Didik</h3></center>
+  <center><h3>SMKN 1 Kragilan</h3></center>
+  <center><h3>Jurusan Rekayasa Perangkat Lunak</h3></center><br>
+
 
   <form class="form-horizontal" action="/action_page.php">
     <div class="form-group">
