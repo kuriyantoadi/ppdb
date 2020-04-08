@@ -68,7 +68,7 @@
       <td><center><?php echo $d['asal_sekolah']; ?></td>
       <td><center><?php echo $d['kondisi']; ?></td>
       <td><center>
-        <a type="button" class="btn btn-info btn-sm" href="akl-tampil.php?no_p=<?php echo $d['no_p']; ?>" >Lihat</a>
+        <a type="button" class="btn btn-info btn-sm" href="akl-tampil.php?id=<?php echo $d['id']; ?>" >Lihat</a>
       </td>
     </tr>
 

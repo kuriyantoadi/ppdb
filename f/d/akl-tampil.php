@@ -36,8 +36,8 @@
   <table class="table table-bordered">
     <?php
       include '../../koneksi.php';
-      $no_p = $_GET['no_p'];
-      $data = mysqli_query($koneksi,"select * from f_siswa where no_p='$no_p'");
+      $id = $_GET['id'];
+      $data = mysqli_query($koneksi,"select * from f_siswa where id='$id'");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
@@ -214,10 +214,10 @@
       </tr>
       <tr>
         <td>
-          <center><a type="button" class="btn btn-primary btn-md" href="akl-terima.php?no_p=<?php echo $d['no_p']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
+          <center><a type="button" class="btn btn-primary btn-md" href="akl-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
         </td>
         <td>
-          <center><a type="button" class="btn btn-warning btn-md" href="akl-tolak.php?no_p=<?php echo $d['no_p']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
+          <center><a type="button" class="btn btn-warning btn-md" href="akl-tolak.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
         </td>
 
       </tr>
