@@ -22,7 +22,7 @@
 <div class="container">
   <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
   <center><h3></h3></center>
-  <center><h3>Kompetensi Keahlian Teknik Komputer dan Jaringan</h3></center>
+  <center><h3>Kompetensi Keahlian Rekayasa Perangkat Lunak</h3></center>
 
   <br><br><br>
 
@@ -55,7 +55,7 @@
     <?php
       include '../../koneksi.php';
       $no = 1;
-      $data = mysqli_query($koneksi,"select * from f_siswa where kompetensi_keahlian='Teknik Komputer dan Jaringan'");
+      $data = mysqli_query($koneksi,"select * from f_siswa where kompetensi_keahlian='Rekayasa Perangkat Lunak'");
       while($d = mysqli_fetch_array($data)) {
     ?>
 

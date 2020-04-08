@@ -237,19 +237,19 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" >Piagram 1 </label>
+      <label class="control-label col-sm-2" >Piagam 1 </label>
       <div class="col-sm-6">
         <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" >
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" >Piagram 2</label>
+      <label class="control-label col-sm-2" >Piagrm 2</label>
       <div class="col-sm-6">
         <input type="file" name="pdf_piagam2" accept="application/pdf" class="form-control-file" >
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" >Piagram 3 </label>
+      <label class="control-label col-sm-2" >Piagam 3 </label>
       <div class="col-sm-6">
         <input type="file" name="pdf_piagam3" accept="application/pdf" class="form-control-file" >
       </div>
@@ -259,7 +259,7 @@
     <h6>2. Piagam boleh dikosongkan</h6>
     <h6>3. Piagam hasil perlombaan dan/atau penghargaan di bidang akademik maupun non akademik</h6>
 
-    <br><h4>F. INPUT NILAI UJIAN NASIOANAL PESERTA DIDIK</h4>
+    <br><h4>F. INPUT NILAI UJIAN NASIONAL PESERTA DIDIK</h4>
     <div class="form-group">
       <label class="control-label col-sm-2" >Nilai Bahasa Indonesia </label>
       <div class="col-sm-3">

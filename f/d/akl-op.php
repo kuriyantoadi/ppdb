@@ -22,7 +22,7 @@
 <div class="container">
   <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
   <center><h3></h3></center>
-  <center><h3>Kompetensi Keahlian Teknik Komputer dan Jaringan</h3></center>
+  <center><h3>Kompetensi Keahlian Akuntansi dan Keuangan Lembaga</h3></center>
 
   <br><br><br>
 
@@ -55,7 +55,7 @@
     <?php
       include '../../koneksi.php';
       $no = 1;
-      $data = mysqli_query($koneksi,"select * from f_siswa where kompetensi_keahlian='Teknik Komputer dan Jaringan'");
+      $data = mysqli_query($koneksi,"select * from f_siswa where kompetensi_keahlian='Akuntansi dan Keuangan Lembaga'");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
@@ -68,7 +68,7 @@
       <td><center><?php echo $d['asal_sekolah']; ?></td>
       <td><center><?php echo $d['kondisi']; ?></td>
       <td><center>
-        <a type="button" class="btn btn-info btn-sm" href="tkj-tampil.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" >Lihat</a>
+        <a type="button" class="btn btn-info btn-sm" href="akl-tampil.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" >Lihat</a>
       </td>
     </tr>
 

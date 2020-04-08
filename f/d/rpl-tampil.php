@@ -27,7 +27,7 @@
 		<div class="col-md-6">
       <center><h3>Form Pendaftaran Calon Peserta Didik</h3></center>
       <center><h3>SMK Negeri 1 Kragilan</h3></center>
-      <center><h3>Program Studi Rekayasa Perangkat Lunak</h3></center><br>
+      <center><h3>Kompetensi Keahlian Rekayasa Perangkat Lunak</h3></center>
 		</div>
 		<div class="col-md-3">
 		</div>
@@ -214,10 +214,10 @@
       </tr>
       <tr>
         <td>
-          <center><a type="button" class="btn btn-primary btn-md" href="tkj-terima.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
+          <center><a type="button" class="btn btn-primary btn-md" href="rpl-terima.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
         </td>
         <td>
-          <center><a type="button" class="btn btn-warning btn-md" href="tkj-tolak.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
+          <center><a type="button" class="btn btn-warning btn-md" href="rpl-tolak.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
         </td>
 
       </tr>

@@ -33,32 +33,32 @@ if($cek > 0){
 	}elseif ($login['level']=="op-tkj") {
 	$_SESSION['username'] = $username;
 	$_SESSION['status'] = "login";
-	header("location:d/op-tkj.php");
+	header("location:d/tkj-op.php");
 
 }elseif ($login['level']=="op-rpl") {
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
-		header("location:d/op-rpl.php");
+		header("location:d/rpl-op.php");
 
 	}elseif ($login['level']=="op-otkp") {
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
-		header("location:d/op-otkp.php");
+		header("location:d/otkp-op.php");
 
 	}elseif ($login['level']=="op-akl") {
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
-		header("location:d/op-akl.php");
+		header("location:d/akl-op.php");
 
 	}elseif ($login['level']=="op-tkr") {
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
-		header("location:d/op-tkr.php");
+		header("location:d/tkr-op.php");
 
 	}elseif ($login['level']=="op-mesin") {
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
-		header("location:d/op-mesin.php");
+		header("location:d/mesin-op.php");
 
 }
 	else{
@@ -66,6 +66,6 @@ if($cek > 0){
 	}
 
 }else{
-	//header("location:index.php?pesan=gagal");
+	header("location:index.php?pesan=gagal");
 }
 ?>

@@ -12,6 +12,6 @@ mysqli_query($koneksi,"update f_siswa set
 
 
 // mengalihkan halaman kembali ke index.php
-header("location:tkj-tampil.php");
+header("location:mesin-op.php");
 
 ?>

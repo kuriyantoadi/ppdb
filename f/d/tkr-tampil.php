@@ -27,7 +27,7 @@
 		<div class="col-md-6">
       <center><h3>Form Pendaftaran Calon Peserta Didik</h3></center>
       <center><h3>SMK Negeri 1 Kragilan</h3></center>
-      <center><h3>Program Studi Rekayasa Perangkat Lunak</h3></center><br>
+      <center><h3>Kompetensi Keahlian Teknik Kendaraan Ringan</h3></center>
 		</div>
 		<div class="col-md-3">
 		</div>

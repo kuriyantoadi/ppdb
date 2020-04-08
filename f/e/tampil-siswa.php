@@ -205,7 +205,7 @@
       </div>
     </div>
 
-    <br><h4>F. INPUT NILAI UJIAN NASIOANAL PESERTA DIDIK</h4>
+    <br><h4>F. INPUT NILAI UJIAN NASIONAL PESERTA DIDIK</h4>
     <div class="form-group">
       <label class="control-label col-sm-2" >Nilai Bahasa Indonesia </label>
       <div class="col-sm-3">
