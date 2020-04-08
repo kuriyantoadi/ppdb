@@ -230,8 +230,7 @@ $no_p = $_POST['no_p'];
                 echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
                      }
                 }
-
-
+  $id = $_POST['id'];
   $tgl_pendaftaran = $_POST['tgl_pendfataran'];
   $kompetensi_keahlian = $_POST['kompetensi_keahlian'];
   $asal_sekolah = $_POST['asal_sekolah'];
@@ -262,9 +261,39 @@ $no_p = $_POST['no_p'];
   $un_ipa = $_POST['un_ipa'];
 
 
+//awal user pembuatan password
+  function user_acak($panjang)
+  {
+      $karakter= 'abcdefghijklmnopqrstuvwxyz';
+      $string = '';
+      for ($i = 0; $i < $panjang; $i++) {
+    $pos = rand(0, strlen($karakter)-1);
+    $string .= $karakter{$pos};
+      }
+      return $string;
+  }
+
+  function pass_acak($panjang)
+  {
+      $karakter= '123456789';
+      $string = '';
+      for ($i = 0; $i < $panjang; $i++) {
+    $pos = rand(0, strlen($karakter)-1);
+    $string .= $karakter{$pos};
+      }
+      return $string;
+  }
+
+  //cara memanggilnya
+  $username = user_acak(5);
+  $password = pass_acak(5);
+
+//akhir pembuatan password
+
 
 
   mysqli_query($koneksi,"insert into f_siswa values(
+                '$id',
                 '$no_p',
                 '$tgl_pendaftaran',
                 '$kompetensi_keahlian',
@@ -302,9 +331,14 @@ $no_p = $_POST['no_p'];
                 '$un_bing',
                 '$un_mtk',
                 '$un_mtk',
-                '$un_ipa','')");
+                '$un_ipa',
+                '',
+                '$username',
+                '$password'
+                )");
 
 // node_id=<?php echo $d['node_id'];
-//header("location:tampil-rpl.html?no_p=$no_p");
+ header("location:tampil-rpl.php?no_p=$no_p");
+
 
 ?>

@@ -18,15 +18,19 @@
 			<center><img class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" />
 		</div>
 		<div class="col-md-6">
-      <center><h3>Form Pendaftaran Calon Peserta Didik</h3></center>
       <center><h3>SMK Negeri 1 Kragilan</h3></center>
-      <center><h3>Program Studi Rekayasa Perangkat Lunak</h3></center><br>
 		</div>
 		<div class="col-md-3">
 		</div>
   </div>
 
   <table class="table table-bordered">
+    <?php
+    session_start();
+    if($_SESSION['status']!="login"){
+      header("location:f-rpl.php");
+    }
+    ?>
     <?php
       include '../../koneksi.php';
       $no_p = $_GET['no_p'];
@@ -37,9 +41,6 @@
     <table class="table table-bordered">
       <tr>
         <td colspan="2"><center><h4>Bukti Pendaftaran Calon Peserta Didik Baru</td>
-      </tr>
-      <tr>
-        <td colspan="2"><center><h4>SMK Negeri 1 Kragilan</td>
       </tr>
       <tr>
         <td>Nomor Pendaftaran</td>
@@ -141,42 +142,7 @@
         <td>PKH/KKS/KIP/Jamsosda</td>
         <td><?php echo $d['kip']; ?></td>
       </tr>
-      <tr>
-        <td>SKHUN</td>
-        <td><a href="#"></a></td>
-      </tr>
-      <tr>
-        <td>Surat Sehat dari Dokter</td>
-        <td><a href="#"></a></td>
-      </tr>
-      <tr>
-        <td>Kartu Keluarga</td>
-        <td><a href="#"></a></td>
-      </tr>
-      <tr>
-        <td>Akta Kelahiran</td>
-        <td><a href="#"></a></td>
-      </tr>
-      <tr>
-        <td>Photo</td>
-        <td><a href="#"></a></td>
-      </tr>
-      <tr>
-        <td>SwaPhoto</td>
-        <td><a href="#"></a></td>
-      </tr>
-      <tr>
-        <td>Piagam 1</td>
-        <td><a href="#"></a></td>
-      </tr>
-      <tr>
-        <td>Piagam 2</td>
-        <td><a href="#"></a></td>
-      </tr>
-      <tr>
-        <td>Piagam 3</td>
-        <td><a href="#"></a></td>
-      </tr>
+
       <tr>
         <td>Nilai UN Bahasa Indonesia</td>
         <td><?php echo $d['un_bind']; ?></td>
@@ -193,11 +159,42 @@
         <td>Nilai UN IPA</td>
         <td><?php echo $d['un_ipa']; ?></td>
       </tr>
+      <tr>
+        <td>Username tes</td>
+        <td><?php echo $d['username']; ?></td>
+      </tr>
+      <tr>
+        <td>Password tes</td>
+        <td><?php echo $d['password']; ?></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <p>
+            <b>Informasi :</b>
+            <ol>
+              <li>Bukti pendaftaran agar dicetak, minimal 1 lembar.</li>
+              <li>Bukti pendaftaran hanya muncul 1 kali ketika daftar.</li>
+              <li>Bukti pendaftaran tidak boleh disebar luaskan untuk kepentingan apapun.</li>
+              <li>Setiap calon peserta didik baru bertanggung jawab atas bukti pendaftaran.</li>
+              <li>Username dan Password Tes hanya dapat dipakai di Web smkn1kragilan.sch.id.</li>
+              <li>Username dan Password Tes hanya dapat digunakan 1 kali.</li>
+              <li>Peserta yang dinyatakan tidak lolos perberkasan maka tidak bisa mengikuti tes.</li>
+              <li>Jika ada peserta yang sudah dinyatakan lolos dan tidak bisa masuk ke login web tes boleh dinformasikan ke panitia.</li>
+              <li>Tes dilaksanakan secara online tempat tinggal masing-masing calon peserta didik.</li>
+              <li>Jika calon peserta didik melakukan kecurangan ketika mengerjakan soal tes, maka akan dinyatakan gugur dari pendaftaran.</li>
+              <li>Jika ada kesalahan data pada bukti pendaftaran, calon peserta didik harus menginformasikan kepada panitia.</li>
+            </ol>
+          </p>
+        </td>
+      </tr>
     </table>
-
-    <a type="button" class="btn btn-danger btn-sm" href="hapus-rpl.php?no_p=<?php echo $d['no_p']; ?>" onclick="return confirm('Anda yakin menghapus data ini ?')" >Hapus</a>
+    <center>
+    <a type="button" class="btn btn-info btn-md" href="tampil-rpl.php?no_p=<?php echo $no_p; ?>" >Cetak PDF</a>
   <?php } ?>
-
+<br><br><br>
+  <script>
+  		window.print();
+  	</script>
       </div>
     </div>
 </div>

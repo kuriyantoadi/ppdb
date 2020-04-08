@@ -30,6 +30,7 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Nomor Pendaftaran :</label>
       <div class="col-sm-6">
+        <input type="hidden" name="id" value="">
         <input type="text" class="form-control" name="no_p" value="" id="no_p">
       </div>
     </div>

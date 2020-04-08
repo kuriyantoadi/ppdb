@@ -36,8 +36,8 @@
   <table class="table table-bordered">
     <?php
       include '../../koneksi.php';
-      $no_p = $_GET['no_p'];
-      $data = mysqli_query($koneksi,"select * from f_siswa where no_p='$no_p'");
+      $id = $_GET['id'];
+      $data = mysqli_query($koneksi,"select * from f_siswa where id='$id'");
       while($d = mysqli_fetch_array($data)) {
     ?>
 

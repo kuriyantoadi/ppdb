@@ -7,7 +7,8 @@ include '../koneksi.php';
 
 // menangkap data yang dikirim dari form
 // belum mengunakan MD5
-$username = $_POST['username'];
+$username = addslashes(trim($_POST['username']));
+// $username = $_POST['username'];
 $password = md5($_POST['password']);
 
 // menyeleksi data admin dengan username dan password yang sesuai
