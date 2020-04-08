@@ -61,14 +61,14 @@
 
     <tr>
       <td><center><?php echo $no++ ?></td>
-      <td><center><?php echo $d['nomor_pendaftaran']; ?></td>
+      <td><center><?php echo $d['no_p']; ?></td>
       <td><center><?php echo $d['nisn']; ?></td>
       <td><center><?php echo $d['nama_siswa']; ?></td>
       <td><center><?php echo $d['kompetensi_keahlian']; ?></td>
       <td><center><?php echo $d['asal_sekolah']; ?></td>
       <td><center><?php echo $d['kondisi']; ?></td>
       <td><center>
-        <a type="button" class="btn btn-info btn-sm" href="otkp-tampil.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" >Lihat</a>
+        <a type="button" class="btn btn-info btn-sm" href="otkp-tampil.php?no_p=<?php echo $d['no_p']; ?>" >Lihat</a>
       </td>
     </tr>
 

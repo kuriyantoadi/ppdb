@@ -36,8 +36,8 @@
   <table class="table table-bordered">
     <?php
       include '../../koneksi.php';
-      $nomor_pendaftaran = $_GET['nomor_pendaftaran'];
-      $data = mysqli_query($koneksi,"select * from f_siswa where nomor_pendaftaran='$nomor_pendaftaran'");
+      $no_p = $_GET['no_p'];
+      $data = mysqli_query($koneksi,"select * from f_siswa where no_p='$no_p'");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
@@ -45,7 +45,7 @@
 
       <tr>
         <td>Nomor Pendaftaran</td>
-        <td><?php echo $d['nomor_pendaftaran']; ?></td>
+        <td><?php echo $d['no_p']; ?></td>
       </tr>
       <tr>
         <td>Tanggal Pendaftaran</td>
@@ -214,10 +214,10 @@
       </tr>
       <tr>
         <td>
-          <center><a type="button" class="btn btn-primary btn-md" href="akl-terima.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
+          <center><a type="button" class="btn btn-primary btn-md" href="akl-terima.php?no_p=<?php echo $d['no_p']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
         </td>
         <td>
-          <center><a type="button" class="btn btn-warning btn-md" href="akl-tolak.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
+          <center><a type="button" class="btn btn-warning btn-md" href="akl-tolak.php?no_p=<?php echo $d['no_p']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
         </td>
 
       </tr>

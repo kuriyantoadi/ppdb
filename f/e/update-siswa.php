@@ -1,7 +1,7 @@
 <?php
 include '../../koneksi.php';
 
-$nomor_pendaftaran = $_POST['nomor_pendaftaran'];
+$no_p = $_POST['no_p'];
 $tgl_pendaftaran = $_POST['tgl_pendfataran'];
 $kompetensi_keahlian = $_POST['kompetensi_keahlian'];
 $asal_sekolah = $_POST['asal_sekolah'];
@@ -32,7 +32,7 @@ $un_mtk = $_POST['un_mtk'];
 $un_ipa = $_POST['un_ipa'];
 
 mysqli_query($koneksi,"update f_siswa set
-              '$nomor_pendaftaran',
+              '$no_p',
               '$tgl_pendaftaran',
               '$kompetensi_keahlian',
               '$asal_sekolah',
@@ -61,12 +61,12 @@ mysqli_query($koneksi,"update f_siswa set
               '$un_mtk',
               '$un_mtk',
               '$un_ipa'
-              where nomor_pendaftaran='$nomor_pendaftaran'"
+              where no_p='$no_p'"
             );
 
 
   mysqli_query($koneksi,"insert into f_siswa values(
-                '$nomor_pendaftaran',
+                '$no_p',
                 '$tgl_pendaftaran',
                 '$kompetensi_keahlian',
                 '$asal_sekolah',
@@ -91,21 +91,21 @@ mysqli_query($koneksi,"update f_siswa set
                 '$nama_org_tua',
                 '$kip',
                 '$pekerjaan_org_tua',
-                '$nomor_pendaftaran-$pdf_skhun_up.pdf',
-                '$nomor_pendaftaran-$pdf_surat_dokter_up.pdf',
-                '$nomor_pendaftaran-$pdf_kk_up.pdf',
-                '$nomor_pendaftaran-$pdf_akta_up.pdf',
-                '$nomor_pendaftaran-$pdf_photo_up.pdf',
-                '$nomor_pendaftaran-$pdf_swa_kk_up.pdf',
-                '$nomor_pendaftaran-$pdf_piagam1_up.pdf',
-                '$nomor_pendaftaran-$pdf_piagam2_up.pdf',
-                '$nomor_pendaftaran-$pdf_piagam3_up.pdf',
+                '$no_p-$pdf_skhun_up.pdf',
+                '$no_p-$pdf_surat_dokter_up.pdf',
+                '$no_p-$pdf_kk_up.pdf',
+                '$no_p-$pdf_akta_up.pdf',
+                '$no_p-$pdf_photo_up.pdf',
+                '$no_p-$pdf_swa_kk_up.pdf',
+                '$no_p-$pdf_piagam1_up.pdf',
+                '$no_p-$pdf_piagam2_up.pdf',
+                '$no_p-$pdf_piagam3_up.pdf',
                 '$un_bing',
                 '$un_mtk',
                 '$un_mtk',
                 '$un_ipa',NULL)");
 
 // node_id=<?php echo $d['node_id'];
-//header("location:tampil-rpl.html?nomor_pendaftaran=$nomor_pendaftaran");
+//header("location:tampil-rpl.html?no_p=$no_p");
 
 ?>

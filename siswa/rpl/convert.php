@@ -8,7 +8,7 @@ use Dompdf\Dompdf;
 // menggunakan class dompdf
 $dompdf = new Dompdf();
 
-$html = file_get_contents("tampil-rpl.php?nomor_pendaftaran=1");
+$html = file_get_contents("tampil-rpl.php?no_p=1");
 $dompdf->loadHtml($html);
 
 // (Opsional) Mengatur ukuran kertas dan orientasi kertas

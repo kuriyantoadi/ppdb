@@ -30,7 +30,7 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Nomor Pendaftaran :</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control" name="nomor_pendaftaran" value="" id="nomor_pendaftaran">
+        <input type="text" class="form-control" name="no_p" value="" id="no_p">
       </div>
     </div>
     <div class="form-group">
@@ -297,7 +297,7 @@
       <script>
 
       function validasi(){
-        var x = document.forms["input"]["nomor_pendaftaran"].value;
+        var x = document.forms["input"]["no_p"].value;
         if (x == null || x == "") {
           alert("Nomor Pnedaftaran Tidak Boleh Kosong");
           return false;

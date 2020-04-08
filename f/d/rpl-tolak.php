@@ -4,10 +4,10 @@ include '../../koneksi.php';
 
 // menangkap data yang di kirim dari form
 
-$nomor_pendaftaran = $_GET['nomor_pendaftaran'];
+$no_p = $_GET['no_p'];
 
 mysqli_query($koneksi,"update f_siswa set
-              kondisi='tidak terima' where nomor_pendaftaran='$nomor_pendaftaran' "
+              kondisi='tidak terima' where no_p='$no_p' "
             );
 
 

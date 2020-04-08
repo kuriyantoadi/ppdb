@@ -1,7 +1,7 @@
 <?php
 include '../../koneksi.php';
 
-$nomor_pendaftaran = $_POST['nomor_pendaftaran'];
+$no_p = $_POST['no_p'];
 
     // pdf_skhun
     if($_POST['upload']){
@@ -16,7 +16,7 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
       if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
           if($ukuran < 544070){
 
-        move_uploaded_file($file_tmp, 'file/'.$nomor_pendaftaran.'-'.$pdf_skhun_up.'.pdf');
+        move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_skhun_up.'.pdf');
 
           }else{
             echo 'pdf_skhun';
@@ -41,7 +41,7 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
         if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
             if($ukuran < 544070){
 
-          move_uploaded_file($file_tmp, 'file/'.$nomor_pendaftaran.'-'.$pdf_surat_dokter_up.'.pdf');
+          move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_surat_dokter_up.'.pdf');
 
             }else{
               echo 'pdf_surat_dokter';
@@ -68,7 +68,7 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
           if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
               if($ukuran < 544070){
 
-            move_uploaded_file($file_tmp, 'file/'.$nomor_pendaftaran.'-'.$pdf_kk_up.'.pdf');
+            move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_kk_up.'.pdf');
 
               }else{
                 echo 'pdf_kk';
@@ -93,7 +93,7 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
             if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
                 if($ukuran < 544070){
 
-              move_uploaded_file($file_tmp, 'file/'.$nomor_pendaftaran.'-'.$pdf_akta_up.'.pdf');
+              move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_akta_up.'.pdf');
 
                 }else{
                   echo 'pdf_akta';
@@ -118,7 +118,7 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
         if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
             if($ukuran < 544070){
 
-          move_uploaded_file($file_tmp, 'file/'.$nomor_pendaftaran.'-'.$pdf_photo_up.'.pdf');
+          move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_photo_up.'.pdf');
 
             }else{
               echo 'pdf_photo';
@@ -143,7 +143,7 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
           if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
               if($ukuran < 544070){
 
-            move_uploaded_file($file_tmp, 'file/'.$nomor_pendaftaran.'-'.$pdf_swa_kk_up.'.pdf');
+            move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_swa_kk_up.'.pdf');
 
               }else{
                 echo 'pdf_swa_kk';
@@ -168,7 +168,7 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
             if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
                 if($ukuran < 544070){
 
-              move_uploaded_file($file_tmp, 'file/'.$nomor_pendaftaran.'-'.$pdf_piagam1_up.'.pdf');
+              move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_piagam1_up.'.pdf');
 
                 }else{
                   echo 'pdf_piagam1';
@@ -194,7 +194,7 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
               if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
                   if($ukuran < 544070){
 
-                move_uploaded_file($file_tmp, 'file/'.$nomor_pendaftaran.'-'.$pdf_piagam2.'.pdf');
+                move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_piagam2.'.pdf');
 
                   }else{
                     echo 'pdf_piagam2';
@@ -219,7 +219,7 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
                 if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
                     if($ukuran < 544070){
 
-                  move_uploaded_file($file_tmp, 'file/'.$nomor_pendaftaran.'-'.$pdf_piagam3_up.'.pdf');
+                  move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_piagam3_up.'.pdf');
 
                     }else{
                       echo 'pdf_piagam3';
@@ -265,7 +265,7 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
 
 
   mysqli_query($koneksi,"insert into f_siswa values(
-                '$nomor_pendaftaran',
+                '$no_p',
                 '$tgl_pendaftaran',
                 '$kompetensi_keahlian',
                 '$asal_sekolah',
@@ -290,21 +290,21 @@ $nomor_pendaftaran = $_POST['nomor_pendaftaran'];
                 '$nama_org_tua',
                 '$kip',
                 '$pekerjaan_org_tua',
-                '$nomor_pendaftaran-$pdf_skhun_up.pdf',
-                '$nomor_pendaftaran-$pdf_surat_dokter_up.pdf',
-                '$nomor_pendaftaran-$pdf_kk_up.pdf',
-                '$nomor_pendaftaran-$pdf_akta_up.pdf',
-                '$nomor_pendaftaran-$pdf_photo_up.pdf',
-                '$nomor_pendaftaran-$pdf_swa_kk_up.pdf',
-                '$nomor_pendaftaran-$pdf_piagam1_up.pdf',
-                '$nomor_pendaftaran-$pdf_piagam2_up.pdf',
-                '$nomor_pendaftaran-$pdf_piagam3_up.pdf',
+                '$no_p-$pdf_skhun_up.pdf',
+                '$no_p-$pdf_surat_dokter_up.pdf',
+                '$no_p-$pdf_kk_up.pdf',
+                '$no_p-$pdf_akta_up.pdf',
+                '$no_p-$pdf_photo_up.pdf',
+                '$no_p-$pdf_swa_kk_up.pdf',
+                '$no_p-$pdf_piagam1_up.pdf',
+                '$no_p-$pdf_piagam2_up.pdf',
+                '$no_p-$pdf_piagam3_up.pdf',
                 '$un_bing',
                 '$un_mtk',
                 '$un_mtk',
-                '$un_ipa',NULL)");
+                '$un_ipa','')");
 
 // node_id=<?php echo $d['node_id'];
-//header("location:tampil-rpl.html?nomor_pendaftaran=$nomor_pendaftaran");
+//header("location:tampil-rpl.html?no_p=$no_p");
 
 ?>
