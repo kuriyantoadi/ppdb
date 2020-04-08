@@ -7,11 +7,11 @@ include '../../koneksi.php';
 $nomor_pendaftaran = $_GET['nomor_pendaftaran'];
 
 mysqli_query($koneksi,"update f_siswa set
-              kondisi='tidak terima' where nomor_pendaftaran='$nomor_pendaftaran' "
+              kondisi='diterima' where nomor_pendaftaran='$nomor_pendaftaran' "
             );
 
 
 // mengalihkan halaman kembali ke index.php
-header("location:index.php");
+header("location:tkj-tampil.php");
 
 ?>

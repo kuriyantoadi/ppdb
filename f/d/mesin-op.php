@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Operator PPDB </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,8 +20,9 @@
   ?>
 
 <div class="container">
-  <center><h2>Form Pendaftaran Calon Peserta Didik</h2></center>
-  <center><h2>SMKN 1 Kragilan</h2></center>
+  <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
+  <center><h3></h3></center>
+  <center><h3>Kompetensi Keahlian Teknik Komputer dan Jaringan</h3></center>
 
   <br><br><br>
 
@@ -54,7 +55,7 @@
     <?php
       include '../../koneksi.php';
       $no = 1;
-      $data = mysqli_query($koneksi,"select * from f_siswa");
+      $data = mysqli_query($koneksi,"select * from f_siswa where kompetensi_keahlian='Teknik Komputer dan Jaringan'");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
@@ -67,7 +68,7 @@
       <td><center><?php echo $d['asal_sekolah']; ?></td>
       <td><center><?php echo $d['kondisi']; ?></td>
       <td><center>
-        <a type="button" class="btn btn-info btn-sm" href="tampil-siswa.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" >Lihat</a>
+        <a type="button" class="btn btn-info btn-sm" href="tkj-tampil.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" >Lihat</a>
       </td>
     </tr>
 

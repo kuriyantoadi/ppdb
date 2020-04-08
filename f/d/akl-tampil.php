@@ -10,6 +10,13 @@
 </head>
 <body>
 
+  <?php
+  session_start();
+  if($_SESSION['status']!="login"){
+    header("location:../index.php?pesan=belum_login");
+  }
+  ?>
+
 <div class="container">
 
   <div class="container-fluid">
@@ -207,10 +214,10 @@
       </tr>
       <tr>
         <td>
-          <center><a type="button" class="btn btn-primary btn-md" href="f-terima.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" onclick="return confirm('Anda yakin, tidak terima ?')" > Diterima</a>
+          <center><a type="button" class="btn btn-primary btn-md" href="tkj-terima.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
         </td>
         <td>
-          <center><a type="button" class="btn btn-warning btn-md" href="f-tolak.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" onclick="return confirm('Anda yakin, tidak terima ?')" >Tidak diterima</a>
+          <center><a type="button" class="btn btn-warning btn-md" href="tkj-tolak.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
         </td>
 
       </tr>
