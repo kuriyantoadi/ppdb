@@ -41,50 +41,38 @@
   <thead>
     <tr>
       <th><center>No</th>
+      <th><center>Nomor Pendaftaran</th>
       <th><center>NISN Siswa</th>
       <th><center>Nama Siswa</th>
-      <th><center>Pilih Jurusan</th>
+      <th><center>Kompetensi Keahlian</th>
       <th><center>Asal Sekolah</th>
-      <th><center>View</th>
       <th><center>Kondisi</th>
-
+      <th><center>Lihat</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td><center>1</td>
-      <td>001</td>
-      <td>Admin</td>
-      <td>TKJ</td>
-      <td>Asal Sekolah</td>
-      <td>
-        <center>Acc</center>
-      </td>
-      <td>
-        <center>
-          <a href="#" class="btn btn-primary btn-sm">
-            <span class="glyphicon glyphicon-pencil"></span>
-          </a>
-      </td>
+    <?php
+      include '../../koneksi.php';
+      $no = 1;
+      $data = mysqli_query($koneksi,"select * from f_siswa");
+      while($d = mysqli_fetch_array($data)) {
+    ?>
 
-    </tr>
     <tr>
-      <td><center>1</td>
-      <td>002</td>
-      <td>jok</td>
-      <td>RPL</td>
-      <td>Asal Sekolah</td>
-      <td>
-        <center>Acc</center>
+      <td><center><?php echo $no++ ?></td>
+      <td><center><?php echo $d['nomor_pendaftaran']; ?></td>
+      <td><center><?php echo $d['nisn']; ?></td>
+      <td><center><?php echo $d['nama_siswa']; ?></td>
+      <td><center><?php echo $d['kompetensi_keahlian']; ?></td>
+      <td><center><?php echo $d['asal_sekolah']; ?></td>
+      <td><center><?php echo $d['kondisi']; ?></td>
+      <td><center>
+        <a type="button" class="btn btn-info btn-sm" href="tampil-siswa.php?nomor_pendaftaran=<?php echo $d['nomor_pendaftaran']; ?>" >Lihat</a>
       </td>
-      <td>
-        <center>
-          <a href="#" class="btn btn-primary btn-sm">
-            <span class="glyphicon glyphicon-pencil"></span>
-          </a>
-      </td>
-
     </tr>
+
+
+    <?php } ?>
   </tbody>
 </table>
 </div>
