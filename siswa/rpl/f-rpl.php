@@ -179,7 +179,7 @@
     <h6>3. Contoh pengisian 1000 <b>tidak perlu ditulis Meter</h6>
     <h6>4. Jarak harus ditulis dalam satuan meter</h6>
 
-    <br><h4>D. DATA ORANG TUA/WALI CALON PSERTA DIDIK</h4>
+    <br><h4>D. DATA ORANG TUA/WALI CALON PESERTA DIDIK</h4>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Nama Orang Tua/Wali :</label>
       <div class="col-sm-6">
@@ -199,7 +199,7 @@
       </div>
     </div>
 
-    <br><h4>E. INPUT SCAN BERKAS CALON PERSERTA DIDIK</h4>
+    <br><h4>E. INPUT SCAN BERKAS CALON PESERTA DIDIK</h4>
 
     <div class="form-group">
       <label class="control-label col-sm-2" >SKHUN </label>
@@ -244,7 +244,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" >Piagrm 2</label>
+      <label class="control-label col-sm-2" >Piagam 2</label>
       <div class="col-sm-6">
         <input type="file" name="pdf_piagam2" accept="application/pdf" class="form-control-file" >
       </div>

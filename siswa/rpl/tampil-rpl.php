@@ -168,6 +168,26 @@
         <td><?php echo $d['password']; ?></td>
       </tr>
       <tr>
+        <td>Enkripsi 1</td>
+        <td><?php echo md5($no_p); ?></td>
+      </tr>
+      <tr>
+        <td>Enkripsi 2</td>
+        <?php
+            $A = $d['nama_siswa'];
+            $B = $d['tgl_lahir'];
+            $C = $A.$B;
+         ?>
+        <td><?php echo md5($C); ?></td>
+      </tr>
+      <tr>
+        <td>Enkripsi 3</td>
+        <?php
+            $D = $d['nama_org_tua'];
+         ?>
+        <td><?php echo md5($D); ?></td>
+      </tr>
+      <tr>
         <td colspan="2">
           <p>
             <b>Informasi :</b>
