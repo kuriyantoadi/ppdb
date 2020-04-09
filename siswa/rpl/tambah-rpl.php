@@ -290,6 +290,15 @@ $no_p = $_POST['no_p'];
 
 //akhir pembuatan password
 
+//awal Enkripsi
+$A = $nama_siswa;
+$B = $tgl_lahir;
+$C = $A.$B;
+
+$enk = md5($C);
+
+
+// akhir enkripsi
 
 
   mysqli_query($koneksi,"insert into f_siswa values(
@@ -334,7 +343,8 @@ $no_p = $_POST['no_p'];
                 '$un_ipa',
                 '',
                 '$username',
-                '$password'
+                '$password',
+                '$enk'
                 )");
 
 // node_id=<?php echo $d['node_id'];
