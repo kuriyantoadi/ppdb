@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Tampil admin PPDB</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,15 +20,16 @@
   ?>
 
 <div class="container">
-  <center><h2>Form Pendaftaran Calon Peserta Didik</h2></center>
+  <center><h2>Daftar Pendaftaran Calon Peserta Didik</h2></center>
   <center><h2>SMKN 1 Kragilan</h2></center>
 
   <br><br><br>
 
   <div class="form-group">
     <div class="col-sm-7">
+      <a href="../logout.php" type="button" class="btn btn-danger">Logout</a>
+      <a href="" type="button" class="btn btn-success">Download RPL</a>
       <?php include('menu.php'); ?>
-
     </div>
     <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
     <div class="col-sm-3">
@@ -55,7 +56,8 @@
     <?php
       include '../../koneksi.php';
       $no = 1;
-      $data = mysqli_query($koneksi,"select * from f_siswa");
+      $jurusan = "Rekayasa Perangkat Lunak";
+      $data = mysqli_query($koneksi,"select no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id from f_siswa where kompetensi_keahlian in ('$jurusan')");
       while($d = mysqli_fetch_array($data)) {
     ?>
 

@@ -56,7 +56,7 @@
       include '../../koneksi.php';
       $no = 1;
        // $data = mysqli_query($koneksi,"select * from f_siswa where kompetensi_keahlian='Rekayasa Perangkat Lunak'");
-        $data = mysqli_query($koneksi,"select no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id from f_siswa where kompetensi_keahlian='Rekayasa Perangkat Lunak'");
+        $data = mysqli_query($koneksi,"select no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id from f_siswa where kompetensi_keahlian in ('Rekayasa Perangkat Lunak')");
       while($d = mysqli_fetch_array($data)) {
     ?>
 

@@ -25,7 +25,7 @@
 			<center><img class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" />
 		</div>
 		<div class="col-md-6">
-      <center><h3>Form Pendaftaran Calon Peserta Didik</h3></center>
+      <center><h3>Tampil Data Pendaftaran Calon Peserta Didik</h3></center>
       <center><h3>SMK Negeri 1 Kragilan</h3></center>
       <center><h3>Kompetensi Keahlian Rekayasa Perangkat Lunak</h3></center>
 		</div>
@@ -41,6 +41,8 @@
       while($d = mysqli_fetch_array($data)) {
     ?>
 
+    <br><br><br>
+    <a type="button" class="btn btn-danger btn-md" href="rpl-op.php">Kembali</a>
     <table class="table table-bordered">
 
       <tr>
@@ -213,11 +215,10 @@
         <td><?php echo $d['un_ipa']; ?></td>
       </tr>
       <tr>
-        <td>
-          <center><a type="button" class="btn btn-primary btn-md" href="rpl-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
-        </td>
-        <td>
-          <center><a type="button" class="btn btn-warning btn-md" href="rpl-tolak.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
+        <td colspan="2">
+          <center> 
+            <a type="button" class="btn btn-primary btn-md" href="rpl-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
+            <a type="button" class="btn btn-danger btn-md" href="rpl-tolak.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
         </td>
 
       </tr>
