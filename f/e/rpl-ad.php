@@ -45,6 +45,7 @@
   <thead>
     <tr>
       <th><center>No</th>
+      <th><center>Tanggal Pendaftaran</th>
       <th><center>Nomor Pendaftaran</th>
       <th><center>NISN Siswa</th>
       <th><center>Nama Siswa</th>
@@ -60,12 +61,13 @@
       include '../../koneksi.php';
       $no = 1;
       $jurusan = "Rekayasa Perangkat Lunak";
-      $data = mysqli_query($koneksi,"select no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id from f_siswa where kompetensi_keahlian in ('$jurusan')");
+      $data = mysqli_query($koneksi,"SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id from f_siswa where kompetensi_keahlian in ('$jurusan')");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
     <tr>
       <td><center><?php echo $no++ ?></td>
+      <td><center><?php echo $d['tgl_pendaftaran']; ?></td>
       <td><center><?php echo $d['no_p']; ?></td>
       <td><center><?php echo $d['nisn']; ?></td>
       <td><center><?php echo $d['nama_siswa']; ?></td>

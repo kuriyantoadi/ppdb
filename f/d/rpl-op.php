@@ -43,6 +43,7 @@
     <tr>
       <th><center>No</th>
       <th><center>Nomor Pendaftaran</th>
+      <th><center>Tanggal Pendaftaran</th>
       <th><center>NISN Siswa</th>
       <th><center>Nama Siswa</th>
       <th><center>Kompetensi Keahlian</th>
@@ -54,14 +55,15 @@
   <tbody>
     <?php
       include '../../koneksi.php';
-      $halperpage = 5;
+      $halperpage = 50;
       $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
       $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-      $result = mysqli_query($koneksi, "SELECT * FROM f_siswa");
+      $result = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+         FROM f_siswa");
       $total = mysqli_num_rows($result);
       $pages = ceil($total/$halperpage);
-      // $query = mysqli_query($koneksi,"SELECT * FROM f_siswa LIMIT $mulai, $halperpage")or die(mysqli_error);
-      $data = mysqli_query($koneksi,"SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+
+      $data = mysqli_query($koneksi,"SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
         from f_siswa where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
       $no = $mulai+1;
 
@@ -72,6 +74,7 @@
     <tr>
       <td><center><?php echo $no++ ?></td>
       <td><center><?php echo $d['no_p']; ?></td>
+      <td><center><?php echo $d['tgl_pendaftaran']; ?></td>
       <td><center><?php echo $d['nisn']; ?></td>
       <td><center><?php echo $d['nama_siswa']; ?></td>
       <td><center><?php echo $d['kompetensi_keahlian']; ?></td>

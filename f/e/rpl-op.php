@@ -54,9 +54,61 @@
   <tbody>
     <?php
       include '../../koneksi.php';
-      $no = 1;
-       // $data = mysqli_query($koneksi,"select * from f_siswa where kompetensi_keahlian='Rekayasa Perangkat Lunak'");
-        $data = mysqli_query($koneksi,"select no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id from f_siswa where kompetensi_keahlian in ('Rekayasa Perangkat Lunak')");
+      $halperpage = 50;
+      $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+      $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
+      $result = mysqli_query($koneksi, "SELECT
+
+        id,
+        no_p,
+        tgl_pendaftaran,
+        kompetensi_keahlian,
+        asal_sekolah,
+        npsn_sekolah,
+        nisn,
+        nama_siswa,
+        jenis_kelamin,
+        tgl_lahir,
+        tempat_lahir,
+        tahun_lulus,
+        nik,
+        no_kk,
+        tgl_kk,
+        kota,
+        kecamatan,
+        kelurahan,
+        kode_pos,
+        alamat,
+        rt,
+        rw,
+        jarak_kesekolah,
+        nama_org_tua,
+        pekerjaan_org_tua,
+        kip,
+        pdf_skhun,
+        pdf_surat_dokter,
+        pdf_kk,
+        pdf_akta,
+        pdf_photo,
+        pdf_swa_kk,
+        pdf_piagam1,
+        pdf_piagam2,
+        pdf_piagam3,
+        un_bind,
+        un_bing,
+        un_mtk,
+        un_ipa,
+        id
+
+         FROM f_siswa");
+      $total = mysqli_num_rows($result);
+      $pages = ceil($total/$halperpage);
+
+      $data = mysqli_query($koneksi,"SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+        from f_siswa where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
+      $no = $mulai+1;
+
+
       while($d = mysqli_fetch_array($data)) {
     ?>
 
@@ -73,10 +125,14 @@
       </td>
     </tr>
 
-
     <?php } ?>
   </tbody>
 </table>
+<div>
+  <?php for ($i=1; $i<=$pages ; $i++){ ?>
+  <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
+  <?php } ?>
+</div>
 </div>
 <script>
     $(document).ready(function()
