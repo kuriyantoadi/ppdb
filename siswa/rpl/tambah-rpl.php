@@ -194,7 +194,7 @@ $no_p = $_POST['no_p'];
               if(in_array($ekstensi, $ekstensi_diperbolehkan) === true){
                   if($ukuran < 544070){
 
-                move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_piagam2.'.pdf');
+                move_uploaded_file($file_tmp, 'file/'.$no_p.'-'.$pdf_piagam2_up.'.pdf');
 
                   }else{
                     echo 'pdf_piagam2';
