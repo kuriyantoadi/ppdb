@@ -193,10 +193,11 @@
       </tr>
     </table>
     <center>
-    <a target="_blank" type="button" class="btn btn-info btn-md" href="cetak-rpl.php?no_p=<?php echo $no_p; ?>" >Cetak PDF</a>
   <?php } ?>
 <br><br><br>
-
+  <script>
+  		window.print();
+  	</script>
       </div>
     </div>
 </div>

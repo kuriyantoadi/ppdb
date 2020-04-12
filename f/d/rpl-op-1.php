@@ -54,18 +54,9 @@
   <tbody>
     <?php
       include '../../koneksi.php';
-      $halperpage = 5;
-      $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
-      $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-      $result = mysqli_query($koneksi, "SELECT * FROM f_siswa");
-      $total = mysqli_num_rows($result);
-      $pages = ceil($total/$halperpage);
-      // $query = mysqli_query($koneksi,"SELECT * FROM f_siswa LIMIT $mulai, $halperpage")or die(mysqli_error);
-      $data = mysqli_query($koneksi,"SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
-        from f_siswa where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
-      $no = $mulai+1;
-
-
+      $no = 1;
+       // $data = mysqli_query($koneksi,"select * from f_siswa where kompetensi_keahlian='Rekayasa Perangkat Lunak'");
+        $data = mysqli_query($koneksi,"select no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id from f_siswa where kompetensi_keahlian in ('Rekayasa Perangkat Lunak')");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
@@ -82,14 +73,10 @@
       </td>
     </tr>
 
+
     <?php } ?>
   </tbody>
 </table>
-<div>
-  <?php for ($i=1; $i<=$pages ; $i++){ ?>
-  <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
-  <?php } ?>
-</div>
 </div>
 <script>
     $(document).ready(function()

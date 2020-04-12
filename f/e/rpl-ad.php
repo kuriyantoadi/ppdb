@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Operator PPDB </title>
+  <title>Tampil admin PPDB</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,15 +21,17 @@
   ?>
 
 <div class="container">
-  <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
-  <center><h3></h3></center>
-  <center><h3>Kompetensi Keahlian Rekayasa Perangkat Lunak</h3></center>
+  <center><h2>Daftar Pendaftaran Calon Peserta Didik</h2></center>
+  <center><h2>SMKN 1 Kragilan</h2></center>
 
   <br><br><br>
 
   <div class="form-group">
     <div class="col-sm-7">
       <a href="../logout.php" type="button" class="btn btn-danger">Logout</a>
+      <a href="rpl-lap.php" type="button" class="btn btn-success"
+      onclick="return confirm('Download Data PPDB Kompetensi Keahlian Rekayasa Perangkat Lunak ?')">Download RPL</a>
+      <?php include('menu.php'); ?>
     </div>
     <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
     <div class="col-sm-3">
@@ -49,23 +52,15 @@
       <th><center>Asal Sekolah</th>
       <th><center>Kondisi</th>
       <th><center>Lihat</th>
+      <th><center>Hapus</th>
     </tr>
   </thead>
   <tbody>
     <?php
       include '../../koneksi.php';
-      $halperpage = 5;
-      $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
-      $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-      $result = mysqli_query($koneksi, "SELECT * FROM f_siswa");
-      $total = mysqli_num_rows($result);
-      $pages = ceil($total/$halperpage);
-      // $query = mysqli_query($koneksi,"SELECT * FROM f_siswa LIMIT $mulai, $halperpage")or die(mysqli_error);
-      $data = mysqli_query($koneksi,"SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
-        from f_siswa where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
-      $no = $mulai+1;
-
-
+      $no = 1;
+      $jurusan = "Rekayasa Perangkat Lunak";
+      $data = mysqli_query($koneksi,"select no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id from f_siswa where kompetensi_keahlian in ('$jurusan')");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
@@ -78,18 +73,18 @@
       <td><center><?php echo $d['asal_sekolah']; ?></td>
       <td><center><?php echo $d['kondisi']; ?></td>
       <td><center>
-        <a type="button" class="btn btn-info btn-sm" href="rpl-tampil.php?id=<?php echo $d['id']; ?>" >Lihat</a>
+        <a type="button" class="btn btn-info btn-sm" href="tampil-siswa.php?no_p=<?php echo $d['no_p']; ?>" >Lihat</a>
+      </td>
+      <td><center>
+        <a type="button" class="btn btn-danger btn-sm" href="rpl-hapus.php?no_p=<?php echo $d['no_p']; ?>"
+          onclick="return confirm('Anda yakin Hapus data siswa <?php echo $d['nama_siswa']; ?> ?')">Hapus</a>
       </td>
     </tr>
+
 
     <?php } ?>
   </tbody>
 </table>
-<div>
-  <?php for ($i=1; $i<=$pages ; $i++){ ?>
-  <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
-  <?php } ?>
-</div>
 </div>
 <script>
     $(document).ready(function()
