@@ -75,7 +75,10 @@
       un_bing,
       un_mtk,
       un_ipa,
-      id
+      id,
+      username,
+      password,
+      enk
 
        from f_siswa where no_p='$no_p'");
       while($d = mysqli_fetch_array($data)) {
@@ -203,11 +206,11 @@
         <td><?php echo $d['un_ipa']; ?></td>
       </tr>
       <tr>
-        <td>Username tes</td>
+        <td>Username Test</td>
         <td><?php echo $d['username']; ?></td>
       </tr>
       <tr>
-        <td>Password tes</td>
+        <td>Password Test</td>
         <td><?php echo $d['password']; ?></td>
       </tr>
       <tr>

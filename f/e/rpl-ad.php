@@ -53,6 +53,7 @@
       <th><center>Asal Sekolah</th>
       <th><center>Kondisi</th>
       <th><center>Lihat</th>
+      <th><center>Edit</th>
       <th><center>Hapus</th>
     </tr>
   </thead>
@@ -75,7 +76,10 @@
       <td><center><?php echo $d['asal_sekolah']; ?></td>
       <td><center><?php echo $d['kondisi']; ?></td>
       <td><center>
-        <a type="button" class="btn btn-info btn-sm" href="tampil-siswa.php?no_p=<?php echo $d['no_p']; ?>" >Lihat</a>
+        <a type="button" class="btn btn-info btn-sm" href="rpl-lihat.php?no_p=<?php echo $d['no_p']; ?>" >Lihat</a>
+      </td>
+      <td><center>
+        <a type="button" class="btn btn-warning btn-sm" href="edit-siswa.php?no_p=<?php echo $d['no_p']; ?>" >Edit</a>
       </td>
       <td><center>
         <a type="button" class="btn btn-danger btn-sm" href="rpl-hapus.php?no_p=<?php echo $d['no_p']; ?>"

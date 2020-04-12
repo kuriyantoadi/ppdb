@@ -62,11 +62,11 @@
 			<th>PDF SKHUN</th>
 			<th>PDF Surat Dokter</th>
 			<th>PDF KK</th>
+			<th>PDF Akat</th>
 			<th>PDF Photo</th>
 			<th>PDF Swa Photo</th>
 			<th>PDF Piagam 1</th>
 			<th>PDF Piagam 2</th>
-			<th>PDF Piagam 3</th>
 			<th>PDF Piagam 3</th>
 			<th>PDF UN Bahasa Indonesia</th>
 			<th>PDF UN Bahasa Inggris</th>

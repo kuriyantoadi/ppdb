@@ -1,6 +1,6 @@
 
 <br><br><br>
-<a type="button" class="btn btn-danger btn-md" href="rpl-op.php">Kembali</a>
+<a type="button" class="btn btn-danger btn-md" href="rpl-ad.php">Kembali</a>
 <table class="table table-bordered">
 
   <tr>

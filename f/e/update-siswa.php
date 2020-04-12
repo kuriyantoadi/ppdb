@@ -31,81 +31,45 @@ $un_bing = $_POST['un_bing'];
 $un_mtk = $_POST['un_mtk'];
 $un_ipa = $_POST['un_ipa'];
 
-mysqli_query($koneksi,"update f_siswa set
-              '$no_p',
-              '$tgl_pendaftaran',
-              '$kompetensi_keahlian',
-              '$asal_sekolah',
-              '$npsn_sekolah',
-              '$nisn',
-              '$nama_siswa',
-              '$jenis_kelamin',
-              '$tempat_lahir',
-              '$tgl_lahir',
-              '$tahun_lulus',
-              '$nik',
-              '$no_kk',
-              '$tgl_kk',
-              '$kota',
-              '$kecamatan',
-              '$kelurahan',
-              '$kode_pos',
-              '$alamat',
-              '$rt',
-              '$rw',
-              '$jarak_kesekolah',
-              '$nama_org_tua',
-              '$kip',
-              '$pekerjaan_org_tua',
-              '$un_bing',
-              '$un_mtk',
-              '$un_mtk',
-              '$un_ipa'
-              where no_p='$no_p'"
-            );
+// UPDATE `upload` SET `id_file`=[value-1],`nama_file`=[value-2] WHERE 1
+
+mysqli_query($koneksi,"UPDATE f_siswa SET
+             no_p='$no_p',
+             tgl_pendaftaran='$tgl_pendaftaran',
+             kompetensi_keahlian='$kompetensi_keahlian',
+             asal_sekolah='$asal_sekolah',
+             npsn_sekolah='$npsn_sekolah',
+             nisn='$nisn',
+             nama_siswa='$nama_siswa',
+             jenis_kelamin='$jenis_kelamin',
+             tempat_lahir='$tempat_lahir',
+             tgl_lahir='$tgl_lahir',
+             tahun_lulus='$tahun_lulus',
+             nik='$nik',
+             no_kk='$no_kk',
+             tgl_kk='$tgl_kk',
+             kota='$kota',
+             kecamatan='$kecamatan',
+             kelurahan='$kelurahan',
+             kode_pos='$kode_pos',
+             alamat='$alamat',
+             rt='$rt',
+             rw='$rw',
+             jarak_kesekolah='$jarak_kesekolah',
+             nama_org_tua='$nama_org_tua',
+             kip='$kip',
+             pekerjaan_org_tua='$pekerjaan_org_tua',
+             un_bind='$un_bind',
+             un_bing='$un_bing',
+             un_mtk='$un_mtk',
+             un_ipa='$un_ipa'
+             where no_p='$no_p'
+             ");
 
 
-  mysqli_query($koneksi,"insert into f_siswa values(
-                '$no_p',
-                '$tgl_pendaftaran',
-                '$kompetensi_keahlian',
-                '$asal_sekolah',
-                '$npsn_sekolah',
-                '$nisn',
-                '$nama_siswa',
-                '$jenis_kelamin',
-                '$tempat_lahir',
-                '$tgl_lahir',
-                '$tahun_lulus',
-                '$nik',
-                '$no_kk',
-                '$tgl_kk',
-                '$kota',
-                '$kecamatan',
-                '$kelurahan',
-                '$kode_pos',
-                '$alamat',
-                '$rt',
-                '$rw',
-                '$jarak_kesekolah',
-                '$nama_org_tua',
-                '$kip',
-                '$pekerjaan_org_tua',
-                '$no_p-$pdf_skhun_up.pdf',
-                '$no_p-$pdf_surat_dokter_up.pdf',
-                '$no_p-$pdf_kk_up.pdf',
-                '$no_p-$pdf_akta_up.pdf',
-                '$no_p-$pdf_photo_up.pdf',
-                '$no_p-$pdf_swa_kk_up.pdf',
-                '$no_p-$pdf_piagam1_up.pdf',
-                '$no_p-$pdf_piagam2_up.pdf',
-                '$no_p-$pdf_piagam3_up.pdf',
-                '$un_bing',
-                '$un_mtk',
-                '$un_mtk',
-                '$un_ipa',NULL)");
+
 
 // node_id=<?php echo $d['node_id'];
-//header("location:tampil-rpl.html?no_p=$no_p");
+ header("location:rpl-lihat.php?no_p=$no_p");
 
 ?>
