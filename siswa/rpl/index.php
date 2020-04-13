@@ -353,7 +353,7 @@
        </div>
       </div>
     <div class="form-group">
-     <label class="control-label col-sm-2" >Apakah anda bertindik (bagi laki-laki) </label>
+     <label class="control-label col-sm-2" >Apakah anda bertato </label>
      <div class="col-sm-2">
        <select name="tindik" class="form-control" id="exampleFormControlSelect1">
              <option value="Ya">Ya</option>
