@@ -28,7 +28,7 @@
     <?php
     session_start();
     if($_SESSION['status']!="login"){
-      header("location:f-rpl.php");
+      header("location:index.php");
     }
     ?>
     <?php
@@ -174,10 +174,10 @@
       </tr>
       <tr>
         <td>Jarak rumah ke sekolah</td>
-        <td><?php echo $d['jarak_kesekolah']; ?></td>
+        <td><?php echo $d['jarak_kesekolah']; ?> Meter</td>
       </tr>
       <tr>
-        <td>Nama Orang Tua/Wali</td>
+        <td>Nama Orang Tua / Wali</td>
         <td><?php echo $d['nama_org_tua']; ?></td>
       </tr>
       <tr>
@@ -185,7 +185,7 @@
         <td><?php echo $d['pekerjaan_org_tua']; ?></td>
       </tr>
       <tr>
-        <td>PKH/KKS/KIP/Jamsosda</td>
+        <td>PKH / KKS / KIP / Jamsosda</td>
         <td><?php echo $d['kip']; ?></td>
       </tr>
 
