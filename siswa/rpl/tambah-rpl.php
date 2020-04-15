@@ -393,10 +393,12 @@ $enk = md5($C);
                 '$psikotropika',
                 '$bertato',
                 '$peminum'
-                )");
+                )") or die(mysqli_error($koneksi));
 
 // node_id=<?php echo $d['node_id'];
 header("location:tampil-rpl.php?nik=$nik");
 
+ // mysql_query("SELECT * FROM nonexistenttable", $link);
+ // mysqli_query($db,"INSERT INTO stockdetails (`itemdescription`,`itemnumber`,`sellerid`,`purchasedate`,`otherinfo`,`numberofitems`,`isitdelivered`,`price`) VALUES ('$itemdescription','$itemnumber','$sellerid','$purchasedate','$otherinfo','$numberofitems','$numberofitemsused','$isitdelivered','$price')") or die(mysqli_error($db));
 
 ?>
