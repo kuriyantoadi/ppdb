@@ -13,84 +13,35 @@
 <div class="container">
 
   <div class="container-fluid">
-    <div class="row">
-  		<div class="col-md-3">
-  			<center><img style="margin-top: 25px;" src="../../images/logo-banten.png" />
-  		</div>
-  		<div class="col-md-6">
-        <center><h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2></center>
-        <center><h4><b>Bukti Pendaftaran Calon Peserta Didik Baru</b></h4></center>
-        <center><h4><b>Calon Peserta Didik Baru</b></h4></center>
-        <center><h5><b>Tahun Pelajaran 2020/2021</b></h4></center>
-        <center><h4><b>Program Studi Rekayasa Perangkat Lunak</b></h4></center><br>
-        <!-- font ganti jenis -->
-  		</div>
-  		<div class="col-md-3">
-        <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" />
-  		</div>
-  	</div>
+	<div class="row">
+		<div class="col-md-3">
+			<center><img class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" />
+		</div>
+		<div class="col-md-6">
+      <center><h3>SMK Negeri 1 Kragilan</h3></center>
+		</div>
+		<div class="col-md-3">
+		</div>
+  </div>
 
   <table class="table table-bordered">
-
+    <?php
+    // session_start();
+    // if($_SESSION['status']!="login"){
+    //   header("location:f-rpl.php");
+    // }
+    ?>
     <?php
       include '../../koneksi.php';
-      $nik = $_GET['nik'];
-      $data = mysqli_query($koneksi,"select
-
-      id,
-      no_p,
-      tgl_pendaftaran,
-      kompetensi_keahlian,
-      asal_sekolah,
-      npsn_sekolah,
-      nisn,
-      nama_siswa,
-      jenis_kelamin,
-      tgl_lahir,
-      tempat_lahir,
-      tahun_lulus,
-      nik,
-      no_kk,
-      tgl_kk,
-      kota,
-      kecamatan,
-      kelurahan,
-      kode_pos,
-      alamat,
-      rt,
-      rw,
-      jarak_kesekolah,
-      nama_org_tua,
-      pekerjaan_org_tua,
-      kip,
-      pdf_skhun,
-      pdf_surat_dokter,
-      pdf_kk,
-      pdf_akta,
-      pdf_photo,
-      pdf_swa_kk,
-      pdf_piagam1,
-      pdf_piagam2,
-      pdf_piagam3,
-      un_bind,
-      un_bing,
-      un_mtk,
-      un_ipa,
-      id,
-      username,
-      password,
-      enk,
-      bertindik,
-      psikotropika,
-      bertato,
-      perokok,
-      peminum
-
-       from f_siswa where nik='$nik'");
+      $no_p = $_GET['no_p'];
+      $data = mysqli_query($koneksi,"select * from f_siswa where no_p='$no_p'");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
     <table class="table table-bordered">
+      <tr>
+        <td colspan="2"><center><h4>Bukti Pendaftaran Calon Peserta Didik Baru</td>
+      </tr>
       <tr>
         <td>Nomor Pendaftaran</td>
         <td><?php echo $d['no_p']; ?></td>
@@ -120,7 +71,7 @@
         <td><?php echo $d['nama_siswa']; ?></td>
       </tr>
       <tr>
-        <td>Jenis Kelamin</td>
+        <td>jenis Kelamin</td>
         <td><?php echo $d['jenis_kelamin']; ?></td>
       </tr>
       <tr>
@@ -176,11 +127,11 @@
         <td><?php echo $d['rw']; ?></td>
       </tr>
       <tr>
-        <td>Jarak Rumah ke Sekolah</td>
-        <td><?php echo $d['jarak_kesekolah']; ?> Meter</td>
+        <td>Jarak rumah ke sekolah</td>
+        <td><?php echo $d['jarak_kesekolah']; ?></td>
       </tr>
       <tr>
-        <td>Nama Orang Tua / Wali</td>
+        <td>Nama Orang Tua/Wali</td>
         <td><?php echo $d['nama_org_tua']; ?></td>
       </tr>
       <tr>
@@ -188,7 +139,7 @@
         <td><?php echo $d['pekerjaan_org_tua']; ?></td>
       </tr>
       <tr>
-        <td>PKH / KKS / KIP / Jamsosda</td>
+        <td>PKH/KKS/KIP/Jamsosda</td>
         <td><?php echo $d['kip']; ?></td>
       </tr>
 
@@ -209,36 +160,16 @@
         <td><?php echo $d['un_ipa']; ?></td>
       </tr>
       <tr>
-        <td>Username Test</td>
+        <td>Username tes</td>
         <td><?php echo $d['username']; ?></td>
       </tr>
       <tr>
-        <td>Password Test</td>
+        <td>Password tes</td>
         <td><?php echo $d['password']; ?></td>
       </tr>
       <tr>
         <td>Enkripsi </td>
         <td><?php echo $d['enk']; ?></td>
-      </tr>
-      <tr>
-        <td>Bertindik </td>
-        <td><?php echo $d['bertindik']; ?></td>
-      </tr>
-      <tr>
-        <td>Perokok </td>
-        <td><?php echo $d['perokok']; ?></td>
-      </tr>
-      <tr>
-        <td>Psikotropika </td>
-        <td><?php echo $d['psikotropika']; ?></td>
-      </tr>
-      <tr>
-        <td>Bertato </td>
-        <td><?php echo $d['bertato']; ?></td>
-      </tr>
-      <tr>
-        <td>Peminum Minuman Keras</td>
-        <td><?php echo $d['peminum']; ?></td>
       </tr>
       <tr>
         <td colspan="2">
@@ -253,20 +184,20 @@
               <li>Username dan Password Tes hanya dapat digunakan 1 kali.</li>
               <li>Peserta yang dinyatakan tidak lolos perberkasan maka tidak bisa mengikuti tes.</li>
               <li>Jika ada peserta yang sudah dinyatakan lolos dan tidak bisa masuk ke login web tes boleh dinformasikan ke panitia.</li>
-              <li>Tes dilaksanakan secara online di tempat tinggal masing-masing calon peserta didik.</li>
+              <li>Tes dilaksanakan secara online tempat tinggal masing-masing calon peserta didik.</li>
               <li>Jika calon peserta didik melakukan kecurangan ketika mengerjakan soal tes, maka akan dinyatakan gugur dari pendaftaran.</li>
               <li>Jika ada kesalahan data pada bukti pendaftaran, calon peserta didik harus menginformasikan kepada panitia.</li>
-              <li>Apabila data tidak sesuai, maka sekolah berhak membatalkan hasil penerimaan siswa tersebut</li>
             </ol>
           </p>
         </td>
       </tr>
     </table>
     <center>
-    <a target="_blank" type="button" class="btn btn-info btn-md" href="cetak-rpl.php?nik=<?php echo $nik; ?>" >Cetak PDF</a>
   <?php } ?>
 <br><br><br>
-
+  <script>
+  		window.print();
+  	</script>
       </div>
     </div>
 </div>

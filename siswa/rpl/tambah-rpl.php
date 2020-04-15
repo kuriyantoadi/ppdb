@@ -1,7 +1,44 @@
 <?php
 include '../../koneksi.php';
 
-$no_p = $_POST['no_p'];
+$no_kk = $_POST['no_kk'];
+$no_kk_no_p = substr($no_kk,4,12);
+// echo $no_kk_no_p;
+
+$jenis_kelamin = $_POST['jenis_kelamin'];
+if ($jenis_kelamin == "laki-laki"){
+  $jenis_kelamin_no_p = 1;
+}else{
+  $jenis_kelamin_no_p = 2;
+
+}
+// echo $jenis_kelamin_no_p;
+
+$cek_max = mysqli_query($koneksi, "SELECT max(id) FROM f_siswa");
+while($row = mysqli_fetch_assoc($cek_max)){
+    $max = $row['max(id)'];
+    $no_urut = $max+1;
+    echo $no_urut;
+    // echo $no_urut;
+}
+$kode =  sprintf("%04s",$no_urut);
+echo $kode;
+
+$no_kk_no_p = substr($no_kk,4,12);
+// echo $no_kk_no_p;
+
+if ($jenis_kelamin == "laki-laki"){
+  $jenis_kelamin_no_p = 1;
+}else{
+  $jenis_kelamin_no_p = 2;
+
+}
+
+
+$no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
+echo $no_p;
+//awal pembuatan nomor pendaftaran
+
 
     // pdf_skhun
     if($_POST['upload']){
@@ -237,12 +274,13 @@ $no_p = $_POST['no_p'];
   $npsn_sekolah = $_POST['npsn_sekolah'];
   $nisn = $_POST['nisn'];
   $nama_siswa = $_POST['nama_siswa'];
-  $jenis_kelamin = $_POST['jenis_kelamin'];
+//  $jenis_kelamin = $_POST['jenis_kelamin'];
   $tempat_lahir = $_POST['tempat_lahir'];
   $tgl_lahir = $_POST['tgl_lahir'];
   $tahun_lulus = $_POST['tahun_lulus'];
+  $no_hp = $_POST['no_hp'];
   $nik = $_POST['nik'];
-  $no_kk = $_POST['no_kk'];
+  // $no_kk = $_POST['no_kk'];
   $tgl_kk = $_POST['tgl_kk'];
   $kota = $_POST['kota'];
   $kecamatan = $_POST['kecamatan'];
@@ -259,7 +297,11 @@ $no_p = $_POST['no_p'];
   $un_bing = $_POST['un_bing'];
   $un_mtk = $_POST['un_mtk'];
   $un_ipa = $_POST['un_ipa'];
-
+  $bertindik = $_POST['bertindik'];
+  $perokok = $_POST['perokok'];
+  $psikotropika = $_POST['psikotropika'];
+  $bertato = $_POST['bertato'];
+  $peminum = $_POST['peminum'];
 
 //awal user pembuatan password
   function user_acak($panjang)
@@ -314,6 +356,7 @@ $enk = md5($C);
                 '$tempat_lahir',
                 '$tgl_lahir',
                 '$tahun_lulus',
+                '$no_hp',
                 '$nik',
                 '$no_kk',
                 '$tgl_kk',
@@ -344,11 +387,16 @@ $enk = md5($C);
                 '',
                 '$username',
                 '$password',
-                '$enk'
+                '$enk',
+                '$bertindik',
+                '$perokok',
+                '$psikotropika',
+                '$bertato',
+                '$peminum'
                 )");
 
 // node_id=<?php echo $d['node_id'];
- header("location:tampil-rpl.php?no_p=$no_p");
+header("location:tampil-rpl.php?nik=$nik");
 
 
 ?>

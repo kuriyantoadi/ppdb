@@ -15,27 +15,29 @@
   <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-3">
-			<center><img class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-banten.png" />
+			<center><img style="margin-top: 25px;" src="../../images/logo-banten.png" />
 		</div>
 		<div class="col-md-6">
-      <center><h4>SMK Negeri 1 Kragilan</h4></center>
-      <center><h4>Form Pendaftaran</h4></center>
-      <center><h4>Calon Peserta Didik Baru</h4></center>
-      <center><h4>Tahun Pelajaran 2020/2021</h4></center>
-      <center><h4>Program Studi Rekayasa Perangkat Lunak</h4></center><br>
+      <center><h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2></center>
+      <center><h4><b>Form Pendaftaran</b></h4></center>
+      <center><h4><b>Calon Peserta Didik Baru</b></h4></center>
+      <center><h5><b>Tahun Pelajaran 2020/2021</b></h4></center>
+      <center><h4><b>Program Studi Rekayasa Perangkat Lunak</b></h4></center><br>
       <!-- font ganti jenis -->
 		</div>
 		<div class="col-md-3">
-      <center><img class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" />
+      <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" />
 		</div>
 	</div>
 </div>
+
+
   <form class="form-horizontal" action="tambah-rpl.php" name="input" method="POST"  enctype="multipart/form-data" onSubmit="return validasi()">
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Nomor Pendaftaran :</label>
       <div class="col-sm-6">
         <input type="hidden" name="id" value="">
-        <input type="text" class="form-control" name="no_p" value="" id="no_p">
+        <input type="text" class="form-control" name="no_p" value="Nomor Pendaftaran Otomatis dari Sistem" id="no_p" readonly>
       </div>
     </div>
     <div class="form-group">
@@ -55,13 +57,30 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Nama Asal Sekolah :</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control" placeholder="Nama Asal Sekolah" name="asal_sekolah" id="asal_sekolah">
+          <select name="asal_sekolah" class="form-control" id="exampleFormControlSelect1">
+            <option value="SMP NEGERI 1 KRAGILAN">SMP NEGERI 1 KRAGILAN</option>
+            <option value="SMP NEGERI 2 KRAGILAN">SMP NEGERI 2 KRAGILAN</option>
+            <option value="SMP NEGERI 3 KRAGILAN">SMP NEGERI 3 KRAGILAN</option>
+            <option value="SMP NEGERI 4 KRAGILAN">SMP NEGERI 4 KRAGILAN</option>
+            <option value="SMP YBB PGRI KRAGILAN">SMP YBB PGRI KRAGILAN</option>
+            <option value="SMP PLUS INSAN CENDIKIA KRAGILAN">SMP PLUS INSAN CENDIKIA KRAGILAN</option>
+            <option value="SMP IT AL HIDAYAH KRAGILAN">SMP IT AL HIDAYAH KRAGILAN</option>
+            <option value="SMP MUHAMMADIYAH KRAGILAN">SMP MUHAMMADIYAH KRAGILAN</option>
+            <option value="SMP PGRI KRAGILAN">SMP PGRI KRAGILAN</option>
+            <option value="SMP PGRI 1 CARENANG">SMP PGRI 1 CARENANG</option>
+            <option value="SMPN 1 CARENANG">SMPN 1 CARENANG</option>
+            <option value="MTS AL-KHAIRIYAH PABUARAN">MTS AL-KHAIRIYAH PABUARAN</option>
+            <option value="SMP NEGERI 1 JAWILAN">SMP NEGERI 1 JAWILAN</option>
+            <option value="SMP NEGERI 3 CIKEUSAL">SMP NEGERI 3 CIKEUSAL</option>
+            <option value="SEKOLAH AL-KHAIRIYAH CIKEUSAL">SEKOLAH AL-KHAIRIYAH CIKEUSAL</option>
+            <option value="-">Nama Sekolah Tidak Ada</option>
+          </select>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">NPSN Sekolah Asal :</label>
       <div class="col-sm-6">
-        <input type="number" class="form-control"   placeholder="NPSN Sekolah Asal" name="npsn_sekolah" <?php // IDEA:  ?>>
+        <input type="number" class="form-control"   placeholder="NPSN Sekolah Asal" name="npsn_sekolah" required>
       </div>
     </div>
 
@@ -84,7 +103,7 @@
         <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
               <option value="laki-laki">Laki-laki</option>
               <option value="perempuan">Perempuan</option>
-            </select>
+          </select>
      </div>
     </div>
     <div class="form-group">
@@ -102,8 +121,21 @@
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Tahun lulus :</label>
-      <div class="col-sm-6">
-        <input type="number" class="form-control"   placeholder="Tahun lulus" name="tahun_lulus">
+      <div class="col-sm-3">
+        <select name="tahun_lulus" class="form-control" id="exampleFormControlSelect1">
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+            </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Nomor WhatsApp :</label>
+      <div class="col-sm-3">
+        <input type="number" class="form-control" name="no_hp" placeholder="Nomor WhatsApp">
       </div>
     </div>
 
@@ -128,7 +160,7 @@
       (Bulan/Tanggal/Tahun)
     </div>
 
-    <br><h4>D. ALAMAT TEMPAT TINGGAL CALON PESERTA DIDIK BARU</h4><h5>(SESUAI KK)</h5>
+    <br><h4>D. ALAMAT TEMPAT TINGGAL CALON PESERTA DIDIK BARU (SESUAI KK)</h4>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Kabupaten/Kota :</label>
       <div class="col-sm-6">
@@ -185,7 +217,7 @@
     <h6>5. Jika Kartu Keluarga <b>Hilang</b> atau <b>Dalam Proses Pembuatan</b> bisa digantikan dengan surat keterangan domisili dari
     RT/RW/Kelurahan</h6>
 
-    <br><h4>D. DATA ORANG TUA / WALI CALON PESERTA DIDIK</h4>
+    <br><h4>F. DATA ORANG TUA / WALI CALON PESERTA DIDIK</h4>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Nama Orang Tua / Wali :</label>
       <div class="col-sm-6">
@@ -205,7 +237,7 @@
       </div>
     </div>
 
-    <br><h4>E. INPUT SCAN BERKAS CALON PESERTA DIDIK</h4>
+    <br><h4>F. INPUT SCAN BERKAS CALON PESERTA DIDIK</h4>
 
     <div class="form-group">
       <label class="control-label col-sm-2" >SKHUN atau Surat Keterangan Lulus</label>
@@ -263,11 +295,12 @@
     </div>
     <h6><b>Informasi :</h6>
     <h6>1. File harus dengan format <b>.pdf</b> dengan ukuran maksimal <b>500 kb</b></h6>
-    <h6>2. Piagam boleh dikosongkan</h6>
-    <h6>3. Piagam hasil perlombaan dan/atau penghargaan di bidang akademik maupun non akademik</h6>
-    <h6>4. Contoh swa photo dapat dilihat di link berikut(belum di kerjakan)</h6>
+    <h6>2. Dokumen yang di <b>Scan Harus Asli (bukan Photo Copy)</b></h6>
+    <h6>3. Piagam boleh dikosongkan</h6>
+    <h6>4. Piagam hasil perlombaan dan/atau penghargaan di bidang akademik maupun non akademik</h6>
+    <h6>5. Contoh swa photo dapat dilihat di link berikut(belum di kerjakan)</h6>
 
-    <br><h4>F. INPUT NILAI UJIAN NASIONAL PESERTA DIDIK</h4>
+    <br><h4>G. INPUT NILAI UJIAN NASIONAL PESERTA DIDIK</h4>
     <div class="form-group">
       <label class="control-label col-sm-2" >Nilai Bahasa Indonesia </label>
       <div class="col-sm-3">
@@ -292,6 +325,64 @@
         <input type="number" class="form-control"   placeholder="Nilai IPA" name="un_ipa">
       </div>
     </div>
+    <h6><b>Informasi :</b></h6>
+    <h6>1. Sebelum lanjut ke tahap berikut nya tolong nilai di cek kembali</h6>
+    <h6>2. Jika nilai yang sudah di input tidak bisa di edit</h6>
+
+
+    <br><h4>H. KONDISI FISIK DAN KEBIASAAN</h4>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Apakah anda bertindik (bagi laki-laki) </label>
+        <div class="col-sm-2">
+          <select name="bertindik" class="form-control" id="exampleFormControlSelect1">
+                <option value="Ya">Ya</option>
+                <option value="Tidak">Tidak</option>
+            </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Apakah anda Perokok </label>
+        <div class="col-sm-2">
+          <select name="perokok" class="form-control" id="exampleFormControlSelect1">
+            <option value="Ya">Ya</option>
+            <option value="Tidak">Tidak</option>
+          </select>
+       </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Apakah anda pemakai Psikotropika<br>(Narkoba, Ganja dan sejenisnya) </label>
+        <div class="col-sm-2">
+          <select name="psikotropika" class="form-control" id="exampleFormControlSelect1">
+            <option value="Ya">Ya</option>
+            <option value="Tidak">Tidak</option>
+          </select>
+       </div>
+      </div>
+    <div class="form-group">
+     <label class="control-label col-sm-2" >Apakah anda bertato </label>
+     <div class="col-sm-2">
+       <select name="bertato" class="form-control" id="exampleFormControlSelect1">
+             <option value="Ya">Ya</option>
+             <option value="Tidak">Tidak</option>
+         </select>
+      </div>
+    </div>
+    <div class="form-group">
+     <label class="control-label col-sm-2" >Apakah anda peminum-minuman keras </label>
+     <div class="col-sm-2">
+       <select name="peminum" class="form-control" id="exampleFormControlSelect1">
+             <option value="Ya">Ya</option>
+             <option value="Tidak">Tidak</option>
+         </select>
+      </div>
+    </div>
+    <div style="margin-top:  50px;">
+    </div>
+    <h6><b>INFORMASI PENTING:</h6>
+    <h6>Sebelum anda submit pastikan data yang diisi benar, panitia tidak menerima komplain<br>
+      atau perubahan data. Apabila data tidak sesuai, maka sekolah berhak membatalkan hasil penerimaan siswa tersebut.<br></h6>
+    <div style="margin-top:  30px;">
+    </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" name="upload" value="upload" class="btn btn-default">Submit</button>
@@ -313,11 +404,11 @@
           alert("Asal Sekolah Tidak Boleh Kosong");
           return false;
         }
-        var x = document.forms["input"]["npsn_sekolah"].value;
-        if (x == null || x == "") {
-          alert("NPSN Sekolah Tidak Boleh Kosong");
-          return false;
-        }
+        // var x = document.forms["input"]["npsn_sekolah"].value;
+        // if (x == null || x == "") {
+        //   alert("NPSN Sekolah Tidak Boleh Kosong");
+        //   return false;
+        // }
         var x = document.forms["input"]["nisn"].value;
         if (x == null || x == "") {
           alert("NISN Tidak Boleh Kosong");
@@ -341,6 +432,11 @@
         var x = document.forms["input"]["tahun_lulus"].value;
         if (x == null || x == "") {
           alert("Tahun Lulus Tidak Boleh Kosong");
+          return false;
+        }
+        var x = document.forms["input"]["no_hp"].value;
+        if (x == null || x == "") {
+          alert("Nomor WhatsApp Tidak Boleh Kosong");
           return false;
         }
         var x = document.forms["input"]["nik"].value;

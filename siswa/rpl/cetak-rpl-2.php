@@ -14,19 +14,19 @@
 
   <div class="container-fluid">
     <div class="row">
-  		<div class="col-md-3">
-  			<center><img style="margin-top: 25px;" src="../../images/logo-banten.png" />
+  		<div class="col-md-4">
+  			<center><img style="margin-top: 25px;" src="../../images/logo-banten-cetak.png" />
   		</div>
-  		<div class="col-md-6">
-        <center><h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2></center>
-        <center><h4><b>Bukti Pendaftaran Calon Peserta Didik Baru</b></h4></center>
-        <center><h4><b>Calon Peserta Didik Baru</b></h4></center>
-        <center><h5><b>Tahun Pelajaran 2020/2021</b></h4></center>
-        <center><h4><b>Program Studi Rekayasa Perangkat Lunak</b></h4></center><br>
+  		<div class="col-md-4">
+        <center><h4 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h4></center>
+        <center><h5><b>Bukti Pendaftaran Calon Peserta Didik Baru</b></h5></center>
+        <center><h5><b>Calon Peserta Didik Baru</b></h5></center>
+        <center><h5><b>Tahun Pelajaran 2020/2021</b></h5></center>
+        <center><h5><b>Program Studi Rekayasa Perangkat Lunak</b></h5></center><br>
         <!-- font ganti jenis -->
   		</div>
-  		<div class="col-md-3">
-        <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" />
+  		<div class="col-md-4">
+        <center><img style="margin-bottom:  80px; margin-top:  25px;" class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1-cetak.png" />
   		</div>
   	</div>
 
@@ -120,7 +120,7 @@
         <td><?php echo $d['nama_siswa']; ?></td>
       </tr>
       <tr>
-        <td>Jenis Kelamin</td>
+        <td>jenis Kelamin</td>
         <td><?php echo $d['jenis_kelamin']; ?></td>
       </tr>
       <tr>
@@ -176,7 +176,7 @@
         <td><?php echo $d['rw']; ?></td>
       </tr>
       <tr>
-        <td>Jarak Rumah ke Sekolah</td>
+        <td>Jarak rumah ke sekolah</td>
         <td><?php echo $d['jarak_kesekolah']; ?> Meter</td>
       </tr>
       <tr>
@@ -237,7 +237,7 @@
         <td><?php echo $d['bertato']; ?></td>
       </tr>
       <tr>
-        <td>Peminum Minuman Keras</td>
+        <td>Peminum minuman keras</td>
         <td><?php echo $d['peminum']; ?></td>
       </tr>
       <tr>
@@ -253,7 +253,7 @@
               <li>Username dan Password Tes hanya dapat digunakan 1 kali.</li>
               <li>Peserta yang dinyatakan tidak lolos perberkasan maka tidak bisa mengikuti tes.</li>
               <li>Jika ada peserta yang sudah dinyatakan lolos dan tidak bisa masuk ke login web tes boleh dinformasikan ke panitia.</li>
-              <li>Tes dilaksanakan secara online di tempat tinggal masing-masing calon peserta didik.</li>
+              <li>Tes dilaksanakan secara online tempat tinggal masing-masing calon peserta didik.</li>
               <li>Jika calon peserta didik melakukan kecurangan ketika mengerjakan soal tes, maka akan dinyatakan gugur dari pendaftaran.</li>
               <li>Jika ada kesalahan data pada bukti pendaftaran, calon peserta didik harus menginformasikan kepada panitia.</li>
               <li>Apabila data tidak sesuai, maka sekolah berhak membatalkan hasil penerimaan siswa tersebut</li>
@@ -263,7 +263,6 @@
       </tr>
     </table>
     <center>
-    <a target="_blank" type="button" class="btn btn-info btn-md" href="cetak-rpl.php?nik=<?php echo $nik; ?>" >Cetak PDF</a>
   <?php } ?>
 <br><br><br>
 
@@ -272,7 +271,9 @@
 </div>
 </div>
 
-
+<script>
+    window.print();
+  </script>
 
 
   </body>
