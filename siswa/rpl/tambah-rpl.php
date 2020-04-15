@@ -24,9 +24,6 @@ while($row = mysqli_fetch_assoc($cek_max)){
 $kode =  sprintf("%04s",$no_urut);
 echo $kode;
 
-$no_kk_no_p = substr($no_kk,4,12);
-// echo $no_kk_no_p;
-
 if ($jenis_kelamin == "laki-laki"){
   $jenis_kelamin_no_p = 1;
 }else{
