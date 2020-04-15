@@ -18,11 +18,11 @@ $cek_max = mysqli_query($koneksi, "SELECT max(id) FROM f_siswa");
 while($row = mysqli_fetch_assoc($cek_max)){
     $max = $row['max(id)'];
     $no_urut = $max+1;
-    echo $no_urut;
+    // echo $no_urut;
     // echo $no_urut;
 }
 $kode =  sprintf("%04s",$no_urut);
-echo $kode;
+// echo $kode;
 
 if ($jenis_kelamin == "laki-laki"){
   $jenis_kelamin_no_p = 1;
@@ -33,7 +33,7 @@ if ($jenis_kelamin == "laki-laki"){
 
 
 $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
-echo $no_p;
+// echo $no_p;
 //awal pembuatan nomor pendaftaran
 
 
@@ -390,12 +390,10 @@ $enk = md5($C);
                 '$psikotropika',
                 '$bertato',
                 '$peminum'
-                )") or die(mysqli_error($koneksi));
+                )");
+                // or die(mysqli_error($koneksi));
 
-// node_id=<?php echo $d['node_id'];
 header("location:tampil-rpl.php?nik=$nik");
 
- // mysql_query("SELECT * FROM nonexistenttable", $link);
- // mysqli_query($db,"INSERT INTO stockdetails (`itemdescription`,`itemnumber`,`sellerid`,`purchasedate`,`otherinfo`,`numberofitems`,`isitdelivered`,`price`) VALUES ('$itemdescription','$itemnumber','$sellerid','$purchasedate','$otherinfo','$numberofitems','$numberofitemsused','$isitdelivered','$price')") or die(mysqli_error($db));
 
 ?>
