@@ -57,8 +57,11 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
         echo 'UKURAN FILE TERLALU BESAR';
           }
            }else{
-             echo 'pdf_skhun';
-      echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+            echo 'File SKHUN tidak pdf';
+            echo "<br>";
+            echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+            header("location:gagal-upload.php");
+            exit;
            }
       }
 
@@ -86,6 +89,8 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
                echo 'pdf_surat_dokter';
                echo "<br>";
                echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+               header("location:gagal-upload.php");
+               exit;
              }
         }
 
@@ -110,7 +115,9 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
               }
                }else{
                  echo 'pdf_kk';
-          echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+                 echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+                 header("location:gagal-upload.php");
+                 exit;
                }
           }
 
@@ -135,7 +142,9 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
                 }
                  }else{
                    echo 'pdf_akta';
-            echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+              echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+              header("location:gagal-upload.php");
+              exit;
                  }
             }
 
@@ -161,6 +170,8 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
              }else{
                echo 'pdf_photo';
         echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+        header("location:gagal-upload.php");
+        exit;
              }
         }
 
@@ -186,6 +197,8 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
                }else{
                  echo 'pdf_swa_kk';
           echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+          header("location:gagal-upload.php");
+          exit;
                }
           }
 
@@ -211,6 +224,8 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
                  }else{
                    echo 'pdf_piagam1';
             echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+            header("location:gagal-upload.php");
+            exit;
                  }
             }
 
@@ -237,6 +252,8 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
                    }else{
                      echo 'pdf_piagam2';
               echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+              header("location:gagal-upload.php");
+              exit;
                    }
               }
 
@@ -262,6 +279,8 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
                      }else{
                        echo 'pdf_piagam3';
                 echo 'EKSTENSI FILE YANG DI UPLOAD TIDAK DI PERBOLEHKAN';
+                header("location:gagal-upload.php");
+                exit;
                      }
                 }
   $id = $_POST['id'];
