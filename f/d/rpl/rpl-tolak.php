@@ -7,7 +7,8 @@ session_start();
 if($_SESSION['status']!="login"){
   header("location:../../index.php?pesan=belum_login");
 }else{
-  $id = mysql_real_escape_string($_GET['id']);
+  // $id = mysql_real_escape_string($_GET['id']);
+  $id = $_GET['id'];
 
   mysqli_query($koneksi,"update f_siswa set
                 kondisi='tidak diterima' where id='$id' "
