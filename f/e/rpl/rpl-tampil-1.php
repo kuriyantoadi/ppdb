@@ -1,16 +1,6 @@
 
 <br><br><br>
-<table>
-  <tr>
-    <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;"
-      class="btn btn-danger btn-md" href="index.php">Kembali</a></td>
-    <td></td><td></td>
-    <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;"
-      class="btn btn-warning btn-md" href="edit-siswa.php?id=<?php echo $d['id']; ?>"> Edit</a>
-</td>
-  </tr>
-</table>
-
+<a type="button" class="btn btn-danger btn-md" href="index.php">Kembali</a>
 <table class="table table-bordered">
 
   <tr>
@@ -114,6 +104,59 @@
     <td><?php echo $d['kip']; ?></td>
   </tr>
   <tr>
+    <td>SKHUN</td>
+    <td>
+      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_skhun']; ?>">SKHU PDF</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Surat Sehat dari Dokter</td>
+    <td>
+      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_surat_dokter']; ?>">Surat Dokter PDF</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Kartu Keluarga</td>
+    <td>
+      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_kk']; ?>">Kartu Keluarga PDF</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Akta Kelahiran</td>
+    <td>
+      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_akta']; ?>">Akta Kelahiran  PDF</a>
+    </td>      </tr>
+  <tr>
+    <td>Photo</td>
+    <td>
+      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_photo']; ?>">Photo PDF</a>
+    </td>
+  </tr>
+  <tr>
+    <td>SwaPhoto</td>
+    <td>
+      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_swa_kk']; ?>">SwaPhoto PDF</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Piagam 1</td>
+    <td>
+      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_piagam1']; ?>">Piagam 1 PDF</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Piagam 2</td>
+    <td>
+      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_piagam2']; ?>">Piagam 2 PDF</a>
+    </td>
+  </tr>
+  <tr>
+    <td>Piagam 3</td>
+    <td>
+      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_piagam3']; ?>">Piagam 3 PDF</a>
+    </td>
+  </tr>
+  <tr>
     <td>Nilai UN Bahasa Indonesia</td>
     <td><?php echo $d['un_bind']; ?></td>
   </tr>
@@ -128,103 +171,4 @@
   <tr>
     <td>Nilai UN IPA</td>
     <td><?php echo $d['un_ipa']; ?></td>
-  </tr>
-  <tr>
-    <td>Kondisi</td>
-    <td><?php echo $d['kondisi']; ?></td>
-  </tr>
-  <tr>
-    <td>Username</td>
-    <td><?php echo $d['username']; ?></td>
-  </tr>
-  <tr>
-    <td>Password</td>
-    <td><?php echo $d['password']; ?></td>
-  </tr>
-  <tr>
-    <td>Enkripsi</td>
-    <td><?php echo $d['enk']; ?></td>
-  </tr>
-  <tr>
-    <td>Bertindik</td>
-    <td><?php echo $d['bertindik']; ?></td>
-  </tr>
-  <tr>
-    <td>Perokok</td>
-    <td><?php echo $d['perokok']; ?></td>
-  </tr>
-  <tr>
-    <td>Psikotropika</td>
-    <td><?php echo $d['psikotropika']; ?></td>
-  </tr>
-  <tr>
-    <td>Bertato</td>
-    <td><?php echo $d['bertato']; ?></td>
-  </tr>
-  <tr>
-    <td>Peminum</td>
-    <td><?php echo $d['peminum']; ?></td>
-  </tr>
-  <tr>
-    <td>SKHUN</td>
-    <td>
-      <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_skhun']; ?>" type="application/pdf" width="100%" height="500px"> -->
-      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_skhun']; ?>">SKHU PDF</a>
-    </td>
-  </tr>
-  <tr>
-    <td>Surat Sehat dari Dokter</td>
-    <td>
-      <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_surat_dokter']; ?>" type="application/pdf" width="100%" height="500px"> -->
-      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_surat_dokter']; ?>">Surat Dokter PDF</a>
-    </td>
-  </tr>
-  <tr>
-    <td>Kartu Keluarga</td>
-    <td>
-      <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_kk']; ?>" type="application/pdf" width="100%" height="500px"> -->
-      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_kk']; ?>">Kartu Keluarga PDF</a>
-    </td>
-  </tr>
-  <tr>
-    <td>Akta Kelahiran</td>
-    <td>
-      <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_akta']; ?>" type="application/pdf" width="100%" height="500px"> -->
-      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_akta']; ?>">Akta Kelahiran  PDF</a>
-    </td>
-  </tr>
-  <tr>
-    <td>Photo</td>
-    <td>
-      <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_photo']; ?>" type="application/pdf" width="100%" height="500px"> -->
-      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_photo']; ?>">Photo PDF</a>
-    </td>
-  </tr>
-  <tr>
-    <td>SwaPhoto</td>
-    <td>
-      <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_swa_kk']; ?>" type="application/pdf" width="100%" height="500px"> -->
-      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_swa_kk']; ?>">SwaPhoto PDF</a>
-    </td>
-  </tr>
-  <tr>
-    <td>Piagam 1</td>
-    <td>
-      <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_piagam1']; ?>" type="application/pdf" width="100%" height="500px"> -->
-      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_piagam1']; ?>">Piagam 1 PDF</a>
-    </td>
-  </tr>
-  <tr>
-    <td>Piagam 2</td>
-    <td>
-      <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_piagam2']; ?>" type="application/pdf" width="100%" height="500px"> -->
-      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_piagam2']; ?>">Piagam 2 PDF</a>
-    </td>
-  </tr>
-  <tr>
-    <td>Piagam 3</td>
-    <td>
-      <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_piagam3']; ?>" type="application/pdf" width="100%" height="500px"> -->
-      <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_piagam3']; ?>">Piagam 3 PDF</a>
-    </td>
   </tr>

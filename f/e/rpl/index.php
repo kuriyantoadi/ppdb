@@ -1,7 +1,8 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Operator PPDB </title>
+  <title>Tampil admin PPDB</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,15 +21,17 @@
   ?>
 
 <div class="container">
-  <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
-  <center><h3></h3></center>
-  <center><h3>Kompetensi Keahlian Rekayasa Perangkat Lunak</h3></center>
+  <center><h2>Daftar Pendaftaran Calon Peserta Didik</h2></center>
+  <center><h2>SMKN 1 Kragilan</h2></center>
 
   <br><br><br>
 
   <div class="form-group">
     <div class="col-sm-7">
-      <a href="../logout.php" type="button" class="btn btn-danger">Logout</a>
+      <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
+      <a href="rpl-lap.php" type="button" class="btn btn-success"
+      onclick="return confirm('Download Data PPDB Kompetensi Keahlian Rekayasa Perangkat Lunak ?')">Download RPL</a>
+      <?php include('menu.php'); ?>
     </div>
     <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
     <div class="col-sm-3">
@@ -42,6 +45,7 @@
   <thead>
     <tr>
       <th><center>No</th>
+      <th><center>Tanggal Pendaftaran</th>
       <th><center>Nomor Pendaftaran</th>
       <th><center>NISN Siswa</th>
       <th><center>Nama Siswa</th>
@@ -49,6 +53,8 @@
       <th><center>Asal Sekolah</th>
       <th><center>Kondisi</th>
       <th><center>Lihat</th>
+      <th><center>Edit</th>
+      <th><center>Hapus</th>
     </tr>
   </thead>
   <tbody>
@@ -64,47 +70,13 @@
         tgl_pendaftaran,
         kompetensi_keahlian,
         asal_sekolah,
-        npsn_sekolah,
-        nisn,
-        nama_siswa,
-        jenis_kelamin,
-        tgl_lahir,
-        tempat_lahir,
-        tahun_lulus,
-        nik,
-        no_kk,
-        tgl_kk,
-        kota,
-        kecamatan,
-        kelurahan,
-        kode_pos,
-        alamat,
-        rt,
-        rw,
-        jarak_kesekolah,
-        nama_org_tua,
-        pekerjaan_org_tua,
-        kip,
-        pdf_skhun,
-        pdf_surat_dokter,
-        pdf_kk,
-        pdf_akta,
-        pdf_photo,
-        pdf_swa_kk,
-        pdf_piagam1,
-        pdf_piagam2,
-        pdf_piagam3,
-        un_bind,
-        un_bing,
-        un_mtk,
-        un_ipa,
-        id
+        nisn
 
          FROM f_siswa");
       $total = mysqli_num_rows($result);
       $pages = ceil($total/$halperpage);
 
-      $data = mysqli_query($koneksi,"SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+      $data = mysqli_query($koneksi,"SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id,tgl_pendaftaran
         from f_siswa where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
       $no = $mulai+1;
 
@@ -114,6 +86,7 @@
 
     <tr>
       <td><center><?php echo $no++ ?></td>
+      <td><center><?php echo $d['tgl_pendaftaran']; ?></td>
       <td><center><?php echo $d['no_p']; ?></td>
       <td><center><?php echo $d['nisn']; ?></td>
       <td><center><?php echo $d['nama_siswa']; ?></td>
@@ -121,9 +94,17 @@
       <td><center><?php echo $d['asal_sekolah']; ?></td>
       <td><center><?php echo $d['kondisi']; ?></td>
       <td><center>
-        <a type="button" class="btn btn-info btn-sm" href="rpl-tampil.php?id=<?php echo $d['id']; ?>" >Lihat</a>
+        <a type="button" class="btn btn-info btn-sm" href="rpl-lihat.php?id=<?php echo $d['id']; ?>" >Lihat</a>
+      </td>
+      <td><center>
+        <a type="button" class="btn btn-warning btn-sm" href="edit-siswa.php?id=<?php echo $d['id']; ?>" >Edit</a>
+      </td>
+      <td><center>
+        <a type="button" class="btn btn-danger btn-sm" href="rpl-hapus.php?id=<?php echo $d['id']; ?>"
+          onclick="return confirm('Anda yakin Hapus data siswa <?php echo $d['nama_siswa']; ?> ?')">Hapus</a>
       </td>
     </tr>
+
 
     <?php } ?>
   </tbody>

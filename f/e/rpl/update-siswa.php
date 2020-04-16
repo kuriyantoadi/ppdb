@@ -1,6 +1,7 @@
 <?php
-include '../../koneksi.php';
+include '../../../koneksi.php';
 
+$id = $_POST['id'];
 $no_p = $_POST['no_p'];
 $tgl_pendaftaran = $_POST['tgl_pendfataran'];
 $kompetensi_keahlian = $_POST['kompetensi_keahlian'];
@@ -12,6 +13,7 @@ $jenis_kelamin = $_POST['jenis_kelamin'];
 $tempat_lahir = $_POST['tempat_lahir'];
 $tgl_lahir = $_POST['tgl_lahir'];
 $tahun_lulus = $_POST['tahun_lulus'];
+$no_hp = $_POST['no_hp'];
 $nik = $_POST['nik'];
 $no_kk = $_POST['no_kk'];
 $tgl_kk = $_POST['tgl_kk'];
@@ -30,6 +32,14 @@ $un_bind = $_POST['un_bind'];
 $un_bing = $_POST['un_bing'];
 $un_mtk = $_POST['un_mtk'];
 $un_ipa = $_POST['un_ipa'];
+$bertindik = $_POST['bertindik'];
+$perokok = $_POST['perokok'];
+$psikotropika = $_POST['psikotropika'];
+$bertato = $_POST['bertato'];
+$peminum = $_POST['peminum'];
+
+
+
 
 // UPDATE `upload` SET `id_file`=[value-1],`nama_file`=[value-2] WHERE 1
 
@@ -45,6 +55,7 @@ mysqli_query($koneksi,"UPDATE f_siswa SET
              tempat_lahir='$tempat_lahir',
              tgl_lahir='$tgl_lahir',
              tahun_lulus='$tahun_lulus',
+             no_hp='$no_hp',
              nik='$nik',
              no_kk='$no_kk',
              tgl_kk='$tgl_kk',
@@ -62,14 +73,19 @@ mysqli_query($koneksi,"UPDATE f_siswa SET
              un_bind='$un_bind',
              un_bing='$un_bing',
              un_mtk='$un_mtk',
-             un_ipa='$un_ipa'
-             where no_p='$no_p'
+             un_ipa='$un_ipa',
+             bertindik='$bertindik',
+             perokok='$perokok',
+             psikotropika='$psikotropika',
+             bertato='$bertato',
+             peminum='$peminum'
+             where id='$id'
              ");
 
 
 
 
 // node_id=<?php echo $d['node_id'];
- header("location:rpl-lihat.php?no_p=$no_p");
+ header("location:rpl-lihat.php?id=$id");
 
 ?>

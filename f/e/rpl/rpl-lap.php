@@ -3,28 +3,6 @@
 <head>
 </head>
 <body>
-	<!-- <style type="text/css">
-	body{
-		font-family: sans-serif;
-	}
-	table{
-		margin: 20px auto;
-		border-collapse: collapse;
-	}
-	table td,
-	table td{
-		border: 1px solid #3c3c3c;
-		padding: 3px 8px;
-
-	}
-	a{
-		background: blue;
-		color: #fff;
-		padding: 8px 10px;
-		text-decoration: none;
-		border-radius: 2px;
-	}
-	</style> -->
 
 	<?php
 	  header("Content-type: application/vnd-ms-excel");
@@ -46,6 +24,7 @@
 			<th>Tempat Lahir</th>
 			<th>Tanggal Lahir</th>
 			<th>tahun Lulus</th>
+			<th>Nomor HP</th>
 			<th>NIK</th>
 			<th>NO KK</th>
 			<th>Tgl KK</th>
@@ -58,6 +37,7 @@
 			<th>RW</th>
 			<th>Jarak Ke Sekolah</th>
 			<th>Nama Orang Tua</th>
+			<th>Pekerjaan Orang Tua</th>
 			<th>KIP</th>
 			<th>PDF SKHUN</th>
 			<th>PDF Surat Dokter</th>
@@ -76,10 +56,15 @@
 			<th>Username</th>
 			<th>Password</th>
 			<th>Enkripsi</th>
+			<th>Bertindik</th>
+			<th>Perokok</th>
+			<th>Psikotropika</th>
+			<th>Bertato</th>
+			<th>Peminum</th>
 
 		</tr>
 		<?php
-		include '../../koneksi.php';
+		include '../../../koneksi.php';
 		$no = 1;
 		$data = mysqli_query($koneksi,"select
 		id,
@@ -94,6 +79,7 @@
 		tgl_lahir,
 		tempat_lahir,
 		tahun_lulus,
+		no_hp,
 		nik,
 		no_kk,
 		tgl_kk,
@@ -125,7 +111,12 @@
 		kondisi,
 		username,
 		password,
-		enk
+		enk,
+		bertindik,
+		perokok,
+		psikotropika,
+		bertato,
+		peminum
 		 from f_siswa");
 		while($d = mysqli_fetch_array($data)){
 			?>
@@ -143,6 +134,7 @@
 				<td><?php echo $d['tempat_lahir']; ?></td>
 				<td><?php echo $d['tgl_lahir']; ?></td>
 				<td><?php echo $d['tahun_lulus']; ?></td>
+				<td><?php echo $d['no_p']; ?></td>
 				<td><?php echo $d['nik']; ?></td>
 				<td><?php echo $d['no_kk']; ?></td>
 				<td><?php echo $d['tgl_kk']; ?></td>
@@ -155,6 +147,7 @@
 				<td><?php echo $d['rw']; ?></td>
 				<td><?php echo $d['jarak_kesekolah']; ?></td>
 				<td><?php echo $d['nama_org_tua']; ?></td>
+				<td><?php echo $d['pekerjaan_org_tua']; ?></td>
 				<td><?php echo $d['kip']; ?></td>
 				<td><?php echo $d['pdf_skhun']; ?></td>
 				<td><?php echo $d['pdf_surat_dokter']; ?></td>
@@ -173,6 +166,12 @@
 				<td><?php echo $d['username']; ?></td>
 				<td><?php echo $d['password']; ?></td>
 				<td><?php echo $d['enk']; ?></td>
+				<td><?php echo $d['bertindik']; ?></td>
+				<td><?php echo $d['perokok']; ?></td>
+				<td><?php echo $d['psikotropika']; ?></td>
+				<td><?php echo $d['bertato']; ?></td>
+				<td><?php echo $d['peminum']; ?></td>
+
 
 			</tr>
 			<?php

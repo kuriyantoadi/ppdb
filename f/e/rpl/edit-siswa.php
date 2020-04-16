@@ -12,7 +12,7 @@
   <?php
   session_start();
   if($_SESSION['status']!="login"){
-    header("location:../index.php?pesan=belum_login");
+    header("location:../../index.php?pesan=belum_login");
   }
   ?>
 <div class="container">
@@ -33,15 +33,16 @@
   <form class="form-horizontal" action="update-siswa.php" name="input" method="POST"  enctype="multipart/form-data" onSubmit="return validasi()">
 
     <?php
-      include '../../koneksi.php';
-      $no_p = $_GET['no_p'];
-      $data = mysqli_query($koneksi,"select * from f_siswa where no_p='$no_p'");
+      include '../../../koneksi.php';
+      $id = $_GET['id'];
+      $data = mysqli_query($koneksi,"select * from f_siswa where id='$id'");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Nomor Pendaftaran :</label>
       <div class="col-sm-6">
+        <input type="text" name="id" value="<?php echo $d['id']; ?>" hidden>
         <input type="text" class="form-control" name="no_p" value="<?php echo $d['no_p']; ?>" id="no_p" readonly>
       </div>
     </div>
@@ -88,7 +89,7 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Jenis Kelamin :</label>
       <div class="col-sm-2">
-        <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1">
+        <select name="jenis_kelamin" class="form-control" >
               <option value="laki-laki">Laki-laki</option>
               <option value="perempuan">Perempuan</option>
             </select>
@@ -228,6 +229,58 @@
       <label class="control-label col-sm-2">Nilai IPA </label>
       <div class="col-sm-3">
         <input type="number" class="form-control"   placeholder="Nilai IPA" name="un_ipa" value="<?php echo $d['un_ipa']; ?>">
+      </div>
+    </div>
+    <br><h4>H. KONDISI FISIK DAN KEBIASAAN</h4>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Apakah anda bertindik (bagi laki-laki) </label>
+        <div class="col-sm-2">
+          <select name="bertindik" class="form-control" required>
+                <option value="<?php echo $d['bertindik']; ?>"> <?php echo $d['bertindik']; ?> </option>
+                <option value="Ya">Ya</option>
+                <option value="Tidak">Tidak</option>
+                <option value="Perempuan">Saya Perempuan</option>
+            </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Apakah anda Perokok </label>
+        <div class="col-sm-2">
+          <select name="perokok" class="form-control" value="<?php echo $d['perokok']; ?>" required>
+            <option value="<?php echo $d['perokok']; ?>"> <?php echo $d['perokok']; ?> </option>
+            <option value="Ya">Ya</option>
+            <option value="Tidak">Tidak</option>
+          </select>
+       </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" >Apakah anda pemakai Psikotropika<br>(Narkoba, Ganja dan sejenisnya) </label>
+        <div class="col-sm-2">
+          <select name="psikotropika" class="form-control" required>
+            <option value="<?php echo $d['psikotropika']; ?>" > <?php echo $d['psikotropika']; ?> </option>
+            <option value="Ya">Ya</option>
+            <option value="Tidak">Tidak</option>
+          </select>
+       </div>
+      </div>
+    <div class="form-group">
+     <label class="control-label col-sm-2" >Apakah anda bertato </label>
+     <div class="col-sm-2">
+       <select name="bertato" class="form-control" required>
+         <option value='<?php echo $d['bertato']; ?>'> <?php echo $d['bertato']; ?> </option>
+             <option value="Ya">Ya</option>
+             <option value="Tidak">Tidak</option>
+         </select>
+      </div>
+    </div>
+    <div class="form-group">
+     <label class="control-label col-sm-2" >Apakah anda peminum-minuman keras </label>
+     <div class="col-sm-2">
+       <select name="peminum" class="form-control" required>
+         <option value="<?php echo $d['peminum']; ?>" > <?php echo $d['peminum']; ?> </option>
+             <option value="Ya">Ya</option>
+             <option value="Tidak">Tidak</option>
+         </select>
       </div>
     </div>
 
