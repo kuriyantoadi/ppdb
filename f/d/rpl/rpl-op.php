@@ -85,11 +85,11 @@
          $tampil_kondisi = $d['kondisi'];
          if ($tampil_kondisi == "diterima") {
            echo "<button type='button' class='btn btn-success btn-sm' disabled><b>Diterima</b></a>";
-         }else{
+         }elseif($tampil_kondisi == "tidak diterima"){
            echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>Tidak Diterima</b></a>";
+         }else{
+           echo "";
          }
-
-
          ?>
       </td>
       <td><center>
