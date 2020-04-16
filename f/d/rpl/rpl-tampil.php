@@ -22,7 +22,7 @@
   <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-3">
-			<center><img class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" />
+			<!-- <center><img class="img-fluid" alt="Bootstrap Image Preview" src="../../images/logo-smkn1.png" /> -->
 		</div>
 		<div class="col-md-6">
       <center><h3>Tampil Data Pendaftaran Calon Peserta Didik</h3></center>
@@ -35,7 +35,7 @@
 
   <table class="table table-bordered">
     <?php
-      include '../../koneksi.php';
+      include '../../../koneksi.php';
       $id = $_GET['id'];
       $data = mysqli_query($koneksi,"select
       id,

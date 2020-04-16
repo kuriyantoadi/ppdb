@@ -39,7 +39,7 @@ if($cek > 0){
 }elseif ($login['level']=="op-rpl") {
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
-		header("location:d/rpl-op.php");
+		header("location:d/rpl/");
 
 	}elseif ($login['level']=="op-otkp") {
 		$_SESSION['username'] = $username;
