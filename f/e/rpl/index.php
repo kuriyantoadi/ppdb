@@ -15,7 +15,7 @@
   <?php
   session_start();
   if($_SESSION['status']!="login"){
-    header("location:../index.php?pesan=belum_login");
+    header("location:../../index.php?pesan=belum_login");
   }
   ?>
 
@@ -53,7 +53,7 @@
   </thead>
   <tbody>
     <?php
-      include '../../koneksi.php';
+      include '../../../koneksi.php';
       $halperpage = 50;
       $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
       $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;

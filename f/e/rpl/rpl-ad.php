@@ -59,7 +59,7 @@
   </thead>
   <tbody>
     <?php
-      include '../../koneksi.php';
+      include '../../../koneksi.php';
       $no = 1;
       $jurusan = "Rekayasa Perangkat Lunak";
       $data = mysqli_query($koneksi,"SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id from f_siswa where kompetensi_keahlian in ('$jurusan')");

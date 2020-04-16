@@ -35,7 +35,7 @@
 
   <table class="table table-bordered">
     <?php
-      include '../../koneksi.php';
+      include '../../../koneksi.php';
       $no_p = $_GET['no_p'];
       $data = mysqli_query($koneksi,"select
 

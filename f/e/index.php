@@ -1,3 +1,3 @@
 <?php
-  include('rpl-ad.php');
+header("location:rpl/index.php");
  ?>
