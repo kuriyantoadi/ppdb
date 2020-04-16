@@ -34,7 +34,8 @@
 
     <?php
       include '../../koneksi.php';
-      $nik = $_GET['nik'];
+      $nik = mysql_real_escape_string($_GET['nik']);
+      // $nik = $_GET['nik'];
       $data = mysqli_query($koneksi,"select
 
       id,
