@@ -13,7 +13,7 @@
   <?php
   session_start();
   if($_SESSION['status']!="login"){
-    header("location:../index.php?pesan=belum_login");
+    header("location:../../index.php?pesan=belum_login");
   }
   ?>
 
@@ -88,7 +88,7 @@
           <center>
             <a type="button" class="btn btn-primary btn-md" href="rpl-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
             <a type="button" class="btn btn-danger btn-md" href="rpl-tolak.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
-            <a type="button" class="btn btn-success btn-md" href="../../siswa/rpl/tampil-rpl.php?no_p=<?php echo $d['no_p']; ?>" >Cetak PDF</a>
+            <a type="button" class="btn btn-success btn-md" href="../../../siswa/rpl/tampil-rpl.php?nik=<?php echo $d['nik']; ?>" >Cetak PDF</a>
         </td>
       </tr>
     </table><br>

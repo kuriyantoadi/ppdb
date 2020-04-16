@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="./js/jquery-latest.js"></script>
-  <script type="text/javascript" src="./js/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-latest.js"></script>
+  <script type="text/javascript" src="../js/jquery.tablesorter.min.js"></script>
 </head>
 <body>
 
@@ -28,7 +28,7 @@
 
   <div class="form-group">
     <div class="col-sm-7">
-      <a href="../logout.php" type="button" class="btn btn-danger">Logout</a>
+      <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
     </div>
     <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
     <div class="col-sm-3">
@@ -79,7 +79,19 @@
       <td><center><?php echo $d['nama_siswa']; ?></td>
       <td><center><?php echo $d['kompetensi_keahlian']; ?></td>
       <td><center><?php echo $d['asal_sekolah']; ?></td>
-      <td><center><?php echo $d['kondisi']; ?></td>
+      <td><center>
+        <?php
+         // echo $d['kondisi'];
+         $tampil_kondisi = $d['kondisi'];
+         if ($tampil_kondisi == "diterima") {
+           echo "<button type='button' class='btn btn-success btn-sm' disabled><b>Diterima</b></a>";
+         }else{
+           echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>Tidak Diterima</b></a>";
+         }
+
+
+         ?>
+      </td>
       <td><center>
         <a type="button" class="btn btn-info btn-sm" href="rpl-tampil.php?id=<?php echo $d['id']; ?>" >Lihat</a>
       </td>
