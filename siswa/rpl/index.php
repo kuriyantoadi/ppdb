@@ -259,7 +259,7 @@ if(isset($_GET['pesan'])){
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">PKH / KKS / KIP / Jamsosda<br>(Diisi jika memiliki) :</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control"   placeholder="PKH/KKS/KIP/Jamsosda" name="kip" required>
+        <input type="text" class="form-control"   placeholder="PKH/KKS/KIP/Jamsosda" name="kip" >
       </div>
     </div>
 
@@ -304,19 +304,19 @@ if(isset($_GET['pesan'])){
     <div class="form-group">
       <label class="control-label col-sm-2" >Piagam 1 </label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1"   required>
+        <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1"   >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Piagam 2</label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_piagam2" accept="application/pdf" class="form-control-file" id="cek_piagam2"   required>
+        <input type="file" name="pdf_piagam2" accept="application/pdf" class="form-control-file" id="cek_piagam2"   >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Piagam 3 </label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_piagam3" accept="application/pdf" class="form-control-file" id="cek_piagam3"  required>
+        <input type="file" name="pdf_piagam3" accept="application/pdf" class="form-control-file" id="cek_piagam3"  >
       </div>
     </div>
     <h6><b>Informasi :</h6>
