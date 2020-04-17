@@ -55,7 +55,7 @@
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Kompetensi Keahlian :</label>
       <div class="col-sm-6">
-        <select name="Kompetensi_keahlian" class="form-control" >
+        <select name="kompetensi_keahlian" class="form-control" >
               <option value="Teknik Komputer Jaringan">Teknik Komputer Jaringan</option>
               <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
               <option value="Akuntansi Keuangan Lembaga">Akuntansi Keuangan Lembaga</option>
