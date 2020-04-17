@@ -86,9 +86,9 @@
       <tr>
         <td colspan="2">
           <center>
-            <a type="button" class="btn btn-primary btn-md" href="tkj-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
+            <a type="button" class="btn btn-success btn-md" href="tkj-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
             <a type="button" class="btn btn-danger btn-md" href="tkj-tolak.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
-            <a type="button" class="btn btn-success btn-md" href="../../siswa/tkj/tampil-rpl.php?no_p=<?php echo $d['no_p']; ?>" >Cetak PDF</a>
+            <a type="button" class="btn btn-primary btn-md" href="../../siswa/tkj/tampil-rpl.php?no_p=<?php echo $d['no_p']; ?>" >Cetak PDF</a>
         </td>
       </tr>
     </table><br>
