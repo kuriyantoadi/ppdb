@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<?php
+	  header("Content-type: application/vnd-ms-excel");
+	  header("Content-Disposition: attachment; filename=Data_PPPD_2020_SMK_Negeri_1_Kragilan.xls");
+	?>
 </head>
 <body>
 
@@ -26,10 +30,7 @@
 		}
 		</style>
 
-	<?php
-	  header("Content-type: application/vnd-ms-excel");
-	  header("Content-Disposition: attachment; filename=Data_PPPD_2020_SMK_Negeri_1_Kragilan.xls");
-	?>
+
 
 	<table border="0 ">
 		<tr>
