@@ -4,7 +4,7 @@
 </head>
 <body>
 
-	<!-- <style type="text/css">
+	<style type="text/css">
 		body{
 			font-family: sans-serif;
 		}
@@ -24,7 +24,7 @@
 			text-decoration: none;
 			border-radius: 2px;
 		}
-		</style> -->
+		</style>
 
 	<?php
 	  header("Content-type: application/vnd-ms-excel");
