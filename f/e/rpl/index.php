@@ -1,8 +1,8 @@
-  <?php
+<?php
   session_start();
   if($_SESSION['status']!="login"){
     header("location:../../index.php?pesan=belum_login");
-  }else{
+  }
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -150,6 +150,5 @@
     }
 
     </script>
-  <?php } ?>
 </body>
 </html>
