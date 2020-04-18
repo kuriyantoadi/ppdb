@@ -9,6 +9,7 @@ while($row = mysqli_fetch_array($cek_nik)){
     echo "Maaf, data anda ada yang sama dengan data yang sudah pernah di input pendaftaran sebelumnya?";
     echo "<br>";
     echo "Anda sudah pernah mendaftar? Jika, sudah anda bisa periksa dihalaman siswa sudah mendaftar";
+    echo "<br>";
     echo "Jika, anda belum pernah mendaftar anda bisa hubungi Operator kami";
 
     exit();
