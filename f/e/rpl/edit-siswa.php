@@ -1,3 +1,9 @@
+<?php
+session_start();
+if($_SESSION['status']!="login"){
+  header("location:../../index.php?pesan=belum_login");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,12 +15,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <?php
-  session_start();
-  if($_SESSION['status']!="login"){
-    header("location:../../index.php?pesan=belum_login");
-  }
-  ?>
+
 <div class="container">
 
   <div class="container-fluid">
