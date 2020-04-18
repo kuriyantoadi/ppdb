@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION['status']!="login"){
+  header("location:../../index.php?pesan=belum_login");
+}else{
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +19,7 @@
 </head>
 <body>
 
-  <?php
-  session_start();
-  if($_SESSION['status']!="login"){
-    header("location:../../index.php?pesan=belum_login");
-  }else{
 
-  ?>
 
 <div class="container">
   <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
