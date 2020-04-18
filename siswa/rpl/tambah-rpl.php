@@ -1,6 +1,16 @@
 <?php
 include '../../koneksi.php';
 
+$cek_nik = mysqli_query($koneksi, "SELECT nik FROM f_siswa");
+while($row = mysqli_fetch_array($cek_nik)){
+  $t_nik = $row['nik'];
+  $nik = $_POST['nik'];
+  if ($t_nik == $nik){
+    echo "Maaf data ada ada yang sama dengan data yang sudah pernah di input pendaftara sebelumnya?";
+    exit();
+  }
+}
+
 $no_kk = $_POST['no_kk'];
 $no_kk_no_p = substr($no_kk,4,12);
 // echo $no_kk_no_p;

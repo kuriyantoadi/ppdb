@@ -1,4 +1,10 @@
 <?php
+session_start();
+if($_SESSION['status']!="login"){
+  header("location:../../index.php?pesan=belum_login");
+}
+
+
 include '../../../koneksi.php';
 
 $id = $_POST['id'];
