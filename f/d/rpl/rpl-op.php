@@ -16,7 +16,8 @@
   session_start();
   if($_SESSION['status']!="login"){
     header("location:../../index.php?pesan=belum_login");
-  }
+  }else{
+
   ?>
 
 <div class="container">
@@ -103,7 +104,11 @@
 <div>
   <?php for ($i=1; $i<=$pages ; $i++){ ?>
   <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
-  <?php } ?>
+  <?php
+  } // database
+  }//session 
+
+  ?>
 </div>
 </div>
 <script>
@@ -141,6 +146,7 @@
             }
         }
     }
+
 
     </script>
 </body>
