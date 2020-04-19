@@ -126,8 +126,8 @@ if(isset($_GET['pesan'])){
       <div class="col-sm-2">
         <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1" required>
               <option value="">Pilih</option>
-              <option value="laki-laki">Laki-laki</option>
-              <option value="perempuan">Perempuan</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
           </select>
      </div>
     </div>

@@ -42,7 +42,7 @@
     <td><?php echo $d['nama_siswa']; ?></td>
   </tr>
   <tr>
-    <td>jenis Kelamin</td>
+    <td>Jenis Kelamin</td>
     <td><?php echo $d['jenis_kelamin']; ?></td>
   </tr>
   <tr>
