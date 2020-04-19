@@ -335,7 +335,7 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
   $peminum = $_POST['peminum'];
 
 //awal user pembuatan password
-  function user_acak($panjang)
+  function pass_acak($panjang)
   {
       $karakter= 'abcdefghijklmnopqrstuvwxyz';
       $string = '';
@@ -346,7 +346,7 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
       return $string;
   }
 
-  function pass_acak($panjang)
+  function user_acak($panjang)
   {
       $karakter= '123456789';
       $string = '';
@@ -358,7 +358,7 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
   }
 
   //cara memanggilnya
-  $username = user_acak(5);
+  $username = user_acak(6);
   $password = pass_acak(5);
 
 //akhir pembuatan password
