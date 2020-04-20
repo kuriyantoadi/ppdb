@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script type="../text/javascript" src="./js/jquery-latest.js"></script>
-  <script type="../text/javascript" src="./js/jquery.tablesorter.min.js"></script>
+  <script type="../text/javascript" src="../../../js/jquery-latest.js"></script>
+  <script type="../text/javascript" src="../../../js/jquery.tablesorter.min.js"></script>
 </head>
 <body>
 
@@ -70,12 +70,12 @@
         asal_sekolah,
         nisn
 
-         FROM f_siswa");
+         FROM f_siswa_rpl");
       $total = mysqli_num_rows($result);
       $pages = ceil($total/$halperpage);
 
       $data = mysqli_query($koneksi,"SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id,tgl_pendaftaran
-        from f_siswa where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
+        from f_siswa_rpl where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
       $no = $mulai+1;
 
 

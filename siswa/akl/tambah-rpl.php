@@ -1,7 +1,7 @@
 <?php
 include '../../koneksi.php';
 
-$cek_nik = mysqli_query($koneksi, "SELECT nik FROM f_siswa_rpl");
+$cek_nik = mysqli_query($koneksi, "SELECT nik FROM f_siswa_akl");
 while($row = mysqli_fetch_array($cek_nik)){
   $t_nik = $row['nik'];
   $nik = $_POST['nik'];
@@ -29,7 +29,7 @@ if ($jenis_kelamin == "laki-laki"){
 }
 // echo $jenis_kelamin_no_p;
 
-$cek_max = mysqli_query($koneksi, "SELECT max(id) FROM f_siswa_rpl");
+$cek_max = mysqli_query($koneksi, "SELECT max(id) FROM f_siswa_akl");
 while($row = mysqli_fetch_assoc($cek_max)){
     $max = $row['max(id)'];
     $no_urut = $max+1;
@@ -333,8 +333,6 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
   $psikotropika = $_POST['psikotropika'];
   $bertato = $_POST['bertato'];
   $peminum = $_POST['peminum'];
-  $laptop = $_POST['laptop'];
-
 
 //awal user pembuatan password
   function pass_acak($panjang)
@@ -376,7 +374,7 @@ $enk = md5($C);
 // akhir enkripsi
 
 
-  mysqli_query($koneksi,"insert into f_siswa_rpl values(
+  mysqli_query($koneksi,"insert into f_siswa_akl values(
                 '$id',
                 '$no_p',
                 '$tgl_pendaftaran',
@@ -425,8 +423,7 @@ $enk = md5($C);
                 '$perokok',
                 '$psikotropika',
                 '$bertato',
-                '$peminum',
-                '$laptop'
+                '$peminum'
                 )");
                 // or die(mysqli_error($koneksi));
 

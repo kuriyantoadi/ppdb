@@ -7,12 +7,6 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  <!-- Include library Bootstrap Datepicker -->
-  <!-- <link href="../datepicker/css/bootstrap.min.css" rel="stylesheet"> -->
-  <link href="../0-datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
-
-
 </head>
 <body>
 
@@ -37,27 +31,6 @@
 	</div>
 </div>
 
-<?php
-if(isset($_GET['pesan'])){
-  if($_GET['pesan'] == "gagal"){
-    echo "
-    <div class='alert alert-danger' role='alert'>
-      <center>Maaf Password anda salah!
-    </div>";
-  }else if($_GET['pesan'] == "logout"){
-    echo "
-    <div class='alert alert-warning' role='alert'>
-      <center>Anda Berhasil Logout
-    </div>
-    ";
-  }else if($_GET['pesan'] == "belum_login"){
-    echo "
-    <div class='alert alert-danger' role='alert'>
-      <center>Maaf anda harus login dulu
-    </div>";
-  }
-}
-?>
 
   <form class="form-horizontal" action="tambah-rpl.php" name="input" method="POST"  enctype="multipart/form-data" onSubmit="return validasi()">
     <div class="form-group">
@@ -129,9 +102,8 @@ if(isset($_GET['pesan'])){
       <label class="control-label col-sm-2" for="email">Jenis Kelamin :</label>
       <div class="col-sm-2">
         <select name="jenis_kelamin" class="form-control" id="exampleFormControlSelect1" required>
-              <option value="">Pilih</option>
-              <option value="Laki-laki">Laki-laki</option>
-              <option value="Perempuan">Perempuan</option>
+              <option value="laki-laki">Laki-laki</option>
+              <option value="perempuan">Perempuan</option>
           </select>
      </div>
     </div>
@@ -144,9 +116,9 @@ if(isset($_GET['pesan'])){
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Tanggal Lahir :</label>
       <div class="col-sm-3">
-        <input type="text" name="tgl_lahir" class="form-control datepicker" />
+        <input type="date" class="form-control" name="tgl_lahir" required>
       </div>
-      (Tanggal/Bulan/Tahun)
+      (Bulan/Tanggal/Tahun)
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Tahun lulus :</label>
@@ -185,9 +157,9 @@ if(isset($_GET['pesan'])){
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Tanggl Diterbitkan KK :</label>
       <div class="col-sm-3">
-        <input type="text" name="tgl_kk" class="form-control datepicker" />
+        <input type="date" class="form-control"   placeholder="Tanggal KK terbit" name="tgl_kk" required>
       </div>
-      (Tanggal/Bulan/Tahun)
+      (Bulan/Tanggal/Tahun)
     </div>
 
     <br><h4>D. ALAMAT TEMPAT TINGGAL CALON PESERTA DIDIK BARU (SESUAI KK)</h4>
@@ -263,7 +235,7 @@ if(isset($_GET['pesan'])){
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">PKH / KKS / KIP / Jamsosda<br>(Diisi jika memiliki) :</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control"   placeholder="PKH/KKS/KIP/Jamsosda" name="kip" >
+        <input type="text" class="form-control"   placeholder="PKH/KKS/KIP/Jamsosda" name="kip" required>
       </div>
     </div>
 
@@ -272,55 +244,55 @@ if(isset($_GET['pesan'])){
     <div class="form-group">
       <label class="control-label col-sm-2" >SKHUN atau Surat Keterangan Lulus</label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_skhun" accept="application/pdf" class="form-control-file" id="cek_skhu"  required>
+        <input type="file" name="pdf_skhun" accept="application/pdf" class="form-control-file" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Surat Sehat dari Dokter </label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_surat_dokter" accept="application/pdf" class="form-control-file" id="cek_surat_dokter"   required>
+        <input type="file" name="pdf_surat_dokter" accept="application/pdf" class="form-control-file" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Kartu Keluarga (KK) </label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_kk" accept="application/pdf" class="form-control-file" id="cek_kk"   required>
+        <input type="file" name="pdf_kk" accept="application/pdf" class="form-control-file" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Akta Kelahiran </label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_akta" accept="application/pdf" class="form-control-file" id="cek_akta"   required>
+        <input type="file" name="pdf_akta" accept="application/pdf" class="form-control-file" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Photo </label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_photo" accept="application/pdf" class="form-control-file"  id="cek_photo"   required>
+        <input type="file" name="pdf_photo" accept="application/pdf" class="form-control-file" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >SwaPhoto dan KK </label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_swa_kk" accept="application/pdf" class="form-control-file" id="cek_swa_kk"   required>
+        <input type="file" name="pdf_swa_kk" accept="application/pdf" class="form-control-file" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Piagam 1 </label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" id="cek_piagam1"   >
+        <input type="file" name="pdf_piagam1" accept="application/pdf" class="form-control-file" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Piagam 2</label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_piagam2" accept="application/pdf" class="form-control-file" id="cek_piagam2"   >
+        <input type="file" name="pdf_piagam2" accept="application/pdf" class="form-control-file" required>
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Piagam 3 </label>
       <div class="col-sm-6">
-        <input type="file" name="pdf_piagam3" accept="application/pdf" class="form-control-file" id="cek_piagam3"  >
+        <input type="file" name="pdf_piagam3" accept="application/pdf" class="form-control-file" required>
       </div>
     </div>
     <h6><b>Informasi :</h6>
@@ -412,21 +384,6 @@ if(isset($_GET['pesan'])){
          </select>
       </div>
     </div>
-
-    <br><h4>I. PERSYARATAN KHUSUS KOMPETENSI KEAHLIAN REKAYASA PERANGKAT LUNAK</h4>
-      <div class="form-group">
-        <label class="control-label col-sm-2" >Kesanggupan siswa untuk mempunyai laptop pribadi </label>
-        <div class="col-sm-2">
-          <select name="laptop" class="form-control" required>
-                <option value="">Pilihan Anda</option>
-                <option value="Ya">Ya</option>
-                <option value="Tidak">Tidak</option>
-            </select>
-        </div>
-      </div>
-      <h6>Laptop siswa harus mempunyai minimal spesifikasi RAM 4 GB, Prosessor setara Intel Core i3 dan Harddisk Minimal 150 GB<br></h6>
-
-
     <div style="margin-top:  50px;">
     </div>
     <h6><b>INFORMASI PENTING:</h6>
@@ -436,104 +393,11 @@ if(isset($_GET['pesan'])){
     </div>
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">
-        <button type="submit" name="upload" value="upload" class="btn btn-default"
-        onclick="if (eval(ukuran)>0.5) { alert('Ukuran file pdf melebihi batas yaitu 500Kb'); return false; } else { return true; }">Submit</button>
+        <button type="submit" name="upload" value="upload" class="btn btn-default">Submit</button>
       </div>
     </div>
-
-
-
   </form>
 </div>
-
-    <!-- <script src="../datepicker/js/jquery.min.js"></script>
-    <script src="../datepicker/js/bootstrap.min.js"></script> -->
-    <script src="../0-datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="../0-datepicker/js/custom.js"></script>
-
-    <script>
-    $(document).ready(function(){
-        setDatePicker()
-        setDateRangePicker(".startdate", ".enddate")
-        setMonthPicker()
-        setYearPicker()
-        setYearRangePicker(".startyear", ".endyear")
-    })
-    </script>
-
-
-    <script type="text/javascript">
-    var uploadField = document.getElementById("cek_akta");
-    uploadField.onchange = function() {
-        if(this.files[0].size > 500000){
-          alert("Maaf ukuran file pdf akta anda melebihi 500 KB");
-          this.value = "";
-        };
-      };
-
-    var uploadField = document.getElementById("cek_kk");
-    uploadField.onchange = function() {
-        if(this.files[0].size > 500000){
-          alert("Maaf ukuran file pdf KK anda melebihi 500 KB");
-          this.value = "";
-        };
-      };
-
-    var uploadField = document.getElementById("cek_photo");
-    uploadField.onchange = function() {
-        if(this.files[0].size > 500000){
-          alert("Maaf ukuran file pdf Photo anda melebihi 500 KB");
-          this.value = "";
-        };
-      };
-
-    var uploadField = document.getElementById("cek_piagam1");
-    uploadField.onchange = function() {
-        if(this.files[0].size > 500000){
-          alert("Maaf ukuran file pdf Piagam 1 anda melebihi 500 KB");
-          this.value = "";
-        };
-      };
-    var uploadField = document.getElementById("cek_piagam2");
-    uploadField.onchange = function() {
-        if(this.files[0].size > 500000){
-          alert("Maaf ukuran file pdf Piagam 2 anda melebihi 500 KB");
-          this.value = "";
-        };
-      };
-    var uploadField = document.getElementById("cek_piagam3");
-    uploadField.onchange = function() {
-        if(this.files[0].size > 500000){
-          alert("Maaf ukuran file pdf Piagam 3 anda melebihi 500 KB");
-          this.value = "";
-        };
-      };
-    var uploadField = document.getElementById("cek_swa_kk");
-    uploadField.onchange = function() {
-        if(this.files[0].size > 500000){
-          alert("Maaf ukuran file pdf Swa Photo dengan KK anda melebihi 500 KB");
-          this.value = "";
-        };
-      };
-    var uploadField = document.getElementById("cek_surat_dokter");
-    uploadField.onchange = function() {
-        if(this.files[0].size > 500000){
-          alert("Maaf ukuran file pdf Surat Dokter anda melebihi 500 KB");
-          this.value = "";
-        };
-      };
-    var uploadField = document.getElementById("cek_skhu");
-    uploadField.onchange = function() {
-        if(this.files[0].size > 500000){
-          alert("Maaf ukuran file pdf SKHU anda melebihi 500 KB");
-          this.value = "";
-        };
-        if(this.files[0].size > 500000){
-          alert("Maaf ukuran file pdf SKHU anda melebihi 500 KB");
-          this.value = "";
-        };
-      };
-    </script>
 
   </body>
 </html>

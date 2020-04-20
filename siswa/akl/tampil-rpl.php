@@ -22,7 +22,7 @@
         <center><h4><b>Bukti Pendaftaran Calon Peserta Didik Baru</b></h4></center>
         <center><h4><b>Calon Peserta Didik Baru</b></h4></center>
         <center><h5><b>Tahun Pelajaran 2020/2021</b></h4></center>
-        <center><h4><b>Program Studi Rekayasa Perangkat Lunak</b></h4></center><br>
+        <center><h4><b>Program Studi Akuntansi Keuangan Lembaga</b></h4></center><br>
         <!-- font ganti jenis -->
   		</div>
   		<div class="col-md-3">
@@ -85,10 +85,9 @@
       psikotropika,
       bertato,
       perokok,
-      peminum,
-      laptop
+      peminum
 
-       from f_siswa_rpl where nik='$nik'");
+       from f_siswa_akl where nik='$nik'");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
@@ -243,10 +242,6 @@
         <td><?php echo $d['peminum']; ?></td>
       </tr>
       <tr>
-        <td>Kesanggupan mempunyai Laptop dengan spesifikasi yang ditentukan</td>
-        <td><?php echo $d['laptop']; ?></td>
-      </tr>
-      <tr>
         <td colspan="2">
           <p>
             <b>Informasi :</b>
@@ -263,8 +258,6 @@
               <li>Jika calon peserta didik melakukan kecurangan ketika mengerjakan soal tes, maka akan dinyatakan gugur dari pendaftaran.</li>
               <li>Jika ada kesalahan data diri pada bukti pendaftaran (hanya data diri), calon peserta didik harus menginformasikan kepada panitia bagian informasi.</li>
               <li>Apabila ditemukan data yang tidak sesuai calon peserta didik baru maka sekolah berhak untuk membatalkan hasil seleksi pendaftaran.</li>
-              <li>Kesanggupan siswa harus mempunyai minimal spesifikasi RAM 4 GB, Prosessor setara Intel Core i3 dan Harddisk Minimal 150 GB</li>
-
             </ol>
           </p>
         </td>

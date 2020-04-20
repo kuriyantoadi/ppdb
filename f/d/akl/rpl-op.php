@@ -14,8 +14,8 @@ if($_SESSION['status']!="login"){
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/jquery-latest.js"></script>
-  <script type="text/javascript" src="../js/jquery.tablesorter.min.js"></script>
+  <script type="text/javascript" src="../../../js/jquery-latest.js"></script>
+  <script type="text/javascript" src="../../../js/jquery.tablesorter.min.js"></script>
 </head>
 <body>
 
@@ -24,7 +24,7 @@ if($_SESSION['status']!="login"){
 <div class="container">
   <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
   <center><h3></h3></center>
-  <center><h3>Kompetensi Keahlian Rekayasa Perangkat Lunak</h3></center>
+  <center><h3>Kompetensi Keahlian Akuntansi Keungan Lembaga</h3></center>
 
   <br><br><br>
 
@@ -61,12 +61,12 @@ if($_SESSION['status']!="login"){
       $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
       $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
       $result = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
-         FROM f_siswa_rpl");
+         FROM f_siswa_akl");
       $total = mysqli_num_rows($result);
       $pages = ceil($total/$halperpage);
 
       $data = mysqli_query($koneksi,"SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
-        from f_siswa_rpl where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
+        from f_siswa_akl where kompetensi_keahlian in ('Akuntansi Keungan Lembaga') LIMIT $mulai, $halperpage ");
       $no = $mulai+1;
 
 

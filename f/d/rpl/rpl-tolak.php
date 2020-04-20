@@ -10,7 +10,7 @@ if($_SESSION['status']!="login"){
   // $id = mysql_real_escape_string($_GET['id']);
   $id = $_GET['id'];
 
-  mysqli_query($koneksi,"update f_siswa set
+  mysqli_query($koneksi,"update f_siswa_rpl set
                 kondisi='tidak diterima' where id='$id' "
               );
 

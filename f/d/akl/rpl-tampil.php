@@ -24,7 +24,7 @@ if($_SESSION['status']!="login"){
 		</div>
 		<div class="col-md-8">
       <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
-      <center><h3>Kompetensi Keahlian Rekayasa Perangkat Lunak</h3></center>
+      <center><h3>Kompetensi Keahlian Akuntansi Keungan Lembaga</h3></center>
 		</div>
 		<div class="col-md-2">
 		</div>
@@ -84,10 +84,8 @@ if($_SESSION['status']!="login"){
   		perokok,
   		psikotropika,
   		bertato,
-  		peminum,
-      laptop
-
-       from f_siswa_rpl where id='$id'");
+  		peminum
+       from f_siswa_akl where id='$id'");
       while($d = mysqli_fetch_array($data)) {
         include('tampil.php');
        ?>

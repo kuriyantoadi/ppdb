@@ -38,7 +38,7 @@ if($_SESSION['status']!="login"){
     <?php
       include '../../../koneksi.php';
       $id = $_GET['id'];
-      $data = mysqli_query($koneksi,"select * from f_siswa_rpl where id='$id'");
+      $data = mysqli_query($koneksi,"select * from f_siswa_akl where id='$id'");
       while($d = mysqli_fetch_array($data)) {
     ?>
 
@@ -294,17 +294,7 @@ if($_SESSION['status']!="login"){
          </select>
       </div>
     </div>
-    <br><h4>I. PERSYARATAN KHUSUS KOMPETENSI KEAHLIAN REKAYASA PERANGKAT LUNAK</h4>
-    <div class="form-group">
-     <label class="control-label col-sm-2" >Kesanggupan mempunyai laptop pribadi </label>
-     <div class="col-sm-2">
-       <select name="laptop" class="form-control" required>
-         <option value="<?php echo $d['laptop']; ?>" > <?php echo $d['laptop']; ?> </option>
-             <option value="Ya">Ya</option>
-             <option value="Tidak">Tidak</option>
-         </select>
-      </div>
-    </div>
+
 
 <?php } ?>
 

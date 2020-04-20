@@ -1,4 +1,4 @@
-<?php ob_start(); ?>
+f_siswa_akl<?php ob_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -85,8 +85,6 @@
 			<th>Psikotropika</th>
 			<th>Bertato</th>
 			<th>Peminum</th>
-			<th>Kesanggupan Mempunyai Laptop</th>
-
 
 		</tr>
 		<?php
@@ -142,9 +140,8 @@
 		perokok,
 		psikotropika,
 		bertato,
-		peminum,
-		laptop
-		 from f_siswa_rpl");
+		peminum
+		from f_siswa_akl");
 		while($d = mysqli_fetch_array($data)){
 			?>
 			<tr>
@@ -198,7 +195,6 @@
 				<td><?php echo $d['psikotropika']; ?></td>
 				<td><?php echo $d['bertato']; ?></td>
 				<td><?php echo $d['peminum']; ?></td>
-				<td><?php echo $d['laptop']; ?></td>
 
 			</tr>
 			<?php

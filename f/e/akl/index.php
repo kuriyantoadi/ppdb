@@ -1,36 +1,35 @@
-<?php
-session_start();
-if($_SESSION['status']!="login"){
-  header("location:../../index.php?pesan=belum_login");
-}else{
-
-?>
+f_siswa_akl<?php
+  session_start();
+  if($_SESSION['status']!="login"){
+    header("location:../../index.php?pesan=belum_login");
+  }
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Operator PPDB </title>
+  <title>Tampil admin PPDB</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../js/jquery-latest.js"></script>
-  <script type="text/javascript" src="../js/jquery.tablesorter.min.js"></script>
+  <script type="../text/javascript" src="../../../js/jquery-latest.js"></script>
+  <script type="../text/javascript" src="../../../js/jquery.tablesorter.min.js"></script>
 </head>
 <body>
 
-
-
 <div class="container">
-  <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
-  <center><h3></h3></center>
-  <center><h3>Kompetensi Keahlian Rekayasa Perangkat Lunak</h3></center>
+  <center><h2>Daftar Pendaftaran Calon Peserta Didik</h2></center>
+  <center><h2>SMKN 1 Kragilan</h2></center>
 
   <br><br><br>
 
   <div class="form-group">
     <div class="col-sm-7">
       <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
+      <a href="rpl-lap.php" type="button" class="btn btn-success"
+      onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi Keungan Lembaga ?')">Download RPL</a>
+      <?php include('menu.php'); ?>
     </div>
     <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
     <div class="col-sm-3">
@@ -44,14 +43,16 @@ if($_SESSION['status']!="login"){
   <thead>
     <tr>
       <th><center>No</th>
-      <th><center>Nomor Pendaftaran</th>
       <th><center>Tanggal Pendaftaran</th>
+      <th><center>Nomor Pendaftaran</th>
       <th><center>NISN Siswa</th>
       <th><center>Nama Siswa</th>
       <th><center>Kompetensi Keahlian</th>
       <th><center>Asal Sekolah</th>
       <th><center>Kondisi</th>
       <th><center>Lihat</th>
+      <th><center>Edit</th>
+      <th><center>Hapus</th>
     </tr>
   </thead>
   <tbody>
@@ -60,13 +61,21 @@ if($_SESSION['status']!="login"){
       $halperpage = 50;
       $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
       $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-      $result = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
-         FROM f_siswa_rpl");
+      $result = mysqli_query($koneksi, "SELECT
+
+        id,
+        no_p,
+        tgl_pendaftaran,
+        kompetensi_keahlian,
+        asal_sekolah,
+        nisn
+
+         FROM f_siswa_akl");
       $total = mysqli_num_rows($result);
       $pages = ceil($total/$halperpage);
 
-      $data = mysqli_query($koneksi,"SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
-        from f_siswa_rpl where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
+      $data = mysqli_query($koneksi,"SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id,tgl_pendaftaran
+        from f_siswa_akl where kompetensi_keahlian in ('Akuntansi Keungan Lembaga') LIMIT $mulai, $halperpage ");
       $no = $mulai+1;
 
 
@@ -75,29 +84,25 @@ if($_SESSION['status']!="login"){
 
     <tr>
       <td><center><?php echo $no++ ?></td>
-      <td><center><?php echo $d['no_p']; ?></td>
       <td><center><?php echo $d['tgl_pendaftaran']; ?></td>
+      <td><center><?php echo $d['no_p']; ?></td>
       <td><center><?php echo $d['nisn']; ?></td>
       <td><center><?php echo $d['nama_siswa']; ?></td>
       <td><center><?php echo $d['kompetensi_keahlian']; ?></td>
       <td><center><?php echo $d['asal_sekolah']; ?></td>
+      <td><center><?php echo $d['kondisi']; ?></td>
       <td><center>
-        <?php
-         // echo $d['kondisi'];
-         $tampil_kondisi = $d['kondisi'];
-         if ($tampil_kondisi == "diterima") {
-           echo "<button type='button' class='btn btn-success btn-sm' disabled><b>Diterima</b></a>";
-         }elseif($tampil_kondisi == "tidak diterima"){
-           echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>Tidak Diterima</b></a>";
-         }else{
-           echo "";
-         }
-         ?>
+        <a type="button" class="btn btn-info btn-sm" href="rpl-lihat.php?id=<?php echo $d['id']; ?>" >Lihat</a>
       </td>
       <td><center>
-        <a type="button" class="btn btn-info btn-sm" href="rpl-tampil.php?id=<?php echo $d['id']; ?>" >Lihat</a>
+        <a type="button" class="btn btn-warning btn-sm" href="edit-siswa.php?id=<?php echo $d['id']; ?>" >Edit</a>
+      </td>
+      <td><center>
+        <a type="button" class="btn btn-danger btn-sm" href="rpl-hapus.php?id=<?php echo $d['id']; ?>"
+          onclick="return confirm('Anda yakin Hapus data siswa <?php echo $d['nama_siswa']; ?> ?')">Hapus</a>
       </td>
     </tr>
+
 
     <?php } ?>
   </tbody>
@@ -105,10 +110,7 @@ if($_SESSION['status']!="login"){
 <div>
   <?php for ($i=1; $i<=$pages ; $i++){ ?>
   <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
-  <?php
-  } // database
-
-  ?>
+  <?php } ?>
 </div>
 </div>
 <script>
@@ -147,8 +149,6 @@ if($_SESSION['status']!="login"){
         }
     }
 
-
     </script>
-  <?php } ?>
 </body>
 </html>

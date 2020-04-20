@@ -88,9 +88,10 @@ if($_SESSION['status']!="login"){
   		perokok,
   		psikotropika,
   		bertato,
-  		peminum
+  		peminum,
+      laptop
 
-       from f_siswa where id='$id'");
+       from f_siswa_rpl where id='$id'");
       while($d = mysqli_fetch_array($data)) {
         include('rpl-tampil.php');
        ?>

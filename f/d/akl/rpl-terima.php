@@ -12,7 +12,7 @@ if($_SESSION['status']!="login"){
   $id = $_GET['id'];
 
 
-  mysqli_query($koneksi,"update f_siswa_rpl set
+  mysqli_query($koneksi,"update f_siswa_akl set
                 kondisi='diterima' where id='$id' "
               );
 

@@ -43,11 +43,10 @@ $perokok = $_POST['perokok'];
 $psikotropika = $_POST['psikotropika'];
 $bertato = $_POST['bertato'];
 $peminum = $_POST['peminum'];
-$laptop = $_POST['laptop'];
 
 // UPDATE `upload` SET `id_file`=[value-1],`nama_file`=[value-2] WHERE 1
 
-mysqli_query($koneksi,"UPDATE f_siswa_rpl SET
+mysqli_query($koneksi,"UPDATE f_siswa_akl SET
              no_p='$no_p',
              tgl_pendaftaran='$tgl_pendaftaran',
              kompetensi_keahlian='$kompetensi_keahlian',
@@ -82,8 +81,7 @@ mysqli_query($koneksi,"UPDATE f_siswa_rpl SET
              perokok='$perokok',
              psikotropika='$psikotropika',
              bertato='$bertato',
-             peminum='$peminum',
-             laptop='$laptop'
+             peminum='$peminum'
              where id='$id'
              ");
 

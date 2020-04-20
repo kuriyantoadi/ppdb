@@ -8,9 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <!-- Include library Bootstrap Datepicker -->
-  <!-- <link href="../datepicker/css/bootstrap.min.css" rel="stylesheet"> -->
-  <link href="../0-datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+  <link href="../datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
 
 </head>
@@ -28,7 +26,7 @@
       <center><h4><b>Form Pendaftaran</b></h4></center>
       <center><h4><b>Calon Peserta Didik Baru</b></h4></center>
       <center><h5><b>Tahun Pelajaran 2020/2021</b></h4></center>
-      <center><h4><b>Program Studi Rekayasa Perangkat Lunak</b></h4></center><br>
+      <center><h4><b>Program Studi Akuntansi Keuangan Lembaga</b></h4></center><br>
       <!-- font ganti jenis -->
 		</div>
 		<div class="col-md-3">
@@ -76,7 +74,7 @@ if(isset($_GET['pesan'])){
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Kompetensi Keahlian :</label>
       <div class="col-sm-6">
-        <input type="text" class="form-control"   placeholder=" " name="kompetensi_keahlian" value="Rekayasa Perangkat Lunak" readonly>
+        <input type="text" class="form-control"   placeholder=" " name="kompetensi_keahlian" value="Akuntansi Keuangan Lembaga" readonly>
       </div>
     </div>
 
@@ -412,21 +410,6 @@ if(isset($_GET['pesan'])){
          </select>
       </div>
     </div>
-
-    <br><h4>I. PERSYARATAN KHUSUS KOMPETENSI KEAHLIAN REKAYASA PERANGKAT LUNAK</h4>
-      <div class="form-group">
-        <label class="control-label col-sm-2" >Kesanggupan siswa untuk mempunyai laptop pribadi </label>
-        <div class="col-sm-2">
-          <select name="laptop" class="form-control" required>
-                <option value="">Pilihan Anda</option>
-                <option value="Ya">Ya</option>
-                <option value="Tidak">Tidak</option>
-            </select>
-        </div>
-      </div>
-      <h6>Laptop siswa harus mempunyai minimal spesifikasi RAM 4 GB, Prosessor setara Intel Core i3 dan Harddisk Minimal 150 GB<br></h6>
-
-
     <div style="margin-top:  50px;">
     </div>
     <h6><b>INFORMASI PENTING:</h6>
@@ -440,16 +423,13 @@ if(isset($_GET['pesan'])){
         onclick="if (eval(ukuran)>0.5) { alert('Ukuran file pdf melebihi batas yaitu 500Kb'); return false; } else { return true; }">Submit</button>
       </div>
     </div>
-
-
-
   </form>
 </div>
 
     <!-- <script src="../datepicker/js/jquery.min.js"></script>
     <script src="../datepicker/js/bootstrap.min.js"></script> -->
-    <script src="../0-datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="../0-datepicker/js/custom.js"></script>
+    <script src="../datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../datepicker/js/custom.js"></script>
 
     <script>
     $(document).ready(function(){

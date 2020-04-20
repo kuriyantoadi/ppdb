@@ -4,6 +4,7 @@ if($_SESSION['status']!="login"){
   header("location:../../index.php?pesan=belum_login");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,17 +17,19 @@ if($_SESSION['status']!="login"){
 </head>
 <body>
 
+
 <div class="container">
 
   <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-2">
+		<div class="col-md-3">
 		</div>
-		<div class="col-md-8">
-      <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
-      <center><h3>Kompetensi Keahlian Rekayasa Perangkat Lunak</h3></center>
+		<div class="col-md-6">
+      <center><h3>Tampil Data Pendaftaran Calon Peserta Didik</h3></center>
+      <center><h3>SMK Negeri 1 Kragilan</h3></center>
+      <center><h3>Kompetensi Keahlian Akuntansi Keungan Lembaga</h3></center>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-3">
 		</div>
   </div>
 
@@ -35,6 +38,7 @@ if($_SESSION['status']!="login"){
       include '../../../koneksi.php';
       $id = $_GET['id'];
       $data = mysqli_query($koneksi,"select
+
       id,
   		no_p,
   		tgl_pendaftaran,
@@ -84,21 +88,12 @@ if($_SESSION['status']!="login"){
   		perokok,
   		psikotropika,
   		bertato,
-  		peminum,
-      laptop
-
-       from f_siswa_rpl where id='$id'");
+  		peminum
+       from f_siswa_akl where id='$id'");
       while($d = mysqli_fetch_array($data)) {
-        include('tampil.php');
+        include('rpl-tampil.php');
        ?>
-      <tr>
-        <td colspan="2">
-          <center>
-            <a type="button" class="btn btn-success btn-md" href="rpl-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
-            <a type="button" class="btn btn-danger btn-md" href="rpl-tolak.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
-            <a type="button" class="btn btn-primary btn-md" href="../../../siswa/rpl/tampil-rpl.php?nik=<?php echo $d['nik']; ?>" >Cetak PDF</a>
-        </td>
-      </tr>
+
     </table><br>
     <?php } ?>
 
@@ -106,9 +101,6 @@ if($_SESSION['status']!="login"){
     </div>
 </div>
 </div>
-
-
-
 
   </body>
 </html>

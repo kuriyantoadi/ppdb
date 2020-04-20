@@ -156,6 +156,10 @@
     <td><?php echo $d['peminum']; ?></td>
   </tr>
   <tr>
+    <td>Kesanggupan mempunyai laptop</td>
+    <td><?php echo $d['laptop']; ?></td>
+  </tr>
+  <tr>
     <td>
       SKHUN
       <br>Nama Siswa : <b> <?php echo $d['nama_siswa']; ?> </b>
