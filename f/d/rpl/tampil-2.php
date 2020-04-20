@@ -156,30 +156,21 @@
     <td><?php echo $d['peminum']; ?></td>
   </tr>
   <tr>
-    <td>
-      SKHUN
-      <br>Nama Siswa : <b> <?php echo $d['nama_siswa']; ?> </b>
-      <br>Nilai Bahasa Indonesia : <b><?php echo $d['un_bind']; ?></b>
-      <br>Nilai Bahasa Inggris   : <b><?php echo $d['un_bing']; ?></b>
-      <br>Nilai Matematika       : <b><?php echo $d['un_mtk']; ?></b>
-      <br>Nilai IPA              : <b><?php echo $d['un_ipa']; ?></b>
-
+    <td>SKHUN</td>
     <td>
       <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_skhun']; ?>" type="application/pdf" width="100%" height="500px">
+      <!-- <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_skhun']; ?>">SKHU PDF</a> -->
     </td>
   </tr>
   <tr>
     <td>Surat Sehat dari Dokter</td>
     <td>
       <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_surat_dokter']; ?>" type="application/pdf" width="100%" height="500px">
+      <!-- <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_surat_dokter']; ?>">Surat Dokter PDF</a> -->
     </td>
   </tr>
   <tr>
-    <td>Kartu Keluarga
-      <br>NIK           : <b> <?php echo $d['no_kk']; ?> </b>
-      <br>Nomor KK      : <b><?php echo $d['un_bind']; ?></b>
-      <br>Tanggal KK Terbit : <b><?php echo $d['tgl_kk']; ?></b>
-    </td>
+    <td>Kartu Keluarga</td>
     <td>
       <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_kk']; ?>" type="application/pdf" width="100%" height="500px">
       <!-- <a type="button" class="btn btn-info btn-sm" href="../../siswa/rpl/file/<?php echo $d['pdf_kk']; ?>">Kartu Keluarga PDF</a> -->

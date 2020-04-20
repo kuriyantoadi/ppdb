@@ -8,6 +8,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+  <!-- Include library Bootstrap Datepicker -->
+  <!-- <link href="../datepicker/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="../datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -140,9 +144,9 @@ if(isset($_GET['pesan'])){
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Tanggal Lahir :</label>
       <div class="col-sm-3">
-        <input type="date" class="form-control" name="tgl_lahir" required>
+        <input type="text" class="form-control datepicker" />
       </div>
-      (Bulan/Tanggal/Tahun)
+      (Tanggal/Bulan/Tahun)
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Tahun lulus :</label>
@@ -181,9 +185,9 @@ if(isset($_GET['pesan'])){
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Tanggl Diterbitkan KK :</label>
       <div class="col-sm-3">
-        <input type="date" class="form-control"   placeholder="Tanggal KK terbit" name="tgl_kk" required>
+        <input type="text" class="form-control datepicker" />
       </div>
-      (Bulan/Tanggal/Tahun)
+      (Tanggal/Bulan/Tahun)
     </div>
 
     <br><h4>D. ALAMAT TEMPAT TINGGAL CALON PESERTA DIDIK BARU (SESUAI KK)</h4>
@@ -423,6 +427,21 @@ if(isset($_GET['pesan'])){
     </div>
   </form>
 </div>
+
+    <!-- <script src="../datepicker/js/jquery.min.js"></script>
+    <script src="../datepicker/js/bootstrap.min.js"></script> -->
+    <script src="../datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../datepicker/js/custom.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        setDatePicker()
+        setDateRangePicker(".startdate", ".enddate")
+        setMonthPicker()
+        setYearPicker()
+        setYearRangePicker(".startyear", ".endyear")
+    })
+    </script>
 
 
     <script type="text/javascript">
