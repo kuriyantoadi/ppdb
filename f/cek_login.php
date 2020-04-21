@@ -59,7 +59,7 @@ if($cek > 0){
 	}elseif ($login['level']=="op-mesin") {
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
-		header("location:d/mesin-op.php");
+		header("location:d/mesin/index.php");
 
 }
 	else{
