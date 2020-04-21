@@ -11,7 +11,6 @@ while ($row = mysqli_fetch_array($cek_nik)) {
         echo "Anda sudah pernah mendaftar? Jika, sudah anda bisa periksa dihalaman siswa sudah mendaftar";
         echo "<br>";
         echo "Jika, anda belum pernah mendaftar anda bisa hubungi Operator kami";
-
         exit();
     }
 }
