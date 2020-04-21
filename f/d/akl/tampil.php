@@ -165,13 +165,13 @@
       <br>Nilai IPA              : <b><?php echo $d['un_ipa']; ?></b>
 
     <td>
-      <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_skhun']; ?>" type="application/pdf" width="100%" height="500px">
+      <embed src="../../../siswa/akl/file/<?php echo $d['pdf_skhun']; ?>" type="application/pdf" width="100%" height="500px">
     </td>
   </tr>
   <tr>
     <td>Surat Sehat dari Dokter</td>
     <td>
-      <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_surat_dokter']; ?>" type="application/pdf" width="100%" height="500px">
+      <embed src="../../../siswa/akl/file/<?php echo $d['pdf_surat_dokter']; ?>" type="application/pdf" width="100%" height="500px">
     </td>
   </tr>
   <tr>
@@ -181,42 +181,42 @@
       <br>Tanggal KK Terbit : <b><?php echo $d['tgl_kk']; ?></b>
     </td>
     <td>
-      <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_kk']; ?>" type="application/pdf" width="100%" height="500px">
+      <embed src="../../../siswa/akl/file/<?php echo $d['pdf_kk']; ?>" type="application/pdf" width="100%" height="500px">
     </td>
   </tr>
   <tr>
     <td>Akta Kelahiran</td>
     <td>
-      <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_akta']; ?>" type="application/pdf" width="100%" height="500px">
+      <embed src="../../../siswa/akl/file/<?php echo $d['pdf_akta']; ?>" type="application/pdf" width="100%" height="500px">
     </td>
   </tr>
   <tr>
     <td>Photo</td>
     <td>
-      <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_photo']; ?>" type="application/pdf" width="100%" height="500px">
+      <embed src="../../../siswa/akl/file/<?php echo $d['pdf_photo']; ?>" type="application/pdf" width="100%" height="500px">
     </td>
   </tr>
   <tr>
     <td>SwaPhoto</td>
     <td>
-      <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_swa_kk']; ?>" type="application/pdf" width="100%" height="500px">
+      <embed src="../../../siswa/akl/file/<?php echo $d['pdf_swa_kk']; ?>" type="application/pdf" width="100%" height="500px">
     </td>
   </tr>
   <tr>
     <td>Piagam 1</td>
     <td>
-      <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_piagam1']; ?>" type="application/pdf" width="100%" height="500px">
+      <embed src="../../../siswa/akl/file/<?php echo $d['pdf_piagam1']; ?>" type="application/pdf" width="100%" height="500px">
     </td>
   </tr>
   <tr>
     <td>Piagam 2</td>
     <td>
-      <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_piagam2']; ?>" type="application/pdf" width="100%" height="500px">
+      <embed src="../../../siswa/akl/file/<?php echo $d['pdf_piagam2']; ?>" type="application/pdf" width="100%" height="500px">
     </td>
   </tr>
   <tr>
     <td>Piagam 3</td>
     <td>
-      <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_piagam3']; ?>" type="application/pdf" width="100%" height="500px">
+      <embed src="../../../siswa/akl/file/<?php echo $d['pdf_piagam3']; ?>" type="application/pdf" width="100%" height="500px">
     </td>
   </tr>

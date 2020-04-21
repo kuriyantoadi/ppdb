@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-  <link href="../datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+  <link href="../0-datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
 
 </head>
@@ -57,7 +57,7 @@ if(isset($_GET['pesan'])){
 }
 ?>
 
-  <form class="form-horizontal" action="tambah-rpl.php" name="input" method="POST"  enctype="multipart/form-data" onSubmit="return validasi()">
+  <form class="form-horizontal" action="tambah-akl.php" name="input" method="POST"  enctype="multipart/form-data" onSubmit="return validasi()">
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Nomor Pendaftaran :</label>
       <div class="col-sm-6">
@@ -428,8 +428,8 @@ if(isset($_GET['pesan'])){
 
     <!-- <script src="../datepicker/js/jquery.min.js"></script>
     <script src="../datepicker/js/bootstrap.min.js"></script> -->
-    <script src="../datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="../datepicker/js/custom.js"></script>
+    <script src="../0-datepicker/libraries/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="../0-datepicker/js/custom.js"></script>
 
     <script>
     $(document).ready(function(){

@@ -1,4 +1,4 @@
 <?php
-  header("location:rpl-op.php");
+  header("location:akl-op.php");
   exit;
  ?>

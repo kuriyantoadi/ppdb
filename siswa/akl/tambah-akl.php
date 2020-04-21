@@ -427,7 +427,7 @@ $enk = md5($C);
                 )");
                 // or die(mysqli_error($koneksi));
 
-header("location:tampil-rpl.php?nik=$nik");
+header("location:tampil-akl.php?nik=$nik");
 
 
 ?>

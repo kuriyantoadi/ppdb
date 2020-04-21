@@ -264,7 +264,7 @@
       </tr>
     </table>
     <center>
-    <a target="_blank" type="button" class="btn btn-info btn-md" href="cetak-rpl.php?nik=<?php echo $nik; ?>" >Cetak PDF</a>
+    <a target="_blank" type="button" class="btn btn-info btn-md" href="cetak-akl.php?nik=<?php echo $nik; ?>" >Cetak PDF</a>
   <?php } ?>
 <br><br><br>
 

@@ -7,7 +7,7 @@ if($_SESSION['status']!="login"){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>PPDB SMKN 1 Kragilan</title>
+  <title>Operator  PPDB SMKN 1 Kragilan</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -92,9 +92,9 @@ if($_SESSION['status']!="login"){
       <tr>
         <td colspan="2">
           <center>
-            <a type="button" class="btn btn-success btn-md" href="rpl-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
-            <a type="button" class="btn btn-danger btn-md" href="rpl-tolak.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
-            <a type="button" class="btn btn-primary btn-md" href="../../../siswa/rpl/tampil-rpl.php?nik=<?php echo $d['nik']; ?>" >Cetak PDF</a>
+            <a type="button" class="btn btn-success btn-md" href="akl-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
+            <a type="button" class="btn btn-danger btn-md" href="akl-tolak.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
+            <a type="button" class="btn btn-primary btn-md" href="../../../siswa/akl/tampil-akl.php?nik=<?php echo $d['nik']; ?>" >Cetak PDF</a>
         </td>
       </tr>
     </table><br>

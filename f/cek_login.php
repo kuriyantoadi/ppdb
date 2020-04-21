@@ -36,7 +36,7 @@ if($cek > 0){
 	$_SESSION['status'] = "login";
 	header("location:d/tkj-op.php");
 
-}elseif ($login['level']=="op-rpl") {
+	}elseif ($login['level']=="op-rpl") {
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
 		header("location:d/rpl/");
@@ -49,7 +49,7 @@ if($cek > 0){
 	}elseif ($login['level']=="op-akl") {
 		$_SESSION['username'] = $username;
 		$_SESSION['status'] = "login";
-		header("location:d/akl-op.php");
+		header("location:d/akl/index.php");
 
 	}elseif ($login['level']=="op-tkr") {
 		$_SESSION['username'] = $username;
