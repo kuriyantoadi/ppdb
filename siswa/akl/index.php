@@ -36,24 +36,24 @@
 </div>
 
 <?php
-if(isset($_GET['pesan'])){
-  if($_GET['pesan'] == "gagal"){
-    echo "
+if (isset($_GET['pesan'])) {
+    if ($_GET['pesan'] == "gagal") {
+        echo "
     <div class='alert alert-danger' role='alert'>
       <center>Maaf Password anda salah!
     </div>";
-  }else if($_GET['pesan'] == "logout"){
-    echo "
+    } elseif ($_GET['pesan'] == "logout") {
+        echo "
     <div class='alert alert-warning' role='alert'>
       <center>Anda Berhasil Logout
     </div>
     ";
-  }else if($_GET['pesan'] == "belum_login"){
-    echo "
+    } elseif ($_GET['pesan'] == "belum_login") {
+        echo "
     <div class='alert alert-danger' role='alert'>
       <center>Maaf anda harus login dulu
     </div>";
-  }
+    }
 }
 ?>
 

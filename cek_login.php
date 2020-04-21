@@ -14,21 +14,18 @@ $password = $_POST['password'];
 
 // menghitung jumlah data yang ditemukan
 
-if($cek > 0){
-
-	if($login['level']=="admin"){
-		$_SESSION['username'] = $username;
-		$_SESSION['status'] = "login";
-		header("location:e/index.php");
-	}elseif ($login['level']=="operator") {
-		$_SESSION['username'] = $username;
-		$_SESSION['status'] = "login";
-		header("location:d/index.php");
-	}else{
-		header("location:index.php?pesan=gagal");
-	}
-
-}else{
-	header("location:index.php?pesan=gagal");
+if ($cek > 0) {
+    if ($login['level']=="admin") {
+        $_SESSION['username'] = $username;
+        $_SESSION['status'] = "login";
+        header("location:e/index.php");
+    } elseif ($login['level']=="operator") {
+        $_SESSION['username'] = $username;
+        $_SESSION['status'] = "login";
+        header("location:d/index.php");
+    } else {
+        header("location:index.php?pesan=gagal");
+    }
+} else {
+    header("location:index.php?pesan=gagal");
 }
-?>
