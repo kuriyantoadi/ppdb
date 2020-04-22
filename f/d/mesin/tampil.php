@@ -156,6 +156,10 @@
     <td><?php echo $d['peminum']; ?></td>
   </tr>
   <tr>
+    <td>Tinggi Badan</td>
+    <td><?php echo $d['tinggi_bdn']; ?> cm</td>
+  </tr>
+  <tr>
     <td>
       SKHUN
       <br>Nama Siswa : <b> <?php echo $d['nama_siswa']; ?> </b>

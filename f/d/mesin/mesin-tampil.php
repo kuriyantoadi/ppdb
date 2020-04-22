@@ -1,7 +1,7 @@
 <?php
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../../index.php?pesan=belum_login");
+if ($_SESSION['status']!="login") {
+    header("location:../../index.php?pesan=belum_login");
 }
 ?>
 <!DOCTYPE html>
@@ -34,7 +34,7 @@ if($_SESSION['status']!="login"){
     <?php
       include '../../../koneksi.php';
       $id = $_GET['id'];
-      $data = mysqli_query($koneksi,"select
+      $data = mysqli_query($koneksi, "select
       id,
   		no_p,
   		tgl_pendaftaran,
@@ -84,11 +84,11 @@ if($_SESSION['status']!="login"){
   		perokok,
   		psikotropika,
   		bertato,
-  		peminum
+  		peminum,
+      tinggi_bdn
        from f_siswa_mesin where id='$id'");
-      while($d = mysqli_fetch_array($data)) {
-        include('tampil.php');
-       ?>
+      while ($d = mysqli_fetch_array($data)) {
+          include('tampil.php'); ?>
       <tr>
         <td colspan="2">
           <center>
@@ -98,7 +98,8 @@ if($_SESSION['status']!="login"){
         </td>
       </tr>
     </table><br>
-    <?php } ?>
+    <?php
+      } ?>
 
       </div>
     </div>

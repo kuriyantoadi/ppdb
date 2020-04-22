@@ -1,12 +1,13 @@
 <?php
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../../index.php?pesan=belum_login");
+if ($_SESSION['status']!="login") {
+    header("location:../../index.php?pesan=belum_login");
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <title>PPDB SMKN 1 Kragilan</title>
   <meta charset="utf-8">
@@ -15,29 +16,36 @@ if($_SESSION['status']!="login"){
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
 
-<div class="container">
+  <div class="container">
 
-  <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-3">
-		</div>
-		<div class="col-md-6">
-      <center><h3>Tampil Data Pendaftaran Calon Peserta Didik</h3></center>
-      <center><h3>SMK Negeri 1 Kragilan</h3></center>
-      <center><h3>Kompetensi Keahlian Akuntansi Keungan Lembaga</h3></center>
-		</div>
-		<div class="col-md-3">
-		</div>
-  </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+          <center>
+            <h3>Tampil Data Pendaftaran Calon Peserta Didik</h3>
+          </center>
+          <center>
+            <h3>SMK Negeri 1 Kragilan</h3>
+          </center>
+          <center>
+            <h3>Kompetensi Keahlian Akuntansi Keungan Lembaga</h3>
+          </center>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
 
-  <table class="table table-bordered">
-    <?php
+      <table class="table table-bordered">
+        <?php
       include '../../../koneksi.php';
       $id = $_GET['id'];
-      $data = mysqli_query($koneksi,"select
+      $data = mysqli_query($koneksi, "select
 
       id,
   		no_p,
@@ -88,19 +96,21 @@ if($_SESSION['status']!="login"){
   		perokok,
   		psikotropika,
   		bertato,
-  		peminum
+  		peminum,
+      tinggi_bdn
        from f_siswa_mesin where id='$id'");
-      while($d = mysqli_fetch_array($data)) {
-        include('rpl-tampil.php');
-       ?>
+      while ($d = mysqli_fetch_array($data)) {
+          include('mesin-tampil.php'); ?>
 
-    </table><br>
-    <?php } ?>
+      </table><br>
+      <?php
+      } ?>
 
-      </div>
     </div>
-</div>
-</div>
+  </div>
+  </div>
+  </div>
 
-  </body>
+</body>
+
 </html>

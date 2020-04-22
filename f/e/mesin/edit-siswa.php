@@ -1,7 +1,7 @@
 <?php
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../../index.php?pesan=belum_login");
+if ($_SESSION['status']!="login") {
+    header("location:../../index.php?pesan=belum_login");
 }
 ?>
 <!DOCTYPE html>
@@ -38,9 +38,9 @@ if($_SESSION['status']!="login"){
     <?php
       include '../../../koneksi.php';
       $id = $_GET['id'];
-      $data = mysqli_query($koneksi,"select * from f_siswa_mesin where id='$id'");
-      while($d = mysqli_fetch_array($data)) {
-    ?>
+      $data = mysqli_query($koneksi, "select * from f_siswa_mesin where id='$id'");
+      while ($d = mysqli_fetch_array($data)) {
+          ?>
 
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Nomor Pendaftaran :</label>
@@ -294,9 +294,16 @@ if($_SESSION['status']!="login"){
          </select>
       </div>
     </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Tinggi Badan </label><b>CM</b>
+      <div class="col-sm-2">
+        <input type="number" name="tinggi_bdn" class="form-control" value="<?php echo $d['tinggi_bdn']; ?>" required >
+      </div>
+    </div>
 
 
-<?php } ?>
+<?php
+      } ?>
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">

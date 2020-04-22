@@ -1,7 +1,7 @@
 <?php
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../../index.php?pesan=belum_login");
+if ($_SESSION['status']!="login") {
+    header("location:../../index.php?pesan=belum_login");
 }
 
 
@@ -43,10 +43,12 @@ $perokok = $_POST['perokok'];
 $psikotropika = $_POST['psikotropika'];
 $bertato = $_POST['bertato'];
 $peminum = $_POST['peminum'];
+$tinggi_bdn = $_POST['tinggi_bdn'];
+
 
 // UPDATE `upload` SET `id_file`=[value-1],`nama_file`=[value-2] WHERE 1
 
-mysqli_query($koneksi,"UPDATE f_siswa_mesin SET
+mysqli_query($koneksi, "UPDATE f_siswa_mesin SET
              no_p='$no_p',
              tgl_pendaftaran='$tgl_pendaftaran',
              kompetensi_keahlian='$kompetensi_keahlian',
@@ -81,7 +83,8 @@ mysqli_query($koneksi,"UPDATE f_siswa_mesin SET
              perokok='$perokok',
              psikotropika='$psikotropika',
              bertato='$bertato',
-             peminum='$peminum'
+             peminum='$peminum',
+             tinggi_bdn='$tinggi_bdn'
              where id='$id'
              ");
 
@@ -89,6 +92,4 @@ mysqli_query($koneksi,"UPDATE f_siswa_mesin SET
 
 
 // node_id=<?php echo $d['node_id'];
- header("location:rpl-lihat.php?id=$id");
-
-?>
+ header("location:mesin-lihat.php?id=$id");

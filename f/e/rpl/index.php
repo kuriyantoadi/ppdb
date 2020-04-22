@@ -1,7 +1,7 @@
 <?php
   session_start();
-  if($_SESSION['status']!="login"){
-    header("location:../../index.php?pesan=belum_login");
+  if ($_SESSION['status']!="login") {
+      header("location:../../index.php?pesan=belum_login");
   }
   ?>
 <!DOCTYPE html>
@@ -29,7 +29,7 @@
       <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
       <a href="rpl-lap.php" type="button" class="btn btn-success"
       onclick="return confirm('Download Data PPDB Kompetensi Keahlian Rekayasa Perangkat Lunak ?')">Download RPL</a>
-      <?php include('menu.php'); ?>
+      <?php include('../menu.php'); ?>
     </div>
     <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
     <div class="col-sm-3">
@@ -74,13 +74,13 @@
       $total = mysqli_num_rows($result);
       $pages = ceil($total/$halperpage);
 
-      $data = mysqli_query($koneksi,"SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id,tgl_pendaftaran
+      $data = mysqli_query($koneksi, "SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id,tgl_pendaftaran
         from f_siswa_rpl where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
       $no = $mulai+1;
 
 
-      while($d = mysqli_fetch_array($data)) {
-    ?>
+      while ($d = mysqli_fetch_array($data)) {
+          ?>
 
     <tr>
       <td><center><?php echo $no++ ?></td>
@@ -104,13 +104,16 @@
     </tr>
 
 
-    <?php } ?>
+    <?php
+      } ?>
   </tbody>
 </table>
 <div>
-  <?php for ($i=1; $i<=$pages ; $i++){ ?>
+  <?php for ($i=1; $i<=$pages ; $i++) {
+          ?>
   <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
-  <?php } ?>
+  <?php
+      } ?>
 </div>
 </div>
 <script>

@@ -3,9 +3,9 @@
 <html>
 <head>
 	<?php
-	  header("Content-type: application/vnd-ms-excel");
-	  header("Content-Disposition: attachment; filename=Data_PPPD_2020_SMK_Negeri_1_Kragilan.xls");
-	?>
+      header("Content-type: application/vnd-ms-excel");
+      header("Content-Disposition: attachment; filename=Data_PPPD_2020_SMK_Negeri_1_Kragilan-Mesin.xls");
+    ?>
 </head>
 <body>
 
@@ -85,12 +85,14 @@
 			<th>Psikotropika</th>
 			<th>Bertato</th>
 			<th>Peminum</th>
+			<th>Tinggi Badan</th>
+
 
 		</tr>
 		<?php
-		include '../../../koneksi.php';
-		$no = 1;
-		$data = mysqli_query($koneksi,"select
+        include '../../../koneksi.php';
+        $no = 1;
+        $data = mysqli_query($koneksi, "select
 		id,
 		no_p,
 		tgl_pendaftaran,
@@ -140,10 +142,11 @@
 		perokok,
 		psikotropika,
 		bertato,
-		peminum
+		peminum,
+		tinggi_bdn
 		from f_siswa_mesin");
-		while($d = mysqli_fetch_array($data)){
-			?>
+        while ($d = mysqli_fetch_array($data)) {
+            ?>
 			<tr>
 				<td><?php echo $no++; ?></td>
 				<td><?php echo $d['id']; ?></td>
@@ -195,11 +198,13 @@
 				<td><?php echo $d['psikotropika']; ?></td>
 				<td><?php echo $d['bertato']; ?></td>
 				<td><?php echo $d['peminum']; ?></td>
+				<td><?php echo $d['tinggi_bdn']; ?></td>
+
 
 			</tr>
 			<?php
-		}
-		?>
+        }
+        ?>
 
 		</table>
 </body>

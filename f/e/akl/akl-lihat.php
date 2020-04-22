@@ -1,7 +1,7 @@
 <?php
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../../index.php?pesan=belum_login");
+if ($_SESSION['status']!="login") {
+    header("location:../../index.php?pesan=belum_login");
 }
 ?>
 
@@ -37,7 +37,7 @@ if($_SESSION['status']!="login"){
     <?php
       include '../../../koneksi.php';
       $id = $_GET['id'];
-      $data = mysqli_query($koneksi,"select
+      $data = mysqli_query($koneksi, "select
 
       id,
   		no_p,
@@ -90,12 +90,12 @@ if($_SESSION['status']!="login"){
   		bertato,
   		peminum
        from f_siswa_akl where id='$id'");
-      while($d = mysqli_fetch_array($data)) {
-        include('rpl-tampil.php');
-       ?>
+      while ($d = mysqli_fetch_array($data)) {
+          include('akl-tampil.php'); ?>
 
     </table><br>
-    <?php } ?>
+    <?php
+      } ?>
 
       </div>
     </div>

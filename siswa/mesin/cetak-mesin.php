@@ -36,7 +36,7 @@
     <?php
       include '../../koneksi.php';
       $nik = $_GET['nik'];
-      $data = mysqli_query($koneksi,"select
+      $data = mysqli_query($koneksi, "select
 
       id,
       no_p,
@@ -85,11 +85,12 @@
       psikotropika,
       bertato,
       perokok,
-      peminum
+      peminum,
+      tinggi_bdn
 
        from f_siswa_mesin where nik='$nik'");
-      while($d = mysqli_fetch_array($data)) {
-    ?>
+      while ($d = mysqli_fetch_array($data)) {
+          ?>
 
     <table class="table table-bordered">
       <tr>
@@ -242,6 +243,10 @@
         <td><?php echo $d['peminum']; ?></td>
       </tr>
       <tr>
+        <td>Tinggi Badan</td>
+        <td><?php echo $d['tinggi_bdn']; ?> cm</td>
+      </tr>
+      <tr>
         <td colspan="2">
           <p>
             <b>Informasi :</b>
@@ -264,7 +269,8 @@
       </tr>
     </table>
     <center>
-  <?php } ?>
+  <?php
+      } ?>
 <br><br><br>
 
       </div>

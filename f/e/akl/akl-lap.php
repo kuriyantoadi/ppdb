@@ -1,11 +1,11 @@
-f_siswa_akl<?php ob_start(); ?>
+<?php ob_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<?php
-	  header("Content-type: application/vnd-ms-excel");
-	  header("Content-Disposition: attachment; filename=Data_PPPD_2020_SMK_Negeri_1_Kragilan.xls");
-	?>
+      header("Content-type: application/vnd-ms-excel");
+      header("Content-Disposition: attachment; filename=Data_PPPD_2020_SMK_Negeri_1_Kragilan.xls");
+    ?>
 </head>
 <body>
 
@@ -88,9 +88,9 @@ f_siswa_akl<?php ob_start(); ?>
 
 		</tr>
 		<?php
-		include '../../../koneksi.php';
-		$no = 1;
-		$data = mysqli_query($koneksi,"select
+        include '../../../koneksi.php';
+        $no = 1;
+        $data = mysqli_query($koneksi, "select
 		id,
 		no_p,
 		tgl_pendaftaran,
@@ -142,8 +142,8 @@ f_siswa_akl<?php ob_start(); ?>
 		bertato,
 		peminum
 		from f_siswa_akl");
-		while($d = mysqli_fetch_array($data)){
-			?>
+        while ($d = mysqli_fetch_array($data)) {
+            ?>
 			<tr>
 				<td><?php echo $no++; ?></td>
 				<td><?php echo $d['id']; ?></td>
@@ -198,8 +198,8 @@ f_siswa_akl<?php ob_start(); ?>
 
 			</tr>
 			<?php
-		}
-		?>
+        }
+        ?>
 
 		</table>
 </body>

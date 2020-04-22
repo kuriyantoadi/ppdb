@@ -1,10 +1,9 @@
 <?php
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../../index.php?pesan=belum_login");
-}else{
-
-?>
+if ($_SESSION['status']!="login") {
+    header("location:../../index.php?pesan=belum_login");
+} else {
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,21 +56,21 @@ if($_SESSION['status']!="login"){
   <tbody>
     <?php
       include '../../../koneksi.php';
-      $halperpage = 50;
-      $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
-      $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-      $result = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+    $halperpage = 50;
+    $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+    $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
+    $result = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
          FROM f_siswa_akl");
-      $total = mysqli_num_rows($result);
-      $pages = ceil($total/$halperpage);
+    $total = mysqli_num_rows($result);
+    $pages = ceil($total/$halperpage);
 
-      $data = mysqli_query($koneksi,"SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+    $data = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
         from f_siswa_akl LIMIT $mulai, $halperpage ");
-      $no = $mulai+1;
+    $no = $mulai+1;
 
 
-      while($d = mysqli_fetch_array($data)) {
-    ?>
+    while ($d = mysqli_fetch_array($data)) {
+        ?>
 
     <tr>
       <td><center><?php echo $no++ ?></td>
@@ -85,28 +84,29 @@ if($_SESSION['status']!="login"){
         <?php
          // echo $d['kondisi'];
          $tampil_kondisi = $d['kondisi'];
-         if ($tampil_kondisi == "diterima") {
-           echo "<button type='button' class='btn btn-success btn-sm' disabled><b>Diterima</b></a>";
-         }elseif($tampil_kondisi == "tidak diterima"){
-           echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>Tidak Diterima</b></a>";
-         }else{
-           echo "";
-         }
-         ?>
+        if ($tampil_kondisi == "diterima") {
+            echo "<button type='button' class='btn btn-success btn-sm' disabled><b>Diterima</b></a>";
+        } elseif ($tampil_kondisi == "tidak diterima") {
+            echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>Tidak Diterima</b></a>";
+        } else {
+            echo "";
+        } ?>
       </td>
       <td><center>
         <a type="button" class="btn btn-info btn-sm" href="akl-tampil.php?id=<?php echo $d['id']; ?>" >Lihat</a>
       </td>
     </tr>
 
-    <?php } ?>
+    <?php
+    } ?>
   </tbody>
 </table>
 <div>
-  <?php for ($i=1; $i<=$pages ; $i++){ ?>
+  <?php for ($i=1; $i<=$pages ; $i++) {
+        ?>
   <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
   <?php
-  } // database
+    } // database
 
   ?>
 </div>
@@ -149,6 +149,7 @@ if($_SESSION['status']!="login"){
 
 
     </script>
-  <?php } ?>
+  <?php
+} ?>
 </body>
 </html>

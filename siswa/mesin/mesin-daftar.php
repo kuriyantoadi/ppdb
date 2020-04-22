@@ -64,13 +64,13 @@
       $total = mysqli_num_rows($result);
       $pages = ceil($total/$halperpage);
 
-      $data = mysqli_query($koneksi,"SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+      $data = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
         from f_siswa_mesin where kompetensi_keahlian in ('Akuntansi Keuangan Lembaga') LIMIT $mulai, $halperpage ");
       $no = $mulai+1;
 
 
-      while($d = mysqli_fetch_array($data)) {
-    ?>
+      while ($d = mysqli_fetch_array($data)) {
+          ?>
 
     <tr>
       <td><center><?php echo $no++ ?></td>
@@ -82,14 +82,16 @@
       <td><center><?php echo $d['asal_sekolah']; ?></td>
     </tr>
 
-    <?php } ?>
+    <?php
+      } ?>
   </tbody>
 </table>
 <div>
-  <?php for ($i=1; $i<=$pages ; $i++){ ?>
+  <?php for ($i=1; $i<=$pages ; $i++) {
+          ?>
   <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
   <?php
-  } // database
+      } // database
 
   ?>
 </div>

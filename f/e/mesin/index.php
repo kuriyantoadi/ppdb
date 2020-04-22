@@ -1,7 +1,9 @@
+<?php ob_start(); ?>
+
 <?php
   session_start();
-  if($_SESSION['status']!="login"){
-    header("location:../../index.php?pesan=belum_login");
+  if ($_SESSION['status']!="login") {
+      header("location:../../index.php?pesan=belum_login");
   }
   ?>
 <!DOCTYPE html>
@@ -27,9 +29,9 @@
   <div class="form-group">
     <div class="col-sm-7">
       <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
-      <a href="rpl-lap.php" type="button" class="btn btn-success"
-      onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi Keungan Lembaga ?')">Download RPL</a>
-      <?php include('menu.php'); ?>
+      <a href="mesin-lap.php" type="button" class="btn btn-success"
+      onclick="return confirm('Download Data PPDB Kompetensi Keahlian Teknik Pemesinan ?')">Download Mesin</a>
+      <?php include('../menu.php'); ?>
     </div>
     <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
     <div class="col-sm-3">
@@ -74,13 +76,13 @@
       $total = mysqli_num_rows($result);
       $pages = ceil($total/$halperpage);
 
-      $data = mysqli_query($koneksi,"SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id,tgl_pendaftaran
+      $data = mysqli_query($koneksi, "SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id,tgl_pendaftaran
         from f_siswa_mesin LIMIT $mulai, $halperpage ");
       $no = $mulai+1;
 
 
-      while($d = mysqli_fetch_array($data)) {
-    ?>
+      while ($d = mysqli_fetch_array($data)) {
+          ?>
 
     <tr>
       <td><center><?php echo $no++ ?></td>
@@ -92,25 +94,28 @@
       <td><center><?php echo $d['asal_sekolah']; ?></td>
       <td><center><?php echo $d['kondisi']; ?></td>
       <td><center>
-        <a type="button" class="btn btn-info btn-sm" href="rpl-lihat.php?id=<?php echo $d['id']; ?>" >Lihat</a>
+        <a type="button" class="btn btn-info btn-sm" href="mesin-lihat.php?id=<?php echo $d['id']; ?>" >Lihat</a>
       </td>
       <td><center>
         <a type="button" class="btn btn-warning btn-sm" href="edit-siswa.php?id=<?php echo $d['id']; ?>" >Edit</a>
       </td>
       <td><center>
-        <a type="button" class="btn btn-danger btn-sm" href="rpl-hapus.php?id=<?php echo $d['id']; ?>"
+        <a type="button" class="btn btn-danger btn-sm" href="mesin-hapus.php?id=<?php echo $d['id']; ?>"
           onclick="return confirm('Anda yakin Hapus data siswa <?php echo $d['nama_siswa']; ?> ?')">Hapus</a>
       </td>
     </tr>
 
 
-    <?php } ?>
+    <?php
+      } ?>
   </tbody>
 </table>
 <div>
-  <?php for ($i=1; $i<=$pages ; $i++){ ?>
+  <?php for ($i=1; $i<=$pages ; $i++) {
+          ?>
   <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
-  <?php } ?>
+  <?php
+      } ?>
 </div>
 </div>
 <script>
