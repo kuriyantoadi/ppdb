@@ -403,7 +403,16 @@ $enk = md5($C);
                 '$perokok',
                 '$psikotropika',
                 '$bertato',
-                '$peminum'
+                '$peminum',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                ''
                 )");
                 // or die(mysqli_error($koneksi));
 

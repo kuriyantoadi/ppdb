@@ -168,7 +168,6 @@
   <tr>
     <td>SKHUN</td>
     <td>
-      <!-- <embed src="../../../siswa/akl/file/<?php echo $d['pdf_skhun']; ?>" type="application/pdf" width="100%" height="500px"> -->
       <a type="button" class="btn btn-info btn-sm" href="../../../siswa/akl/file/<?php echo $d['pdf_skhun']; ?>">SKHU PDF</a>
     </td>
   </tr>

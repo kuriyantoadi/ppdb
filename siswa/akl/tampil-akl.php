@@ -36,7 +36,7 @@
       include '../../koneksi.php';
       // $nik = mysql_real_escape_string($_GET['nik']);
       $nik = $_GET['nik'];
-      $data = mysqli_query($koneksi,"select
+      $data = mysqli_query($koneksi, "select
 
       id,
       no_p,
@@ -88,8 +88,8 @@
       peminum
 
        from f_siswa_akl where nik='$nik'");
-      while($d = mysqli_fetch_array($data)) {
-    ?>
+      while ($d = mysqli_fetch_array($data)) {
+          ?>
 
     <table class="table table-bordered">
       <tr>
@@ -265,7 +265,8 @@
     </table>
     <center>
     <a target="_blank" type="button" class="btn btn-info btn-md" href="cetak-akl.php?nik=<?php echo $nik; ?>" >Cetak PDF</a>
-  <?php } ?>
+  <?php
+      } ?>
 <br><br><br>
 
       </div>

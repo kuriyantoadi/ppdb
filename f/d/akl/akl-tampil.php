@@ -1,7 +1,7 @@
 <?php
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../../index.php?pesan=belum_login");
+if ($_SESSION['status']!="login") {
+    header("location:../../index.php?pesan=belum_login");
 }
 ?>
 <!DOCTYPE html>
@@ -34,7 +34,7 @@ if($_SESSION['status']!="login"){
     <?php
       include '../../../koneksi.php';
       $id = $_GET['id'];
-      $data = mysqli_query($koneksi,"select
+      $data = mysqli_query($koneksi, "select
       id,
   		no_p,
   		tgl_pendaftaran,
@@ -84,21 +84,24 @@ if($_SESSION['status']!="login"){
   		perokok,
   		psikotropika,
   		bertato,
-  		peminum
+  		peminum,
+      val_skhun,
+      val_surat_dokter,
+      val_kk,
+      val_akta,
+      val_photo,
+      val_swaphoto,
+      val_piagam1,
+      val_piagam2,
+      val_piagam3
+
        from f_siswa_akl where id='$id'");
-      while($d = mysqli_fetch_array($data)) {
-        include('tampil.php');
-       ?>
-      <tr>
-        <td colspan="2">
-          <center>
-            <a type="button" class="btn btn-success btn-md" href="akl-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')" > Diterima</a>
-            <a type="button" class="btn btn-danger btn-md" href="akl-tolak.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')" >Tidak diterima</a>
-            <a type="button" class="btn btn-primary btn-md" href="../../../siswa/akl/tampil-akl.php?nik=<?php echo $d['nik']; ?>" >Cetak PDF</a>
-        </td>
-      </tr>
-    </table><br>
-    <?php } ?>
+      while ($d = mysqli_fetch_array($data)) {
+          include('tampil.php'); ?>
+
+    <br>
+    <?php
+      } ?>
 
       </div>
     </div>

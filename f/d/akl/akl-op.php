@@ -84,10 +84,10 @@ if ($_SESSION['status']!="login") {
         <?php
          // echo $d['kondisi'];
          $tampil_kondisi = $d['kondisi'];
-        if ($tampil_kondisi == "diterima") {
-            echo "<button type='button' class='btn btn-success btn-sm' disabled><b>Diterima</b></a>";
-        } elseif ($tampil_kondisi == "tidak diterima") {
-            echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>Tidak Diterima</b></a>";
+        if ($tampil_kondisi == "Siswa Lolos Seleksi") {
+            echo "<button type='button' class='btn btn-success btn-sm' disabled><b>Siswa Lolos Seleksi</b></a>";
+        } elseif ($tampil_kondisi == "Siswa Tidak Lolos Seleksi") {
+            echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>Tidak Siswa Tidak Lolos Seleksi</b></a>";
         } else {
             echo "";
         } ?>

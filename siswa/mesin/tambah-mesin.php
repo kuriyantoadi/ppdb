@@ -405,7 +405,16 @@ $enk = md5($C);
                 '$psikotropika',
                 '$bertato',
                 '$peminum',
-                '$tinggi_bdn'
+                '$tinggi_bdn',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                '',
+                ''
                 )");
                 // or die(mysqli_error($koneksi));
 
