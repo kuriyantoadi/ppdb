@@ -40,5 +40,5 @@ if ($_SESSION['status']!="login") {
 
 
 
-    header("location:akl-op.php");
+    header("location:index.php");
 }
