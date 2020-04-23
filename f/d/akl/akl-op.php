@@ -59,12 +59,44 @@ if ($_SESSION['status']!="login") {
     $halperpage = 50;
     $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
     $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-    $result = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+    $result = mysqli_query($koneksi, "SELECT no_p,
+      tgl_pendaftaran,
+      nisn,nama_siswa,
+      kompetensi_keahlian,
+      asal_sekolah,
+      kondisi,
+      val_skhun,
+      val_skhun,
+      val_surat_dokter,
+      val_kk,
+      val_akta,
+      val_photo,
+      val_swaphoto,
+      val_piagam1,
+      val_piagam2,
+      val_piagam3,
+      id
          FROM f_siswa_akl");
     $total = mysqli_num_rows($result);
     $pages = ceil($total/$halperpage);
 
-    $data = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+    $data = mysqli_query($koneksi, "SELECT no_p,
+      tgl_pendaftaran,
+      nisn,
+      nama_siswa,
+      kompetensi_keahlian,
+      asal_sekolah,kondisi,
+      val_skhun,
+      val_skhun,
+      val_surat_dokter,
+      val_kk,
+      val_akta,
+      val_photo,
+      val_swaphoto,
+      val_piagam1,
+      val_piagam2,
+      val_piagam3,
+      id
         from f_siswa_akl LIMIT $mulai, $halperpage ");
     $no = $mulai+1;
 
@@ -82,15 +114,7 @@ if ($_SESSION['status']!="login") {
       <td><center><?php echo $d['asal_sekolah']; ?></td>
       <td><center>
         <?php
-         // echo $d['kondisi'];
-         $tampil_kondisi = $d['kondisi'];
-        if ($tampil_kondisi == "Siswa Lolos Seleksi") {
-            echo "<button type='button' class='btn btn-success btn-sm' disabled><b>Siswa Lolos Seleksi</b></a>";
-        } elseif ($tampil_kondisi == "Siswa Tidak Lolos Seleksi") {
-            echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>Tidak Siswa Tidak Lolos Seleksi</b></a>";
-        } else {
-            echo "";
-        } ?>
+        include('../validasi.php'); ?>
       </td>
       <td><center>
         <a type="button" class="btn btn-info btn-sm" href="akl-tampil.php?id=<?php echo $d['id']; ?>" >Lihat</a>
