@@ -405,7 +405,16 @@ mysqli_query($koneksi, "insert into f_siswa_rpl values(
 '$psikotropika',
 '$bertato',
 '$peminum',
-'$laptop'
+'$laptop',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+'',
+''
 )");
 // or die(mysqli_error($koneksi));
 

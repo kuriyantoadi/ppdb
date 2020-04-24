@@ -13,7 +13,7 @@ if ($_SESSION['status']!="login") {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- <link rel="stylesheet" href="../../../css/bootstrap.min.css">
 
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <script src="../../../js/bootstrap.min.js"></script> -->
   <link rel="stylesheet" href="../../../css/bootstrap.min.css">
   <script type="text/javascript" src="../../../js/bootstrap.min.js"></script>
   <script type="text/javascript" src="../../../js/jquery-latest.js"></script>
@@ -94,7 +94,6 @@ if ($_SESSION['status']!="login") {
       asal_sekolah,
       kondisi,
       val_skhun,
-      val_skhun,
       val_surat_dokter,
       val_kk,
       val_akta,
@@ -114,7 +113,6 @@ if ($_SESSION['status']!="login") {
       nama_siswa,
       kompetensi_keahlian,
       asal_sekolah,kondisi,
-      val_skhun,
       val_skhun,
       val_surat_dokter,
       val_kk,

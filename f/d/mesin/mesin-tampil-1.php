@@ -6,31 +6,38 @@ if ($_SESSION['status']!="login") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Operator  PPDB SMKN 1 Kragilan</title>
+  <title>Operator PPDB SMKN 1 Kragilan</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+
   <script src="../../../js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-2">
-		</div>
-		<div class="col-md-8">
-      <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
-      <center><h3>Kompetensi Keahlian Teknik Pemesinan</h3></center>
-		</div>
-		<div class="col-md-2">
-		</div>
-  </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <center>
+            <h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2>
+          </center>
+          <center>
+            <h3>Kompetensi Keahlian Akuntansi Keungan Lembaga</h3>
+          </center>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
 
-  <table class="table table-bordered">
-    <?php
+      <table class="table table-bordered">
+        <?php
       include '../../../koneksi.php';
       $id = $_GET['id'];
       $data = mysqli_query($koneksi, "select
@@ -84,32 +91,26 @@ if ($_SESSION['status']!="login") {
   		psikotropika,
   		bertato,
   		peminum,
-      tinggi_bdn,
-      val_skhun,
-      val_surat_dokter,
-      val_kk,
-      val_akta,
-      val_photo,
-      val_swaphoto,
-      val_piagam1,
-      val_piagam2,
-      val_piagam3
-
+      tinggi_bdn
        from f_siswa_mesin where id='$id'");
       while ($d = mysqli_fetch_array($data)) {
           include('tampil.php'); ?>
-
-    <br>
-    <?php
+        <tr>
+          <td colspan="2">
+            <center>
+              <a type="button" class="btn btn-success btn-md" href="mesin-terima.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, terima ?')"> Diterima</a>
+              <a type="button" class="btn btn-danger btn-md" href="mesin-tolak.php?id=<?php echo $d['id']; ?>" onclick="return confirm('Anda yakin <?php echo $d['nama_siswa']; ?>, tidak terima ?')">Tidak diterima</a>
+              <a type="button" class="btn btn-primary btn-md" href="../../../siswa/mesin/tampil-mesin.php?nik=<?php echo $d['nik']; ?>">Cetak PDF</a>
+          </td>
+        </tr>
+      </table><br>
+      <?php
       } ?>
 
-      </div>
     </div>
-</div>
-</div>
+  </div>
+  </div>
+  </div>
+</body>
 
-
-
-
-  </body>
 </html>

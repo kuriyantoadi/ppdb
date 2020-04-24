@@ -12,7 +12,7 @@ if ($tampil_kondisi == "Siswa Lolos Seleksi") {
 
 //validasi salah
 $t_val_skhun = $d['val_skhun'];
-if ($t_val_skhun == "Data ") {
+if ($t_val_skhun == "Data Tidak Sesuai") {
     echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>SKHUN </b></a>";
 }
 

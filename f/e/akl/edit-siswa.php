@@ -12,7 +12,7 @@ if($_SESSION['status']!="login"){
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../../css/bootstrap.min.css">
   
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="../../../js/bootstrap.min.js"></script>
 
   <link href="../../../siswa/0-datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 </head>
