@@ -22,7 +22,7 @@ if ($_SESSION['status']!="login") {
 
     // UPDATE `upload` SET `id_file`=[value-1],`nama_file`=[value-2] WHERE 1
 
-    mysqli_query($koneksi, "UPDATE f_siswa_mesin SET
+    mysqli_query($koneksi, "UPDATE f_siswa_rpl SET
                id='$id',
                val_skhun='$val_skhun',
                val_surat_dokter='$val_surat_dokter',
