@@ -7,7 +7,7 @@
 <!--===============================================================================================-->
 	<link rel="icon" type="../image/png" href="../images/icons/favicon.ico"/>
 <!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 <!--===============================================================================================-->
@@ -28,26 +28,26 @@
 					</span>
 				</div>
 				<?php
-				if(isset($_GET['pesan'])){
-					if($_GET['pesan'] == "gagal"){
-						echo "
+                if (isset($_GET['pesan'])) {
+                    if ($_GET['pesan'] == "gagal") {
+                        echo "
 						<div class='alert alert-danger' role='alert'>
   						<center>Maaf Password anda salah!
 						</div>";
-					}else if($_GET['pesan'] == "logout"){
-						echo "
+                    } elseif ($_GET['pesan'] == "logout") {
+                        echo "
 						<div class='alert alert-warning' role='alert'>
 							<center>Anda Berhasil Logout
 						</div>
 						";
-					}else if($_GET['pesan'] == "belum_login"){
-						echo "
+                    } elseif ($_GET['pesan'] == "belum_login") {
+                        echo "
 						<div class='alert alert-danger' role='alert'>
   						<center>Maaf anda harus login dulu
 						</div>";
-					}
-				}
-				?>
+                    }
+                }
+                ?>
 
 				<form method="post" action="cek_login.php" class="login100-form validate-form">
 					<div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
