@@ -31,6 +31,7 @@
       </tr>
     </table>
 
+  <table class="table table-bordered">
 
     <?php
       include '../../koneksi.php';
@@ -253,6 +254,7 @@
               <li>Bukti pendaftaran agar dicetak, minimal 1 lembar.</li>
               <li>Bukti pendaftaran hanya muncul 1 kali ketika daftar.</li>
               <li>Bukti pendaftaran tidak boleh disebar luaskan untuk kepentingan apapun.</li>
+              <li>Setiap calon peserta didik baru bertanggung jawab atas bukti pendaftaran.</li>
               <li>Username dan Password Tes hanya dapat dipakai di Web smkn1kragilan.sch.id.</li>
               <li>Username dan Password Tes hanya dapat digunakan 1 kali.</li>
               <li>Peserta yang dinyatakan tidak lolos perberkasan maka tidak bisa mengikuti tes.</li>
@@ -261,13 +263,12 @@
               <li>Jika calon peserta didik melakukan kecurangan ketika mengerjakan soal tes, maka akan dinyatakan gugur dari pendaftaran.</li>
               <li>Jika ada kesalahan data pada bukti pendaftaran, calon peserta didik harus menginformasikan kepada panitia.</li>
               <li>Apabila data tidak sesuai, maka sekolah berhak membatalkan hasil penerimaan siswa tersebut</li>
-
             </ol>
           </p>
         </td>
       </tr>
     </table>
-    <img width="200px" align="right" src="../../images/stampel.png" />
+    <img src="../../images/stampel-1.png" />
 
     <center>
   <?php
