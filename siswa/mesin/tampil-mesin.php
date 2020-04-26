@@ -264,17 +264,18 @@
                 <b>Informasi :</b>
               <ol>
                 <li>Bukti pendaftaran agar dicetak, minimal 1 lembar, sebagai bukti Pendaftaran.</li>
-                <li>Bukti pendaftaran hanya muncul 1 kali ketika daftar.</li>
-                <li>Bukti pendaftaran tidak boleh disebar luaskan untuk kepentingan apapun.</li>
-                <li>Setiap calon peserta didik baru bertanggung jawab atas bukti pendaftaran.</li>
+                <!-- <li>Bukti pendaftaran hanya muncul 1 kali ketika daftar.</li> -->
+                <!-- <li>Bukti pendaftaran tidak boleh disebar luaskan untuk kepentingan apapun.</li> -->
+                <!-- <li>Setiap calon peserta didik baru bertanggung jawab atas bukti pendaftaran.</li> -->
                 <li>Username dan Password Tes hanya dapat dipakai di Web smkn1kragilan.sch.id.</li>
                 <li>Username dan Password Tes hanya dapat digunakan 1 kali.</li>
                 <li>Peserta yang dinyatakan tidak lolos pemberkasan/seleksi administrasi maka tidak bisa mengikuti Tes Penelurusan Minat dan Bakat.</li>
                 <li>Jika ada peserta yang sudah dinyatakan lolos dan tidak bisa masuk ke login web Tes Penelurusan Minat dan Bakat segera menghubungi panitia bagian informasi.</li>
                 <li>Tes dilaksanakan secara online di tempat tinggal masing-masing calon peserta didik.</li>
                 <li>Jika calon peserta didik melakukan kecurangan ketika mengerjakan soal tes, maka akan dinyatakan gugur dari pendaftaran.</li>
-                <li>Jika ada kesalahan data diri pada bukti pendaftaran (hanya data diri), calon peserta didik harus menginformasikan kepada panitia bagian informasi.</li>
+                <!-- <li>Jika ada kesalahan data diri pada bukti pendaftaran (hanya data diri), calon peserta didik harus menginformasikan kepada panitia bagian informasi.</li> -->
                 <li>Apabila ditemukan data yang tidak sesuai calon peserta didik baru maka sekolah berhak untuk membatalkan hasil seleksi pendaftaran.</li>
+                <!-- <li>Spesifikasi laptop minimal RAM 4GB, Prosessor setara Intel Core I3 dan Hardisk Minimal 150GB</li> -->
               </ol>
               </p>
             </td>

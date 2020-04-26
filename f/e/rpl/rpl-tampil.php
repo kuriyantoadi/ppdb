@@ -1,13 +1,12 @@
-
 <br><br><br>
 <table>
   <tr>
-    <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;"
-      class="btn btn-danger btn-md" href="index.php">Kembali</a></td>
-    <td></td><td></td>
-    <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;"
-      class="btn btn-warning btn-md" href="edit-siswa.php?id=<?php echo $d['id']; ?>"> Edit</a>
-</td>
+    <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-danger btn-md" href="index.php">Kembali</a></td>
+    <td><a type="button" style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-warning btn-md" href="edit-siswa.php?id=<?php echo $d['id']; ?>"> Edit</a>
+    </td>
+    <td>
+      <a style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" href="../../../siswa/rpl/tampil-rpl.php?nik=<?php echo $d['nik']; ?>">Cetak PDF</a>
+    </td>
   </tr>
 </table>
 
@@ -194,7 +193,7 @@
     <td>Akta Kelahiran</td>
     <td>
       <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_akta']; ?>" type="application/pdf" width="100%" height="500px"> -->
-      <a type="button" class="btn btn-info btn-sm" href="../../../siswa/rpl/file/<?php echo $d['pdf_akta']; ?>">Akta Kelahiran  PDF</a>
+      <a type="button" class="btn btn-info btn-sm" href="../../../siswa/rpl/file/<?php echo $d['pdf_akta']; ?>">Akta Kelahiran PDF</a>
     </td>
   </tr>
   <tr>

@@ -19,11 +19,11 @@
           <center><img style="margin-bottom:  80px; margin-top:  25px; margin-right: 90px" src="../../images/logo-banten-cetak.png" />
         </td>
         <td>
-          <center><h4 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h4></center>
-          <center><h5><b>Bukti Pendaftaran Calon Peserta Didik Baru</b></h5></center>
-          <center><h5><b>Calon Peserta Didik Baru</b></h5></center>
-          <center><h5><b>Tahun Pelajaran 2020/2021</b></h5></center>
-          <center><h5><b>Program Studi Rekayasa Perangkat Lunak</b></h5></center><br>
+          <center><h5 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h5></center>
+          <center><h6><b>Bukti Pendaftaran Calon Peserta Didik Baru</b></h6></center>
+          <center><h6><b>Calon Peserta Didik Baru</b></h6></center>
+          <center><h6><b>Tahun Pelajaran 2020/2021</b></h6></center>
+          <center><h6><b>Program Studi Rekayasa Perangkat Lunak</b></h6></center><br>
         </td>
         <td>
           <center><img style="margin-bottom:  80px; margin-top:  25px; margin-left: 90px" src="../../images/logo-smkn1-cetak.png" />
@@ -36,7 +36,7 @@
     <?php
       include '../../koneksi.php';
       $nik = $_GET['nik'];
-      $data = mysqli_query($koneksi,"select
+      $data = mysqli_query($koneksi, "select
 
       id,
       no_p,
@@ -89,8 +89,8 @@
       laptop
 
        from f_siswa_rpl where nik='$nik'");
-      while($d = mysqli_fetch_array($data)) {
-    ?>
+      while ($d = mysqli_fetch_array($data)) {
+          ?>
 
     <table class="table table-bordered">
       <tr>
@@ -252,25 +252,28 @@
             <b>Informasi :</b>
             <ol>
               <li>Bukti pendaftaran agar dicetak, minimal 1 lembar, sebagai bukti Pendaftaran.</li>
-              <li>Bukti pendaftaran hanya muncul 1 kali ketika daftar.</li>
-              <li>Bukti pendaftaran tidak boleh disebar luaskan untuk kepentingan apapun.</li>
-              <li>Setiap calon peserta didik baru bertanggung jawab atas bukti pendaftaran.</li>
+              <!-- <li>Bukti pendaftaran hanya muncul 1 kali ketika daftar.</li> -->
+              <!-- <li>Bukti pendaftaran tidak boleh disebar luaskan untuk kepentingan apapun.</li> -->
+              <!-- <li>Setiap calon peserta didik baru bertanggung jawab atas bukti pendaftaran.</li> -->
               <li>Username dan Password Tes hanya dapat dipakai di Web smkn1kragilan.sch.id.</li>
               <li>Username dan Password Tes hanya dapat digunakan 1 kali.</li>
               <li>Peserta yang dinyatakan tidak lolos pemberkasan/seleksi administrasi maka tidak bisa mengikuti Tes Penelurusan Minat dan Bakat.</li>
               <li>Jika ada peserta yang sudah dinyatakan lolos dan tidak bisa masuk ke login web Tes Penelurusan Minat dan Bakat segera menghubungi panitia bagian informasi.</li>
               <li>Tes dilaksanakan secara online di tempat tinggal masing-masing calon peserta didik.</li>
               <li>Jika calon peserta didik melakukan kecurangan ketika mengerjakan soal tes, maka akan dinyatakan gugur dari pendaftaran.</li>
-              <li>Jika ada kesalahan data diri pada bukti pendaftaran (hanya data diri), calon peserta didik harus menginformasikan kepada panitia bagian informasi.</li>
+              <!-- <li>Jika ada kesalahan data diri pada bukti pendaftaran (hanya data diri), calon peserta didik harus menginformasikan kepada panitia bagian informasi.</li> -->
               <li>Apabila ditemukan data yang tidak sesuai calon peserta didik baru maka sekolah berhak untuk membatalkan hasil seleksi pendaftaran.</li>
-              <li>Kesanggupan siswa harus mempunyai minimal spesifikasi RAM 4 GB, Prosessor setara Intel Core i3 dan Harddisk Minimal 150 GB</li>
+              <!-- <li>Spesifikasi laptop minimal RAM 4GB, Prosessor setara Intel Core I3 dan Hardisk Minimal 150GB</li> -->
             </ol>
           </p>
         </td>
       </tr>
     </table>
+    <img width="200px" align="right" src="../../images/stampel.png" style="margin-right:  80px;"/>
+
     <center>
-  <?php } ?>
+  <?php
+      } ?>
 <br><br><br>
 
       </div>
