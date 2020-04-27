@@ -1,6 +1,6 @@
 <?php
   session_start();
-  if ($_SESSION['status']!="login") {
+  if ($_SESSION['status']!="admin") {
       header("location:../../index.php?pesan=belum_login");
   }
   ?>
@@ -12,7 +12,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../../css/bootstrap.min.css">
-  
+
   <script src="../../../js/bootstrap.min.js"></script>
   <script type="../text/javascript" src="../../../js/jquery-latest.js"></script>
   <script type="../text/javascript" src="../../../js/jquery.tablesorter.min.js"></script>

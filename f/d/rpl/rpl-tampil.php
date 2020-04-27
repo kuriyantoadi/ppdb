@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['status']!="login") {
+if ($_SESSION['status']!="rpl") {
     header("location:../../index.php?pesan=belum_login");
 }
 ?>
@@ -99,7 +99,7 @@ if ($_SESSION['status']!="login") {
        from f_siswa_rpl where id='$id'");
       while ($d = mysqli_fetch_array($data)) {
           include('tampil.php'); ?>
-      
+
     <?php
       } ?>
 

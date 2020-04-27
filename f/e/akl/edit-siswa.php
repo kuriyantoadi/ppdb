@@ -1,7 +1,7 @@
 <?php
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../../index.php?pesan=belum_login");
+if ($_SESSION['status']!="admin") {
+    header("location:../../index.php?pesan=belum_login");
 }
 ?>
 <!DOCTYPE html>
@@ -11,7 +11,7 @@ if($_SESSION['status']!="login"){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../../css/bootstrap.min.css">
-  
+
   <script src="../../../js/bootstrap.min.js"></script>
 
   <link href="../../../siswa/0-datepicker/libraries/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
@@ -38,9 +38,9 @@ if($_SESSION['status']!="login"){
     <?php
       include '../../../koneksi.php';
       $id = $_GET['id'];
-      $data = mysqli_query($koneksi,"select * from f_siswa_akl where id='$id'");
-      while($d = mysqli_fetch_array($data)) {
-    ?>
+      $data = mysqli_query($koneksi, "select * from f_siswa_akl where id='$id'");
+      while ($d = mysqli_fetch_array($data)) {
+          ?>
 
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Nomor Pendaftaran :</label>
@@ -296,7 +296,8 @@ if($_SESSION['status']!="login"){
     </div>
 
 
-<?php } ?>
+<?php
+      } ?>
 
     <div class="form-group">
       <div class="col-sm-offset-2 col-sm-10">

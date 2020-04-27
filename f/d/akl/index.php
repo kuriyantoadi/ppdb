@@ -1,6 +1,6 @@
 <?php
 session_start();
-if ($_SESSION['status']!="login") {
+if ($_SESSION['status']!="akl") {
     header("location:../../index.php?pesan=belum_login");
 } else {
     ?>

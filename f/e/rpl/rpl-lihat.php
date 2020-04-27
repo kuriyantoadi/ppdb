@@ -1,7 +1,7 @@
 <?php
 session_start();
-if($_SESSION['status']!="login"){
-  header("location:../../index.php?pesan=belum_login");
+if ($_SESSION['status']!="admin") {
+    header("location:../../index.php?pesan=belum_login");
 }
 ?>
 
@@ -12,7 +12,7 @@ if($_SESSION['status']!="login"){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../../css/bootstrap.min.css">
-  
+
   <script src="../../../js/bootstrap.min.js"></script>
 </head>
 <body>
@@ -37,7 +37,7 @@ if($_SESSION['status']!="login"){
     <?php
       include '../../../koneksi.php';
       $id = $_GET['id'];
-      $data = mysqli_query($koneksi,"select
+      $data = mysqli_query($koneksi, "select
 
       id,
   		no_p,
@@ -92,12 +92,12 @@ if($_SESSION['status']!="login"){
       laptop
 
        from f_siswa_rpl where id='$id'");
-      while($d = mysqli_fetch_array($data)) {
-        include('rpl-tampil.php');
-       ?>
+      while ($d = mysqli_fetch_array($data)) {
+          include('rpl-tampil.php'); ?>
 
     </table><br>
-    <?php } ?>
+    <?php
+      } ?>
 
       </div>
     </div>
