@@ -165,7 +165,7 @@
     <td><?php echo $d['peminum']; ?></td>
   </tr>
   <tr>
-    <td>Kesanggupan Mempunyai Laptop</td>
+    <td>Kesanggupan Memiliki Laptop</td>
     <td><?php echo $d['laptop']; ?></td>
   </tr>
   <tr>

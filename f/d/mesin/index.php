@@ -23,7 +23,7 @@ if ($_SESSION['status']!="login") {
 <div class="container">
   <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
   <center><h3></h3></center>
-  <center><h3>Kompetensi Keahlian Akuntansi Keungan Lembaga</h3></center>
+  <center><h3>Kompetensi Keahlian Teknik Pemesinan</h3></center>
 
   <br><br><br>
 
