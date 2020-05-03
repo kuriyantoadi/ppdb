@@ -452,7 +452,7 @@ if (isset($_GET['pesan'])) {
       </div>
       <h6><b>INFORMASI PENTING:</h6>
       <h6>Sebelum anda submit pastikan data yang diisi benar, panitia tidak menerima komplain<br>
-        atau perubahan data. Apabila data tidak sesuai, maka sekolah berhak membatalkan hasil penerimaan siswa tersebut.<br></h6>
+        atau perubahan data. Apabila data tidak sesuai, Maka calon peserta didik dinyatakan tdk lolos seleksi administrasi.<br></h6>
       <div style="margin-top:  30px;">
       </div>
       <div class="form-group">

@@ -438,13 +438,15 @@ if (isset($_GET['pesan'])) {
           <input type="number" name="tinggi_bdn" class="form-control" placeholder="Tinggi Badan" required>
         </div>
       </div>
-      <h6>Tinggi badan Calon Peserta Didik Harus 155 cm untuk Perempuan dan 160 untuk Laki-laki<br></h6>
-      <h6>Apabila tinggi badan tidak sesuai data, maka siswa tidak berhak melanjudkan sekolah :D(Mohon di cek)<br></h6>
+      <h6>Persyaratan tinggi badan:
+        <br>1. Laki-Laki 160 cm
+        <br>2. Perempuan 155 cm
+        <br>(Jika tinggi badan tdk sesuai dgn syarat tersebut maka dianggap gugur).<br></h6>
       <div style="margin-top:  50px;">
       </div>
       <h6><b>INFORMASI PENTING:</h6>
       <h6>Sebelum anda submit pastikan data yang diisi benar, panitia tidak menerima komplain<br>
-        atau perubahan data. Apabila data tidak sesuai, maka sekolah berhak membatalkan hasil penerimaan siswa tersebut.<br></h6>
+        atau perubahan data. Apabila data tidak sesuai, Maka calon peserta didik dinyatakan tdk lolos seleksi administrasi.<br></h6>
       <div style="margin-top:  30px;">
       </div>
       <div class="form-group">

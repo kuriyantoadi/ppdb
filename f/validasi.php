@@ -1,10 +1,11 @@
 <?php
  // echo $d['kondisi'];
+
  $tampil_kondisi = $d['kondisi'];
 if ($tampil_kondisi == "Siswa Lolos Seleksi") {
-    echo "<button type='button' class='btn btn-success btn-sm' disabled><b>Siswa Lolos Seleksi</b></a>";
+    echo "<button type='button' class='btn btn-success btn-sm' disabled><b>Siswa Lolos Seleksi Administrasi</b></a>";
 } elseif ($tampil_kondisi == "Siswa Tidak Lolos Seleksi") {
-    echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>Tidak Siswa Tidak Lolos Seleksi</b></a>";
+    echo "<button type='button' class='btn btn-danger btn-sm' disabled><b>Tidak Siswa Tidak Lolos Seleksi Administrasi</b></a>";
     echo "<br>";
 } else {
     echo "";
