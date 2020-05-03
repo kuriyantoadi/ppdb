@@ -439,14 +439,14 @@ if (isset($_GET['pesan'])) {
         </div>
       </div>
       <h6>Persyaratan tinggi badan:
-        <br>1. Laki-Laki 160 cm
-        <br>2. Perempuan 155 cm
-        <br>(Jika tinggi badan tdk sesuai dgn syarat tersebut maka dianggap gugur).<br></h6>
+        <br>1. Laki-Laki minimal 160 cm
+        <br>2. Perempuan minimal 155 cm
+        <br>(Jika tinggi badan tidak sesuai dengan syarat tersebut maka dianggap gugur).<br></h6>
       <div style="margin-top:  50px;">
       </div>
       <h6><b>INFORMASI PENTING:</h6>
       <h6>Sebelum anda submit pastikan data yang diisi benar, panitia tidak menerima komplain<br>
-        atau perubahan data. Apabila data tidak sesuai, Maka calon peserta didik dinyatakan tdk lolos seleksi administrasi.<br></h6>
+        atau perubahan data. Apabila data tidak sesuai, Maka calon peserta didik dinyatakan tidak lolos seleksi administrasi.<br></h6>
       <div style="margin-top:  30px;">
       </div>
       <div class="form-group">
