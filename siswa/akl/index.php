@@ -381,7 +381,7 @@ if (isset($_GET['pesan'])) {
        </div>
       </div>
       <div class="form-group">
-        <label class="control-label col-sm-2" >Apakah anda pemakai Psikotropika<br>(Narkoba, Ganja dan sejenisnya) </label>
+        <label class="control-label col-sm-2" >Apakah anda pemakai narkoba, ganja, psikotropika dan zat adiktif lainnya </label>
         <div class="col-sm-2">
           <select name="psikotropika" class="form-control" id="exampleFormControlSelect1" required>
             <option value="">Pilihan Anda</option>
