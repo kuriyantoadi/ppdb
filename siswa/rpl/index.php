@@ -294,7 +294,7 @@ if (isset($_GET['pesan'])) {
         </div>
       </div>
       <div class="form-group">
-        <label class="control-label col-sm-2">Surat Sehat dari Dokter </label>
+        <label class="control-label col-sm-2">Surat Sehat dari Dokter Pemerintah</label>
         <div class="col-sm-6">
           <input type="file" name="pdf_surat_dokter" accept="application/pdf" class="form-control-file" id="cek_surat_dokter" required>
         </div>
@@ -347,6 +347,7 @@ if (isset($_GET['pesan'])) {
       <h6>3. Piagam boleh dikosongkan</h6>
       <h6>4. Piagam hasil perlombaan dan/atau penghargaan di bidang akademik maupun non akademik</h6>
       <h6>5. Contoh swa photo dapat dilihat di link berikut(belum di kerjakan)</h6>
+      <h6>6. Surat sehat harus ditandatangani oleh dokter pemerintah.</h6>
 
       <br>
       <h4>G. INPUT NILAI UJIAN NASIONAL PESERTA DIDIK</h4>
@@ -452,7 +453,8 @@ if (isset($_GET['pesan'])) {
       </div>
       <h6><b>INFORMASI PENTING:</h6>
       <h6>Sebelum anda submit pastikan data yang diisi benar, panitia tidak menerima komplain<br>
-        atau perubahan data. Apabila data tidak sesuai, Maka calon peserta didik dinyatakan tdk lolos seleksi administrasi.<br></h6>
+        atau perubahan data. Apabila data tidak sesuai, Maka calon peserta didik dinyatakan tidak lolos seleksi administrasi dan dianggap gugur.<br></h6>
+
       <div style="margin-top:  30px;">
       </div>
       <div class="form-group">
