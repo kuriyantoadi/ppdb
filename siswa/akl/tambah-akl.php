@@ -338,7 +338,7 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
   }
 
   //cara memanggilnya
-  $username = user_acak(6);
+  $username = user_acak(7);
   $password = pass_acak(5);
 
 //akhir pembuatan password

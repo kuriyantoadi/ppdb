@@ -339,7 +339,7 @@ function user_acak($panjang)
 }
 
 //cara memanggilnya
-$username = user_acak(6);
+$username = user_acak(7);
 $password = pass_acak(5);
 
 //akhir pembuatan password
