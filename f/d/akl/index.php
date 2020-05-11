@@ -32,7 +32,7 @@ if ($_SESSION['status']!="akl") {
       <h3></h3>
     </center>
     <center>
-      <h3>Kompetensi Keahlian Akuntansi Keungan Lembaga</h3>
+      <h3>Kompetensi Keahlian Akuntansi Keuangan Lembaga</h3>
     </center>
 
     <br><br><br>
