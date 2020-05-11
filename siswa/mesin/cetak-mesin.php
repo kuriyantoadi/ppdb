@@ -23,7 +23,7 @@
           <center><h5><b>Bukti Pendaftaran Calon Peserta Didik Baru</b></h5></center>
           <center><h5><b>Calon Peserta Didik Baru</b></h5></center>
           <center><h5><b>Tahun Pelajaran 2020/2021</b></h5></center>
-          <center><h5><b>Program Studi Akuntansi Keuangan Lembaga</b></h5></center><br>
+          <center><h5><b>Program Studi Keuangan Lembaga</b></h5></center><br>
         </td>
         <td>
           <center><img style="margin-bottom:  80px; margin-top:  25px; margin-left: 90px" src="../../images/logo-smkn1-cetak.png" />
