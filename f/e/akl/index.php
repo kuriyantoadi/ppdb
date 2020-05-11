@@ -33,7 +33,7 @@
     <div class="form-group">
       <div class="col-sm-7">
         <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
-        <a href="akl-lap.php" type="button" class="btn btn-success" onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi Keungan Lembaga ?')">Download AKL</a>
+        <a href="akl-lap.php" type="button" class="btn btn-success" onclick="return confirm('Download Data PPDB Kompetensi Keahlian Akuntansi Keuangan Lembaga ?')">Download AKL</a>
         <?php include('../menu.php'); ?>
       </div>
       <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
