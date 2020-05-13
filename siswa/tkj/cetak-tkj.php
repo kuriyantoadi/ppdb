@@ -23,7 +23,7 @@
           <center><h6><b>Bukti Pendaftaran Calon Peserta Didik Baru</b></h6></center>
           <center><h6><b>Calon Peserta Didik Baru</b></h6></center>
           <center><h6><b>Tahun Pelajaran 2020/2021</b></h6></center>
-          <center><h6><b>Program Studi Rekayasa Perangkat Lunak</b></h6></center><br>
+          <center><h6><b>Program Studi Teknik Komputer Jaringan</b></h6></center><br>
         </td>
         <td>
           <center><img style="margin-bottom:  80px; margin-top:  25px; margin-left: 90px" src="../../images/logo-smkn1-cetak.png" />
@@ -88,7 +88,7 @@
       peminum,
       laptop
 
-       from f_siswa_rpl where nik='$nik'");
+       from f_siswa_tkj where nik='$nik'");
       while ($d = mysqli_fetch_array($data)) {
           ?>
 

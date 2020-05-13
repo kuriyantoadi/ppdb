@@ -107,7 +107,7 @@ if (isset($_GET['pesan'])) {
             <option value="SMP MUHAMMADIYAH KRAGILAN">SMP MUHAMMADIYAH KRAGILAN</option>
             <option value="SMP PGRI KRAGILAN">SMP PGRI KRAGILAN</option>
             <option value="SMP PGRI 1 CARENANG">SMP PGRI 1 CARENANG</option>
-            <option value="SMPN 1 CARENANG">SMPN 1 CARENANG</option>
+            <option value="SMP NEGERI 1 CARENANG">SMP NEGERI 1 CARENANG</option>
             <option value="MTS AL-KHAIRIYAH PABUARAN">MTS AL-KHAIRIYAH PABUARAN</option>
             <option value="SMP NEGERI 1 JAWILAN">SMP NEGERI 1 JAWILAN</option>
             <option value="SMP NEGERI 3 CIKEUSAL">SMP NEGERI 3 CIKEUSAL</option>

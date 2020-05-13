@@ -109,7 +109,7 @@ if (isset($_GET['pesan'])) {
             <option value="SMP MUHAMMADIYAH KRAGILAN">SMP MUHAMMADIYAH KRAGILAN</option>
             <option value="SMP PGRI KRAGILAN">SMP PGRI KRAGILAN</option>
             <option value="SMP PGRI 1 CARENANG">SMP PGRI 1 CARENANG</option>
-            <option value="SMPN 1 CARENANG">SMPN 1 CARENANG</option>
+            <option value="SMP NEGERI 1 CARENANG">SMP NEGERI 1 CARENANG</option>
             <option value="MTS AL-KHAIRIYAH PABUARAN">MTS AL-KHAIRIYAH PABUARAN</option>
             <option value="SMP NEGERI 1 JAWILAN">SMP NEGERI 1 JAWILAN</option>
             <option value="SMP NEGERI 3 CIKEUSAL">SMP NEGERI 3 CIKEUSAL</option>
@@ -435,7 +435,7 @@ if (isset($_GET['pesan'])) {
       </div>
 
       <br>
-      <h4>I. PERSYARATAN KHUSUS KOMPETENSI KEAHLIAN Teknik Komputer Jaringan</h4>
+      <h4>I. PERSYARATAN KHUSUS KOMPETENSI KEAHLIAN TEKNIK KOMPUTER JARINGAN</h4>
       <div class="form-group">
         <label class="control-label col-sm-2">Kesanggupan siswa untuk mempunyai laptop pribadi </label>
         <div class="col-sm-2">
