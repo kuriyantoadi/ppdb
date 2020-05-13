@@ -35,7 +35,7 @@
           <h5><b>Tahun Pelajaran 2020/2021</b></h4>
         </center>
         <center>
-          <h4><b>Program Studi Rekayasa Perangkat Lunak</b></h4>
+          <h4><b>Program Studi Teknik Komputer Jaringan</b></h4>
         </center><br>
         <!-- font ganti jenis -->
       </div>
@@ -92,7 +92,7 @@
       $pages = ceil($total/$halperpage);
 
       $data = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
-        from f_siswa_rpl where kompetensi_keahlian in ('Rekayasa Perangkat Lunak') LIMIT $mulai, $halperpage ");
+        from f_siswa_rpl where kompetensi_keahlian in ('Teknik Komputer Jaringan') LIMIT $mulai, $halperpage ");
       $no = $mulai+1;
 
 
