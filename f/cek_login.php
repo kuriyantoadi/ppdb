@@ -29,23 +29,23 @@ if ($cek > 0) {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "login";
         header("location:d/index.php");
-    } elseif ($login['level']=="op-tkj") {
+    } elseif ($login['level']=="tkj") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "login";
         header("location:d/tkj/index.php");
-    } elseif ($login['level']=="op-rpl") {
+    } elseif ($login['level']=="rpl") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "rpl";
         header("location:d/rpl/");
-    } elseif ($login['level']=="op-otkp") {
+    } elseif ($login['level']=="otkp") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "login";
         header("location:d/otkp/index.php");
-    } elseif ($login['level']=="op-akl") {
+    } elseif ($login['level']=="akl") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "akl";
         header("location:d/akl/index.php");
-    } elseif ($login['level']=="op-tkr") {
+    } elseif ($login['level']=="tkr") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "login";
         header("location:d/tkr/index.php");
