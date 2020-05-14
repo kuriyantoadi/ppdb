@@ -31,7 +31,7 @@ if ($cek > 0) {
         header("location:d/index.php");
     } elseif ($login['level']=="tkj") {
         $_SESSION['username'] = $username;
-        $_SESSION['status'] = "login";
+        $_SESSION['status'] = "tkj";
         header("location:d/tkj/index.php");
     } elseif ($login['level']=="rpl") {
         $_SESSION['username'] = $username;
@@ -39,7 +39,7 @@ if ($cek > 0) {
         header("location:d/rpl/");
     } elseif ($login['level']=="otkp") {
         $_SESSION['username'] = $username;
-        $_SESSION['status'] = "login";
+        $_SESSION['status'] = "oktp";
         header("location:d/otkp/index.php");
     } elseif ($login['level']=="akl") {
         $_SESSION['username'] = $username;
@@ -47,7 +47,7 @@ if ($cek > 0) {
         header("location:d/akl/index.php");
     } elseif ($login['level']=="tkr") {
         $_SESSION['username'] = $username;
-        $_SESSION['status'] = "login";
+        $_SESSION['status'] = "tkr";
         header("location:d/tkr/index.php");
     } elseif ($login['level']=="mesin") {
         $_SESSION['username'] = $username;
