@@ -27,7 +27,7 @@ if ($_SESSION['status']!="admin") {
 		<div class="col-md-6">
       <center><h3>Tampil Data Pendaftaran Calon Peserta Didik</h3></center>
       <center><h3>SMK Negeri 1 Kragilan</h3></center>
-      <center><h3>Kompetensi Keahlian Akuntansi Keungan Lembaga</h3></center>
+      <center><h3>Kompetensi Keahlian Akuntansi Keuangan Lembaga</h3></center>
 		</div>
 		<div class="col-md-3">
 		</div>

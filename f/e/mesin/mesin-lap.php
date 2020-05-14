@@ -3,8 +3,11 @@
 <html>
 <head>
 	<?php
-      header("Content-type: application/vnd-ms-excel");
-      header("Content-Disposition: attachment; filename=Data_PPPD_2020_SMK_Negeri_1_Kragilan-Mesin.xls");
+    $waktu=date('d-m-Y H:i:s');
+    $cetak="$waktu.TPM_Data_PPDB_SMK_N_1_Kragilan";
+    header("Content-type: application/vnd-ms-excel");
+    header("Content-Disposition: attachment; filename=$cetak.xls");
+?>
     ?>
 </head>
 <body>

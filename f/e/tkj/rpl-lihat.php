@@ -1,13 +1,14 @@
 <?php
 session_start();
-if ($_SESSION['status']!="akl") {
+if ($_SESSION['status']!="admin") {
     header("location:../../index.php?pesan=belum_login");
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Operator  PPDB SMKN 1 Kragilan</title>
+  <title>PPDB SMKN 1 Kragilan</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../../../css/bootstrap.min.css">
@@ -16,17 +17,19 @@ if ($_SESSION['status']!="akl") {
 </head>
 <body>
 
+
 <div class="container">
 
   <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-2">
+		<div class="col-md-3">
 		</div>
-		<div class="col-md-8">
-      <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
-      <center><h3>Kompetensi Keahlian Akuntansi Keuangan Lembaga</h3></center>
+		<div class="col-md-6">
+      <center><h3>Tampil Data Pendaftaran Calon Peserta Didik</h3></center>
+      <center><h3>SMK Negeri 1 Kragilan</h3></center>
+      <center><h3>Kompetensi Keahlian Teknik Komputer Jaringan</h3></center>
 		</div>
-		<div class="col-md-2">
+		<div class="col-md-3">
 		</div>
   </div>
 
@@ -35,6 +38,7 @@ if ($_SESSION['status']!="akl") {
       include '../../../koneksi.php';
       $id = $_GET['id'];
       $data = mysqli_query($koneksi, "select
+
       id,
   		no_p,
   		tgl_pendaftaran,
@@ -85,21 +89,13 @@ if ($_SESSION['status']!="akl") {
   		psikotropika,
   		bertato,
   		peminum,
-      val_skhun,
-      val_surat_dokter,
-      val_kk,
-      val_akta,
-      val_photo,
-      val_swaphoto,
-      val_piagam1,
-      val_piagam2,
-      val_piagam3
+      laptop
 
-       from f_siswa_akl where id='$id'");
+       from f_siswa_rpl where id='$id'");
       while ($d = mysqli_fetch_array($data)) {
-          include('tampil.php'); ?>
+          include('rpl-tampil.php'); ?>
 
-    <br>
+    </table><br>
     <?php
       } ?>
 
@@ -107,9 +103,6 @@ if ($_SESSION['status']!="akl") {
     </div>
 </div>
 </div>
-
-
-
 
   </body>
 </html>

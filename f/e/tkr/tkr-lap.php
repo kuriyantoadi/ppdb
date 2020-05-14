@@ -3,12 +3,11 @@
 <html>
 <head>
 	<?php
-    $waktu=date('d-m-Y H:i:s');
-    $cetak="$waktu.RPL_Data_PPDB_SMK_N_1_Kragilan";
-    header("Content-type: application/vnd-ms-excel");
-    header("Content-Disposition: attachment; filename=$cetak.xls");
-?>
-	?>
+      $waktu=date('d-m-Y H:i:s');
+      $cetak="$waktu.TKR_Data_PPDB_SMK_N_1_Kragilan";
+      header("Content-type: application/vnd-ms-excel");
+      header("Content-Disposition: attachment; filename=$cetak.xls");
+    ?>
 </head>
 <body>
 
@@ -88,8 +87,6 @@
 			<th>Psikotropika</th>
 			<th>Bertato</th>
 			<th>Peminum</th>
-			<th>Kesanggupan Mempunyai Laptop</th>
-
 
 		</tr>
 		<?php
@@ -145,9 +142,8 @@
 		perokok,
 		psikotropika,
 		bertato,
-		peminum,
-		laptop
-		 from f_siswa_rpl");
+		peminum
+		from f_siswa_tkr");
         while ($d = mysqli_fetch_array($data)) {
             ?>
 			<tr>
@@ -201,7 +197,6 @@
 				<td><?php echo $d['psikotropika']; ?></td>
 				<td><?php echo $d['bertato']; ?></td>
 				<td><?php echo $d['peminum']; ?></td>
-				<td><?php echo $d['laptop']; ?></td>
 
 			</tr>
 			<?php
