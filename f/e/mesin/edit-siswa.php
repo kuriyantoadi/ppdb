@@ -193,7 +193,7 @@ if ($_SESSION['status']!="admin") {
     <div class="form-group">
       <label class="control-label col-sm-2" for="email">Jarak Alamat Siswa ke Sekolah :</label><b>Meter</b>
       <div class="col-sm-4">
-        <input type="number" class="form-control"   placeholder="Jarak Rumah Ke Sekolah" name="jarak_kesekolah" value="<?php echo $d['jarak_kesekolah']; ?>">
+        <input type="number" class="form-control"   placeholder="Jarak Rumah ke Sekolah" name="jarak_kesekolah" value="<?php echo $d['jarak_kesekolah']; ?>">
       </div>
     </div>
 

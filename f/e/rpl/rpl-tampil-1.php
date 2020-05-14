@@ -88,7 +88,7 @@
     <td><?php echo $d['rw']; ?></td>
   </tr>
   <tr>
-    <td>Jarak rumah ke sekolah</td>
+    <td>Jarak Rumah ke Sekolah</td>
     <td><?php echo $d['jarak_kesekolah']; ?></td>
   </tr>
   <tr>
