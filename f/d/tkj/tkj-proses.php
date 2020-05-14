@@ -4,7 +4,7 @@ include '../../../koneksi.php';
 
 
 session_start();
-if ($_SESSION['status']!="tkr") {
+if ($_SESSION['status']!="tkj") {
     header("location:../../index.php?pesan=belum_login");
 } else {
     $id = $_POST['id'];
@@ -22,7 +22,7 @@ if ($_SESSION['status']!="tkr") {
 
     // UPDATE `upload` SET `id_file`=[value-1],`nama_file`=[value-2] WHERE 1
 
-    mysqli_query($koneksi, "UPDATE f_siswa_tkr SET
+    mysqli_query($koneksi, "UPDATE f_siswa_tkj SET
                id='$id',
                val_skhun='$val_skhun',
                val_surat_dokter='$val_surat_dokter',
