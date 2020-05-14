@@ -54,9 +54,11 @@ if ($cek > 0) {
         $_SESSION['status'] = "mesin";
         header("location:d/mesin/index.php");
     } else {
-        // echo "gagal1";
-        header("location:index.php?pesan=gagal1");
+        echo "gagal1";
+        // header("location:index.php?pesan=gagal1");
     }
 } else {
-    header("location:index.php?pesan=gagal");
+    echo "gagal2";
+
+    // header("location:index.php?pesan=gagal");
 }
