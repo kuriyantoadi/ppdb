@@ -5,7 +5,7 @@ include '../../../koneksi.php';
 
 session_start();
 if ($_SESSION['status']!="otkp") {
-    header("location:../../index.php?pesan=belum_login");
+    header("location:../../index.php?pesan=belum_login_om");
 } else {
     $id = $_POST['id'];
     $val_skhun = $_POST['val_skhun'];
