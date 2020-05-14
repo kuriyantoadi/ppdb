@@ -34,7 +34,7 @@ if ($_SESSION['status']!="admin") {
             <h3>SMK Negeri 1 Kragilan</h3>
           </center>
           <center>
-            <h3>Kompetensi Keahlian Akuntansi Keuangan Lembaga</h3>
+            <h3>Kompetensi Keahlian Teknik Pemesinan</h3>
           </center>
         </div>
         <div class="col-md-3">
