@@ -5,7 +5,7 @@
 	<?php
       $waktu = date('d-m-Y');
       header("Content-type: application/vnd-ms-excel");
-      header("Content-Disposition: attachment; filename=$waktu._AKL_Data_PPPD_2020_SMKN_1_KRG.xls");
+      header("Content-Disposition: attachment; filename=$waktu_AKL_Data_PPPD_2020_SMKN_1_KRG.xls");
     ?>
 </head>
 <body>
