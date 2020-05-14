@@ -4,7 +4,7 @@
 <head>
 	<?php
     $waktu=date('d-m-Y H:i:s');
-    $cetak="$waktu.RPL_Data_PPDB_SMK_N_1_Kragilan";
+    $cetak="$waktu.TKJ_Data_PPDB_SMK_N_1_Kragilan";
     header("Content-type: application/vnd-ms-excel");
     header("Content-Disposition: attachment; filename=$cetak.xls");
 ?>
@@ -147,7 +147,7 @@
 		bertato,
 		peminum,
 		laptop
-		 from f_siswa_rpl");
+		 from f_siswa_tkj");
         while ($d = mysqli_fetch_array($data)) {
             ?>
 			<tr>

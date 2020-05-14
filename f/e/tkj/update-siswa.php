@@ -47,7 +47,7 @@ $laptop = $_POST['laptop'];
 
 // UPDATE `upload` SET `id_file`=[value-1],`nama_file`=[value-2] WHERE 1
 
-mysqli_query($koneksi, "UPDATE f_siswa_rpl SET
+mysqli_query($koneksi, "UPDATE f_siswa_tkj SET
              no_p='$no_p',
              tgl_pendaftaran='$tgl_pendaftaran',
              kompetensi_keahlian='$kompetensi_keahlian',
@@ -91,4 +91,4 @@ mysqli_query($koneksi, "UPDATE f_siswa_rpl SET
 
 
 // node_id=<?php echo $d['node_id'];
- header("location:rpl-lihat.php?id=$id");
+ header("location:tkj-lihat.php?id=$id");

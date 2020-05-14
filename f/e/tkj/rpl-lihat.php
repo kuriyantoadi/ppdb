@@ -91,9 +91,9 @@ if ($_SESSION['status']!="admin") {
   		peminum,
       laptop
 
-       from f_siswa_rpl where id='$id'");
+       from f_siswa_tkj where id='$id'");
       while ($d = mysqli_fetch_array($data)) {
-          include('rpl-tampil.php'); ?>
+          include('tkj-tampil.php'); ?>
 
     </table><br>
     <?php

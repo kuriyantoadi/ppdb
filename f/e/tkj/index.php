@@ -27,8 +27,8 @@
   <div class="form-group">
     <div class="col-sm-7">
       <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
-      <a href="rpl-lap.php" type="button" class="btn btn-success"
-      onclick="return confirm('Download Data PPDB Kompetensi Keahlian Teknik Komputer Jaringan ?')">Download RPL</a>
+      <a href="tkj-lap.php" type="button" class="btn btn-success"
+      onclick="return confirm('Download Data PPDB Kompetensi Keahlian Teknik Komputer Jaringan ?')">Download TKJ</a>
       <?php include('../menu.php'); ?>
     </div>
     <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
@@ -70,12 +70,12 @@
         asal_sekolah,
         nisn
 
-         FROM f_siswa_rpl");
+         FROM f_siswa_tkj");
       $total = mysqli_num_rows($result);
       $pages = ceil($total/$halperpage);
 
       $data = mysqli_query($koneksi, "SELECT no_p,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id,tgl_pendaftaran
-        from f_siswa_rpl where kompetensi_keahlian in ('Teknik Komputer Jaringan') LIMIT $mulai, $halperpage ");
+        from f_siswa_tkj where kompetensi_keahlian in ('Teknik Komputer Jaringan') LIMIT $mulai, $halperpage ");
       $no = $mulai+1;
 
 
@@ -92,13 +92,13 @@
       <td><center><?php echo $d['asal_sekolah']; ?></td>
       <td><center><?php echo $d['kondisi']; ?></td>
       <td><center>
-        <a type="button" class="btn btn-info btn-sm" href="rpl-lihat.php?id=<?php echo $d['id']; ?>" >Lihat</a>
+        <a type="button" class="btn btn-info btn-sm" href="tkj-lihat.php?id=<?php echo $d['id']; ?>" >Lihat</a>
       </td>
       <td><center>
         <a type="button" class="btn btn-warning btn-sm" href="edit-siswa.php?id=<?php echo $d['id']; ?>" >Edit</a>
       </td>
       <td><center>
-        <a type="button" class="btn btn-danger btn-sm" href="rpl-hapus.php?id=<?php echo $d['id']; ?>"
+        <a type="button" class="btn btn-danger btn-sm" href="tkj-hapus.php?id=<?php echo $d['id']; ?>"
           onclick="return confirm('Anda yakin Hapus data siswa <?php echo $d['nama_siswa']; ?> ?')">Hapus</a>
       </td>
     </tr>
