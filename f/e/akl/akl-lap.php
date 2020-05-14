@@ -3,9 +3,10 @@
 <html>
 <head>
 	<?php
-      $waktu = date('d-m-Y');
+      $waktu=date('d-m-Y H:i:s');
+      $cetak=$waktu."Data PPDB SMK N 1 Kragilan";
       header("Content-type: application/vnd-ms-excel");
-      header("Content-Disposition: attachment; filename=$waktu_AKL_Data_PPPD_2020_SMKN_1_KRG.xls");
+      header("Content-Disposition: attachment; filename=$cetak.xls");
     ?>
 </head>
 <body>
