@@ -45,7 +45,7 @@
                     } elseif ($_GET['pesan'] == "gagal1") {
                         echo "
 						<div class='alert alert-warning' role='alert'>
-							<center>Anda Berhasil Logout
+							<center>Mohon anda Login lagi
 						</div>
 						";
                     } elseif ($_GET['pesan'] == "belum_login") {
