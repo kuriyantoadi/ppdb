@@ -155,7 +155,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Tanggl Diterbitkan KK :</label>
+      <label class="control-label col-sm-2" for="email">tanggal Diterbitkan KK :</label>
       <div class="col-sm-3">
         <input type="date" class="form-control"   placeholder="Tanggal KK terbit" name="tgl_kk" required>
       </div>

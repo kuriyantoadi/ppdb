@@ -3,8 +3,9 @@
 <html>
 <head>
 	<?php
+
       header("Content-type: application/vnd-ms-excel");
-      header("Content-Disposition: attachment; filename=Data_PPPD_2020_SMK_Negeri_1_Kragilan.xls");
+      header("Content-Disposition: attachment; filename=AKL_Data_PPPD_2020_SMKN_1_KRG.xls");
     ?>
 </head>
 <body>
