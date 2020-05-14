@@ -24,7 +24,7 @@ if ($_SESSION['status']!="otkp") {
 		</div>
 		<div class="col-md-8">
       <center><h2>Tampilan Operator PPDB SMKN 1 Kragilan</h2></center>
-      <center><h3>Kompetensi Keahlian Akuntansi Keungan Lembaga</h3></center>
+      <center><h3>Kompetensi Keahlian Otomatisasi Tata Kelolah Perkantoran</h3></center>
 		</div>
 		<div class="col-md-2">
 		</div>
