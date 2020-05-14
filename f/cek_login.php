@@ -49,7 +49,7 @@ if ($cek > 0) {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "login";
         header("location:d/tkr/index.php");
-    } elseif ($login['level']=="op-mesin") {
+    } elseif ($login['level']=="mesin") {
         $_SESSION['username'] = $username;
         $_SESSION['status'] = "mesin";
         header("location:d/mesin/index.php");
