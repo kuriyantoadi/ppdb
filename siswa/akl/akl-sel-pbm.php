@@ -29,9 +29,6 @@
           <h4><b>Pengumuman Daftar Calon Peserta Didik Seleksi Administrasi</b></h4>
         </center>
         <center>
-          <h4><b>Calon Peserta Didik Baru</b></h4>
-        </center>
-        <center>
           <h5><b>Tahun Pelajaran 2020/2021</b></h4>
         </center>
         <center>
