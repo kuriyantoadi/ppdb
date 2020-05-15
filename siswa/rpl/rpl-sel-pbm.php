@@ -63,9 +63,6 @@
             <center>Nomor Pendaftaran
           </th>
           <th>
-            <center>Tanggal Pendaftaran
-          </th>
-          <th>
             <center>NISN Siswa
           </th>
           <th>
@@ -105,9 +102,6 @@
           </td>
           <td>
             <center><?php echo $d['no_p']; ?>
-          </td>
-          <td>
-            <center><?php echo $d['tgl_pendaftaran']; ?>
           </td>
           <td>
             <center><?php echo $d['nisn']; ?>
