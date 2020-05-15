@@ -26,7 +26,7 @@
           <h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2>
         </center>
         <center>
-          <h4><b>Daftar Calon Peserta Didik yang sudah Mendaftar</b></h4>
+          <h4><b>Pengumuman Daftar Calon Peserta Didik Seleksi Administrasi</b></h4>
         </center>
         <center>
           <h4><b>Calon Peserta Didik Baru</b></h4>
