@@ -26,9 +26,9 @@
           <h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2>
         </center>
         <center>
-          <h4><b>Pengumuman Daftar Calon Peserta Didik Seleksi Administrasi</b></h4>
+          <h4><b>Pengumuman Jadwal Seleksi Penelusuran Bakat dan Minat</b></h4>
         </center>
-        
+
         <center>
           <h5><b>Tahun Pelajaran 2020/2021</b></h4>
         </center>
@@ -50,7 +50,6 @@
 
 
     </div>
-
     <table class="table table-bordered table-hover" id="domainsTable">
       <thead>
         <tr>
@@ -71,24 +70,27 @@
           </th>
           <!-- Data di buka bos :) -->
           <th>
-            <center>Lolos Seleksi
+            <center>Tanggal
+          </th>
+          <th>
+            <center>Waktu
           </th>
         </tr>
       </thead>
       <tbody>
         <?php
       include '../../koneksi.php';
-      $halperpage = 50;
-      $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
-      $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
-      $result = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
-         FROM f_siswa_rpl");
-      $total = mysqli_num_rows($result);
-      $pages = ceil($total/$halperpage);
 
-      $data = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
-        from f_siswa_rpl where kompetensi_keahlian in ('Teknik Komputer Jaringan') LIMIT $mulai, $halperpage ");
-      $no = $mulai+1;
+      $data = mysqli_query($koneksi, "SELECT
+        no_p,
+        nisn,
+        nama_siswa,
+        kompetensi_keahlian,
+        asal_sekolah,id,
+        tanggal,
+        waktu
+        from jadwal_pbm where kompetensi_keahlian=Teknik Komputer Jaringan'  ");
+      $no = 1;
 
 
       while ($d = mysqli_fetch_array($data)) {
@@ -112,7 +114,10 @@
           </td>
           <!-- Data di buka bos :) -->
           <td>
-            <center><?php echo $d['kondisi']; ?>
+            <center><?php echo $d['tanggal']; ?>
+          </td>
+          <td>
+            <center><?php echo $d['waktu']; ?>
           </td>
         </tr>
 
@@ -121,16 +126,10 @@
       </tbody>
     </table>
     <div>
-      <?php for ($i=1; $i<=$pages ; $i++) {
-          ?>
-      <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
-      <?php
-      } // database
 
-  ?>
     </div>
-  </div>
-  <script>
+    </div>
+    <script>
     $(document).ready(function() {
       $("#domainsTable").tablesorter({
         sortList: [
@@ -168,7 +167,7 @@
         }
       }
     }
-  </script>
-</body>
+    </script>
+    </body>
 
-</html>
+    </html>

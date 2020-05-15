@@ -26,13 +26,13 @@
           <h2 style="margin-top:  25px;"><b>SMK Negeri 1 Kragilan</b></h2>
         </center>
         <center>
-          <h4><b>Pengumuman Jadwal Seleksi Penelusuran Bakat dan Minat</b></h4>
+          <h4><b>Pengumuman Daftar Calon Peserta Didik Seleksi Administrasi</b></h4>
         </center>
         <center>
           <h5><b>Tahun Pelajaran 2020/2021</b></h4>
         </center>
         <center>
-          <h4><b>Program Studi Otomatisasi Tata Kelola Perkantoran</b></h4>
+          <h4><b>Program Studi Teknik Pemesinan</b></h4>
         </center><br>
         <!-- font ganti jenis -->
       </div>
@@ -59,6 +59,7 @@
           <th>
             <center>Nomor Pendaftaran
           </th>
+
           <th>
             <center>NISN Siswa
           </th>
@@ -70,27 +71,24 @@
           </th>
           <!-- Data di buka bos :) -->
           <th>
-            <center>Tanggal
-          </th>
-          <th>
-            <center>Waktu
+            <center>Lolos Seleksi
           </th>
         </tr>
       </thead>
       <tbody>
         <?php
       include '../../koneksi.php';
+      $halperpage = 50;
+      $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+      $mulai = ($page>1) ? ($page * $halperpage) - $halperpage : 0;
+      $result = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+         FROM f_siswa_mesin");
+      $total = mysqli_num_rows($result);
+      $pages = ceil($total/$halperpage);
 
-      $data = mysqli_query($koneksi, "SELECT
-        no_p,
-        nisn,
-        nama_siswa,
-        kompetensi_keahlian,
-        asal_sekolah,id,
-        tanggal,
-        waktu
-        from jadwal_pbm where kompetensi_keahlian='Otomatisasi Tata Kelola Perkantoran'  ");
-      $no = 1;
+      $data = mysqli_query($koneksi, "SELECT no_p,tgl_pendaftaran,nisn,nama_siswa,kompetensi_keahlian,asal_sekolah,kondisi,id
+        from f_siswa_mesin where kompetensi_keahlian in ('Teknik Pemesinan') LIMIT $mulai, $halperpage ");
+      $no = $mulai+1;
 
 
       while ($d = mysqli_fetch_array($data)) {
@@ -103,6 +101,7 @@
           <td>
             <center><?php echo $d['no_p']; ?>
           </td>
+
           <td>
             <center><?php echo $d['nisn']; ?>
           </td>
@@ -114,10 +113,7 @@
           </td>
           <!-- Data di buka bos :) -->
           <td>
-            <center><?php echo $d['tanggal']; ?>
-          </td>
-          <td>
-            <center><?php echo $d['waktu']; ?>
+            <center><?php echo $d['kondisi']; ?>
           </td>
         </tr>
 
@@ -126,7 +122,13 @@
       </tbody>
     </table>
     <div>
+      <?php for ($i=1; $i<=$pages ; $i++) {
+          ?>
+      <a class="btn btn-info btn-md" href="?halaman=<?php echo $i; ?>"><?php echo $i; ?></a>
+      <?php
+      } // database
 
+  ?>
     </div>
   </div>
   <script>
@@ -168,6 +170,6 @@
       }
     }
   </script>
-  </body>
+</body>
 
-  </html>
+</html>
