@@ -35,7 +35,7 @@
           <h5><b>Tahun Pelajaran 2020/2021</b></h4>
         </center>
         <center>
-          <h4><b>Program Studi Akuntansi Keuangan Lembaga</b></h4>
+          <h4><b>Program Studi Teknik Pemesinan</b></h4>
         </center><br>
         <!-- font ganti jenis -->
       </div>
