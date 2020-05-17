@@ -50,126 +50,124 @@
 
 
     </div>
+    <table class="table table-bordered table-hover" id="domainsTable">
+      <thead>
+        <tr>
+          <th>
+            <center>No
+          </th>
+          <th>
+            <center>Nomor Pendaftaran
+          </th>
+          <th>
+            <center>NISN Siswa
+          </th>
+          <th>
+            <center>Nama Siswa
+          </th>
+          <th>
+            <center>Asal Sekolah
+          </th>
+          <!-- Data di buka bos :) -->
+          <th>
+            <center>Tanggal
+          </th>
+          <th>
+            <center>Waktu
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+      include '../../koneksi.php';
 
-        </div>
-        <table class="table table-bordered table-hover" id="domainsTable">
-          <thead>
-            <tr>
-              <th>
-                <center>No
-              </th>
-              <th>
-                <center>Nomor Pendaftaran
-              </th>
-              <th>
-                <center>NISN Siswa
-              </th>
-              <th>
-                <center>Nama Siswa
-              </th>
-              <th>
-                <center>Asal Sekolah
-              </th>
-              <!-- Data di buka bos :) -->
-              <th>
-                <center>Tanggal
-              </th>
-              <th>
-                <center>Waktu
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <?php
-          include '../../koneksi.php';
-
-          $data = mysqli_query($koneksi, "SELECT
-            no_p,
-            nisn,
-            nama_siswa,
-            kompetensi_keahlian,
-            asal_sekolah,id,
-            tanggal,
-            waktu
-            from jadwal_pbm where kompetensi_keahlian='Teknik Kendaraan Ringan'  ");
-          $no = 1;
+      $data = mysqli_query($koneksi, "SELECT
+        no_p,
+        nisn,
+        nama_siswa,
+        kompetensi_keahlian,
+        asal_sekolah,id,
+        tanggal,
+        waktu
+        from jadwal_pbm where kompetensi_keahlian='Teknik Kendaraan Ringan'  ");
+      $no = 1;
 
 
-          while ($d = mysqli_fetch_array($data)) {
-              ?>
+      while ($d = mysqli_fetch_array($data)) {
+          ?>
 
-            <tr>
-              <td>
-                <center><?php echo $no++ ?>
-              </td>
-              <td>
-                <center><?php echo $d['no_p']; ?>
-              </td>
-              <td>
-                <center><?php echo $d['nisn']; ?>
-              </td>
-              <td>
-                <center><?php echo $d['nama_siswa']; ?>
-              </td>
-              <td>
-                <center><?php echo $d['asal_sekolah']; ?>
-              </td>
-              <!-- Data di buka bos :) -->
-              <td>
-                <center><?php echo $d['tanggal']; ?>
-              </td>
-              <td>
-                <center><?php echo $d['waktu']; ?>
-              </td>
-            </tr>
+        <tr>
+          <td>
+            <center><?php echo $no++ ?>
+          </td>
+          <td>
+            <center><?php echo $d['no_p']; ?>
+          </td>
+          <td>
+            <center><?php echo $d['nisn']; ?>
+          </td>
+          <td>
+            <center><?php echo $d['nama_siswa']; ?>
+          </td>
+          <td>
+            <center><?php echo $d['asal_sekolah']; ?>
+          </td>
+          <!-- Data di buka bos :) -->
+          <td>
+            <center><?php echo $d['tanggal']; ?>
+          </td>
+          <td>
+            <center><?php echo $d['waktu']; ?>
+          </td>
+        </tr>
 
-            <?php
-          } ?>
-          </tbody>
-        </table>
-        <div>
+        <?php
+      } ?>
+      </tbody>
+    </table>
+    <div>
 
-        </div>
-        </div>
-        <script>
-        $(document).ready(function() {
-          $("#domainsTable").tablesorter({
-            sortList: [
-              [3, 1],
-              [2, 0]
-            ]
-          });
-        });
+    </div>
+    </div>
+    <script>
+    $(document).ready(function() {
+      $("#domainsTable").tablesorter({
+        sortList: [
+          [3, 1],
+          [2, 0]
+        ]
+      });
+    });
 
-        function searchTable() {
-          var input;
-          var saring;
-          var status;
-          var tbody;
-          var tr;
-          var td;
-          var i;
-          var j;
-          input = document.getElementById("input");
-          saring = input.value.toUpperCase();
-          tbody = document.getElementsByTagName("tbody")[0];;
-          tr = tbody.getElementsByTagName("tr");
-          for (i = 0; i < tr.length; i++) {
-            td = tr[i].getElementsByTagName("td");
-            for (j = 0; j < td.length; j++) {
-              if (td[j].innerHTML.toUpperCase().indexOf(saring) > -1) {
-                status = true;
-              }
-            }
-            if (status) {
-              tr[i].style.display = "";
-              status = false;
-            } else {
-              tr[i].style.display = "none";
-            }
+    function searchTable() {
+      var input;
+      var saring;
+      var status;
+      var tbody;
+      var tr;
+      var td;
+      var i;
+      var j;
+      input = document.getElementById("input");
+      saring = input.value.toUpperCase();
+      tbody = document.getElementsByTagName("tbody")[0];;
+      tr = tbody.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+          if (td[j].innerHTML.toUpperCase().indexOf(saring) > -1) {
+            status = true;
           }
         }
-        </script>
-        </body>
+        if (status) {
+          tr[i].style.display = "";
+          status = false;
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+    </script>
+    </body>
 
-        </html>
+    </html>
