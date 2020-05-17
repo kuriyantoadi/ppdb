@@ -143,7 +143,7 @@
 		psikotropika,
 		bertato,
 		peminum
-		from f_siswa_akl");
+		from f_siswa_otkp");
         while ($d = mysqli_fetch_array($data)) {
             ?>
 			<tr>
