@@ -3,8 +3,8 @@
 <html>
 <head>
 	<?php
-      $waktu=date('d-m-Y H:i:s');
-      $cetak="$waktu.OTKP_Data_PPDB_SMK_N_1_Kragilan";
+      // $waktu=date('d-m-Y H:i:s');
+      $cetak="OTKP_Data_PPDB_SMK_N_1_Kragilan";
       header("Content-type: application/vnd-ms-excel");
       header("Content-Disposition: attachment; filename=$cetak.xls");
     ?>
