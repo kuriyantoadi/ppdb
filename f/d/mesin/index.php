@@ -30,9 +30,8 @@ if ($_SESSION['status']!="mesin") {
   <div class="form-group">
     <div class="col-sm-7">
       <a href="../../logout.php" type="button" class="btn btn-danger">Logout</a>
-      <a href="mesin-lap.php" type="button" class="btn btn-success"
+      <a href="../../e/mesin/mesin-lap.php" type="button" class="btn btn-success"
       onclick="return confirm('Download Data PPDB Kompetensi Keahlian Teknik Pemesinan ?')">Download Mesin</a>
-      <?php include('../menu.php'); ?>
     </div>
     <label class="control-label col-sm-2" for="email">Cari Peserta Calon Peserta Didik :</label>
     <div class="col-sm-3">
