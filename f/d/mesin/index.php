@@ -25,7 +25,7 @@ if ($_SESSION['status']!="mesin") {
   <center><h3></h3></center>
   <center><h3>Kompetensi Keahlian Teknik Pemesinan</h3></center>
 
-  <br><br>
+  <br><br><br>
 
   <div class="form-group">
     <div class="col-sm-7">
