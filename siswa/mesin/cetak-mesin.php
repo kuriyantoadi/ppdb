@@ -85,7 +85,8 @@
       bertato,
       perokok,
       peminum,
-      tinggi_bdn
+      tinggi_bdn,
+      buta_warna
 
        from f_siswa_mesin where nik='$nik'");
       while ($d = mysqli_fetch_array($data)) {
@@ -244,6 +245,10 @@
       <tr>
         <td>Tinggi Badan</td>
         <td><?php echo $d['tinggi_bdn']; ?> cm</td>
+      </tr>
+      <tr>
+        <td>Buta Warna</td>
+        <td><?php echo $d['buta_warna']; ?></td>
       </tr>
       <tr>
         <td colspan="2">

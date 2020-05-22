@@ -86,6 +86,7 @@
       bertato,
       perokok,
       peminum,
+      buta_warna,
       laptop
 
        from f_siswa_tkj where nik='$nik'");
@@ -245,6 +246,10 @@
       <tr>
         <td>Kesanggupan Mempunyai Laptop</td>
         <td><?php echo $d['laptop']; ?></td>
+      </tr>
+      <tr>
+        <td>Buta Warna</td>
+        <td><?php echo $d['buta_warna']; ?></td>
       </tr>
       <tr>
         <td colspan="2">

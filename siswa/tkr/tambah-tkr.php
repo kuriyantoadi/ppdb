@@ -313,6 +313,8 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
   $psikotropika = $_POST['psikotropika'];
   $bertato = $_POST['bertato'];
   $peminum = $_POST['peminum'];
+  $buta_warna = $_POST['buta_warna'];
+  $kompetensi_keahlian_2 = $_POST['kompetensi_keahlian_2'];
 
 //awal user pembuatan password
   function pass_acak($panjang)
@@ -404,6 +406,7 @@ $enk = md5($C);
                 '$psikotropika',
                 '$bertato',
                 '$peminum',
+                '$buta_warna',
                 '',
                 '',
                 '',
@@ -412,7 +415,8 @@ $enk = md5($C);
                 '',
                 '',
                 '',
-                ''
+                '',
+                '$kompetensi_keahlian_2'
                 )");
                 // or die(mysqli_error($koneksi));
 

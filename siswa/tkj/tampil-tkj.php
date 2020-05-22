@@ -86,7 +86,8 @@
       bertato,
       perokok,
       peminum,
-      laptop
+      laptop,
+      buta_warna
 
        from f_siswa_tkj where nik='$nik'");
       while ($d = mysqli_fetch_array($data)) {
@@ -241,6 +242,10 @@
       <tr>
         <td>Peminum Minuman Keras</td>
         <td><?php echo $d['peminum']; ?></td>
+      </tr>
+      <tr>
+        <td>Buta Warna</td>
+        <td><?php echo $d['buta_warna']; ?></td>
       </tr>
       <tr>
         <td>Kesanggupan mempunyai Laptop dengan spesifikasi yang ditentukan</td>

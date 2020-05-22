@@ -89,6 +89,23 @@ if (isset($_GET['pesan'])) {
           <input type="text" class="form-control" placeholder=" " name="kompetensi_keahlian" value="Teknik Pemesinan" readonly>
         </div>
       </div>
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Kompetensi Keahlian Pilihan ke-2 :</label>
+        <div class="col-sm-6">
+          <select name="kompetensi_keahlian_2" class="form-control" id="exampleFormControlSelect1" required>
+            <option value="-">Saya tidak memilih</option>
+            <option value="Teknik Komputer Jaringan">Teknik Komputer Jaringan</option>
+            <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
+            <option value="Akuntansi Keuangan Lembaga">Akuntansi Keuangan Lembaga</option>
+            <option value="Otomatisasi Tata Kelola Perkantoran">Otomatisasi Tata Kelola Perkantoran</option>
+            <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan</option>
+          </select>
+          <br><p>1. Kompetensi Keahlian Pilihan ke-2 ini boleh tidak dipilih.
+            <br>2. Jika kompetensi keahlian utama tidak diterima maka akan di proses passing grade oleh panitia
+          dipilihan kompetensi keahlian ke-2. (Ini tidak menjamin untuk diterima)</p>
+        </div>
+
+      </div>
 
       <br>
       <h4>A. DATA ASAL SEKOLAH PESERTA DIDIK BARU</h4>
@@ -120,6 +137,8 @@ if (isset($_GET['pesan'])) {
         <label class="control-label col-sm-2" for="email">NPSN Sekolah Asal :</label>
         <div class="col-sm-6">
           <input type="number" class="form-control" placeholder="NPSN Sekolah Asal" name="npsn_sekolah" required>
+          <br><p>1. Jika sekolah tidak ada maka milih <b>"Nama Sekolah Tidak Ada"</b> dan sampaikan ke operator sekolah di live chat pendaftaran.
+          <br>2. Untuk NPSN sekolah bisa tanya ke sekolah asal atau cari informasi di internet.  </p>
         </div>
       </div>
 
@@ -430,6 +449,16 @@ if (isset($_GET['pesan'])) {
             <option value="Ya">Ya</option>
             <option value="Tidak">Tidak</option>
           </select>
+        </div>
+      </div>
+      <div class="form-group">
+       <label class="control-label col-sm-2" >Apakah anda Buta Warna </label>
+       <div class="col-sm-2">
+         <select name="buta_warna" class="form-control" id="exampleFormControlSelect1" required>
+              <option value="">Pilihan Anda</option>
+               <option value="Ya">Ya</option>
+               <option value="Tidak">Tidak</option>
+           </select>
         </div>
       </div>
       <br>

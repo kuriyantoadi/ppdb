@@ -242,6 +242,10 @@
         <td><?php echo $d['peminum']; ?></td>
       </tr>
       <tr>
+        <td>Buta Warna</td>
+        <td><?php echo $d['buta_warna']; ?></td>
+      </tr>
+      <tr>
         <td colspan="2">
           <p>
             <b>Informasi :</b>

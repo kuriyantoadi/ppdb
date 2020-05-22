@@ -313,6 +313,8 @@ $psikotropika = $_POST['psikotropika'];
 $bertato = $_POST['bertato'];
 $peminum = $_POST['peminum'];
 $laptop = $_POST['laptop'];
+$buta_warna = $_POST['buta_warna'];
+$kompetensi_keahlian_2 = $_POST['kompetensi_keahlian_2'];
 
 
 //awal user pembuatan password
@@ -406,6 +408,7 @@ mysqli_query($koneksi, "insert into f_siswa_tkj values(
 '$bertato',
 '$peminum',
 '$laptop',
+'$buta_warna',
 '',
 '',
 '',
@@ -414,7 +417,9 @@ mysqli_query($koneksi, "insert into f_siswa_tkj values(
 '',
 '',
 '',
-''
+'',
+'$kompetensi_keahlian_2'
+
 )");
 // or die(mysqli_error($koneksi));
 
