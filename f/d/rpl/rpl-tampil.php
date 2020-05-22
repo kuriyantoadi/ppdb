@@ -94,7 +94,9 @@ if ($_SESSION['status']!="rpl") {
       val_swaphoto,
       val_piagam1,
       val_piagam2,
-      val_piagam3
+      val_piagam3,
+      buta_warna,
+      kompetensi_keahlian_2
 
        from f_siswa_rpl where id='$id'");
       while ($d = mysqli_fetch_array($data)) {

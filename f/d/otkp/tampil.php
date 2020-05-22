@@ -159,6 +159,14 @@
       <td><?php echo $d['peminum']; ?></td>
     </tr>
     <tr>
+      <td>Buta Warna</td>
+      <td><?php echo $d['buta_warna']; ?></td>
+    </tr>
+    <tr>
+      <td>Pilihan Kompetensi Keahlian ke-2</td>
+      <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
+    </tr>
+    <tr>
       <td>
         SKHUN
         <br>Nama Siswa : <b> <?php echo $d['nama_siswa']; ?> </b>
