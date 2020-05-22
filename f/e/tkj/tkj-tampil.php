@@ -165,8 +165,16 @@
     <td><?php echo $d['peminum']; ?></td>
   </tr>
   <tr>
+    <td>Buta Warna</td>
+    <td><?php echo $d['buta_warna']; ?></td>
+  </tr>
+  <tr>
     <td>Kesanggupan Memiliki Laptop</td>
     <td><?php echo $d['laptop']; ?></td>
+  </tr>
+  <tr>
+    <td>Kompetensi Keahlian Ke-2</td>
+    <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
   </tr>
   <tr>
     <td>SKHUN</td>

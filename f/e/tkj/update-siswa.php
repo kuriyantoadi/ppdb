@@ -44,6 +44,8 @@ $psikotropika = $_POST['psikotropika'];
 $bertato = $_POST['bertato'];
 $peminum = $_POST['peminum'];
 $laptop = $_POST['laptop'];
+$buta_warna = $_POST['buta_warna'];
+
 
 // UPDATE `upload` SET `id_file`=[value-1],`nama_file`=[value-2] WHERE 1
 
@@ -83,7 +85,8 @@ mysqli_query($koneksi, "UPDATE f_siswa_tkj SET
              psikotropika='$psikotropika',
              bertato='$bertato',
              peminum='$peminum',
-             laptop='$laptop'
+             laptop='$laptop',
+             buta_warna='$buta_warna'
              where id='$id'
              ");
 

@@ -87,6 +87,7 @@
 			<th>Psikotropika</th>
 			<th>Bertato</th>
 			<th>Peminum</th>
+			<th>Buta Warna</th>
 			<th>Kesanggupan Mempunyai Laptop</th>
 
 
@@ -145,7 +146,9 @@
 		psikotropika,
 		bertato,
 		peminum,
-		laptop
+		buta_warna,
+		laptop,
+		kompetensi_keahlian_2
 		 from f_siswa_tkj");
         while ($d = mysqli_fetch_array($data)) {
             ?>
@@ -200,7 +203,9 @@
 				<td><?php echo $d['psikotropika']; ?></td>
 				<td><?php echo $d['bertato']; ?></td>
 				<td><?php echo $d['peminum']; ?></td>
+				<td><?php echo $d['buta_warna']; ?></td>
 				<td><?php echo $d['laptop']; ?></td>
+				<td><?php echo $d['kompetensi_keahlian_2']; ?></td>
 
 			</tr>
 			<?php

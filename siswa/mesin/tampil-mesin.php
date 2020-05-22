@@ -98,8 +98,9 @@
       bertato,
       perokok,
       peminum,
+      buta_warna,
       tinggi_bdn,
-      buta_warna
+      kompetensi_keahlian_2
 
        from f_siswa_mesin where nik='$nik'");
       while ($d = mysqli_fetch_array($data)) {
@@ -262,6 +263,10 @@
           <tr>
             <td>Tinggi Badan</td>
             <td><?php echo $d['tinggi_bdn']; ?>  cm</td>
+          </tr>
+          <tr>
+            <td>kompetensi Keahlian ke-2</td>
+            <td><?php echo $d['kompetensi_keahlian_2']; ?>  cm</td>
           </tr>
           <tr>
             <td colspan="2">
