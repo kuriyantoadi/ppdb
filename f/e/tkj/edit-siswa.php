@@ -294,6 +294,16 @@ if ($_SESSION['status']!="admin") {
          </select>
       </div>
     </div>
+    <div class="form-group">
+     <label class="control-label col-sm-2" >Apakah anda Buta Warna </label>
+     <div class="col-sm-2">
+       <select name="buta_warna" class="form-control" required>
+         <option value="<?php echo $d['buta_warna']; ?>" > <?php echo $d['buta_warna']; ?> </option>
+             <option value="Ya">Ya</option>
+             <option value="Tidak">Tidak</option>
+         </select>
+      </div>
+    </div>
     <br><h4>I. PERSYARATAN KHUSUS KOMPETENSI KEAHLIAN TEKNIK KOMPUTER JARINGAN</h4>
     <div class="form-group">
      <label class="control-label col-sm-2" >Kesanggupan mempunyai laptop pribadi </label>

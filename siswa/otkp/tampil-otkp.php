@@ -86,6 +86,7 @@
       bertato,
       perokok,
       peminum,
+      buta_warna,
       kompetensi_keahlian_2
 
        from f_siswa_otkp where nik='$nik'");
