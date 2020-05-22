@@ -173,7 +173,7 @@
     <td><?php echo $d['laptop']; ?></td>
   </tr>
   <tr>
-    <td>Kompetensi Keahlian Ke-2</td>
+    <td>Pilihan Kompetensi Keahlian ke-2</td>
     <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
   </tr>
   <tr>

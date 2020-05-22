@@ -265,7 +265,7 @@
             <td><?php echo $d['tinggi_bdn']; ?>  cm</td>
           </tr>
           <tr>
-            <td>kompetensi Keahlian ke-2</td>
+            <td>Pilihan Kompetensi Keahlian ke-2</td>
             <td><?php echo $d['kompetensi_keahlian_2']; ?>  cm</td>
           </tr>
           <tr>

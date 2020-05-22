@@ -248,7 +248,7 @@
         <td><?php echo $d['buta_warna']; ?></td>
       </tr>
       <tr>
-        <td>Kompetensi Keahlian ke-2</td>
+        <td>Pilihan Kompetensi Keahlian ke-2</td>
         <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
       </tr>
       <tr>
