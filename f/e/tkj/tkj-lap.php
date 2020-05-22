@@ -89,6 +89,7 @@
 			<th>Peminum</th>
 			<th>Buta Warna</th>
 			<th>Kesanggupan Mempunyai Laptop</th>
+			<th>Kompetensi Keahlian ke-2</th>
 
 
 		</tr>

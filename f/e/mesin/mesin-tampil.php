@@ -8,7 +8,7 @@
       class="btn btn-warning btn-md" href="edit-siswa.php?id=<?php echo $d['id']; ?>"> Edit</a>
     </td>
     <td>
-      <a style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md" 
+      <a style="margin-right: 10px; margin-bottom: 25px;" class="btn btn-primary btn-md"
       href="../../../siswa/mesin/tampil-mesin.php?nik=<?php echo $d['nik']; ?>">Cetak PDF</a>
     </td>
   </tr>
@@ -169,8 +169,16 @@
     <td><?php echo $d['peminum']; ?></td>
   </tr>
   <tr>
+    <td>Buta Warna</td>
+    <td><?php echo $d['buta_warna']; ?></td>
+  </tr>
+  <tr>
     <td>Tinggi Badan</td>
     <td><?php echo $d['tinggi_bdn']; ?></td>
+  </tr>
+  <tr>
+    <td>Pilihan Kompetensi Keahlian ke-2</td>
+    <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
   </tr>
   <tr>
     <td>SKHUN</td>

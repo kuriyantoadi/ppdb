@@ -88,7 +88,8 @@ if ($_SESSION['status']!="admin") {
   		perokok,
   		psikotropika,
   		bertato,
-  		peminum
+  		peminum,
+      kompetensi_keahlian_2
        from f_siswa_otkp where id='$id'");
       while ($d = mysqli_fetch_array($data)) {
           include('otkp-tampil.php'); ?>

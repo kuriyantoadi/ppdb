@@ -89,7 +89,8 @@ if ($_SESSION['status']!="admin") {
   		psikotropika,
   		bertato,
   		peminum,
-      laptop
+      laptop,
+      kompetensi_keahlian_2
 
        from f_siswa_rpl where id='$id'");
       while ($d = mysqli_fetch_array($data)) {

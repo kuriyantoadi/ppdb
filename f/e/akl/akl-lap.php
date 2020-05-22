@@ -87,6 +87,9 @@
 			<th>Psikotropika</th>
 			<th>Bertato</th>
 			<th>Peminum</th>
+			<th>Buta Warna</th>
+			<th>Kompetensi Keahlian ke-2</th>
+
 
 		</tr>
 		<?php
@@ -142,7 +145,9 @@
 		perokok,
 		psikotropika,
 		bertato,
-		peminum
+		peminum,
+		buta_warna,
+		kompetensi_keahlian_2
 		from f_siswa_akl");
         while ($d = mysqli_fetch_array($data)) {
             ?>
@@ -197,6 +202,8 @@
 				<td><?php echo $d['psikotropika']; ?></td>
 				<td><?php echo $d['bertato']; ?></td>
 				<td><?php echo $d['peminum']; ?></td>
+				<td><?php echo $d['buta_warna']; ?></td>
+				<td><?php echo $d['kompetensi_keahlian_2']; ?></td>
 
 			</tr>
 			<?php
