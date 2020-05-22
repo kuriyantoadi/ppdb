@@ -86,7 +86,8 @@
       bertato,
       perokok,
       peminum,
-      buta_warna
+      buta_warna,
+      kompetensi_keahlian_2
 
        from f_siswa_tkr where nik='$nik'");
       while ($d = mysqli_fetch_array($data)) {
@@ -245,6 +246,10 @@
       <tr>
         <td>Buta Warna</td>
         <td><?php echo $d['buta_warna']; ?></td>
+      </tr>
+      <tr>
+        <td>Kompetensi Keahlian ke-2</td>
+        <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
       </tr>
       <tr>
         <td colspan="2">
