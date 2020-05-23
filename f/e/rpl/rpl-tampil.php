@@ -173,6 +173,10 @@
     <td><?php echo $d['laptop']; ?></td>
   </tr>
   <tr>
+    <td>Pilihan Kompetensi Keahlian ke-2</td>
+    <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
+  </tr>
+  <tr>
     <td>SKHUN</td>
     <td>
       <!-- <embed src="../../../siswa/rpl/file/<?php echo $d['pdf_skhun']; ?>" type="application/pdf" width="100%" height="500px"> -->
