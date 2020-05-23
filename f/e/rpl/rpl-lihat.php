@@ -89,6 +89,7 @@ if ($_SESSION['status']!="admin") {
   		psikotropika,
   		bertato,
   		peminum,
+      buta_warna,
       laptop,
       kompetensi_keahlian_2
 

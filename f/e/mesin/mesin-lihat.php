@@ -97,6 +97,7 @@ if ($_SESSION['status']!="admin") {
   		psikotropika,
   		bertato,
   		peminum,
+      buta_warna,
       kompetensi_keahlian_2,
       tinggi_bdn
        from f_siswa_mesin where id='$id'");
