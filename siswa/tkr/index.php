@@ -317,7 +317,7 @@ if (isset($_GET['pesan'])) {
       </div>
     </div>
     <div class="form-group">
-      <label class="control-label col-sm-2" >SwaPhoto dan KK </label>
+      <label class="control-label col-sm-2" >Swafoto memegang KK Sedang diukur tinggi badan </label>
       <div class="col-sm-6">
         <input type="file" name="pdf_swa_kk" accept="application/pdf" class="form-control-file" id="cek_swa_kk"   required>
       </div>
