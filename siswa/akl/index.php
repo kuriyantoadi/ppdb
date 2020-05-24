@@ -96,7 +96,6 @@ if (isset($_GET['pesan'])) {
             <option value="-">Saya tidak memilih</option>
             <option value="Teknik Komputer Jaringan">Teknik Komputer Jaringan</option>
             <option value="Rekayasa Perangkat Lunak">Rekayasa Perangkat Lunak</option>
-            <option value="Akuntansi Keuangan Lembaga">Akuntansi Keuangan Lembaga</option>
             <option value="Otomatisasi Tata Kelola Perkantoran">Otomatisasi Tata Kelola Perkantoran</option>
             <option value="Teknik Kendaraan Ringan">Teknik Kendaraan Ringan</option>
             <option value="Teknik Pemesinan">Teknik Pemesinan</option>
