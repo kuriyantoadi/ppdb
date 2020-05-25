@@ -99,6 +99,7 @@
       perokok,
       peminum,
       buta_warna,
+      tinggi_bdn,
       kompetensi_keahlian_2
 
        from f_siswa_otkp where nik='$nik'");
@@ -258,6 +259,10 @@
           <tr>
             <td>Buta Warna</td>
             <td><?php echo $d['buta_warna']; ?></td>
+          </tr>
+          <tr>
+            <td>Tinggi Badan</td>
+            <td><?php echo $d['tinggi_bdn']; ?>  cm</td>
           </tr>
           <tr>
             <td>Pilihan Kompetensi Keahlian ke-2</td>

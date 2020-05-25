@@ -90,6 +90,7 @@ if ($_SESSION['status']!="admin") {
   		bertato,
   		peminum,
       buta_warna,
+      tinggi_bdn,
       kompetensi_keahlian_2
        from f_siswa_otkp where id='$id'");
       while ($d = mysqli_fetch_array($data)) {

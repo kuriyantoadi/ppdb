@@ -95,6 +95,7 @@ if ($_SESSION['status']!="otkp") {
       val_piagam2,
       val_piagam3,
       buta_warna,
+      tinggi_bdn,
       kompetensi_keahlian_2
 
        from f_siswa_otkp where id='$id'");

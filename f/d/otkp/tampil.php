@@ -163,6 +163,10 @@
       <td><?php echo $d['buta_warna']; ?></td>
     </tr>
     <tr>
+      <td>Tinggi Badan</td>
+      <td><?php echo $d['tinggi_bdn']; ?>  cm</td>
+    </tr>
+    <tr>
       <td>Pilihan Kompetensi Keahlian ke-2</td>
       <td><?php echo $d['kompetensi_keahlian_2']; ?></td>
     </tr>

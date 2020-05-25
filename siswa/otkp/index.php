@@ -464,6 +464,16 @@ if (isset($_GET['pesan'])) {
           </select>
         </div>
       </div>
+      <h4>I. PERSYARATAN KHUSUS KOMPETENSI KEAHLIAN OTOMATISASI TATA KELOLA PERKANTORAN</h4>
+      <div class="form-group">
+        <label class="control-label col-sm-2">Tinggi Badan </label><b>cm</b>
+        <div class="col-sm-2">
+          <input type="number" name="tinggi_bdn" class="form-control" placeholder="Tinggi Badan" required>
+        </div>
+      </div>
+      <h6>Persyaratan tinggi badan minimal 150 cm
+        <br>(Jika tinggi badan tidak sesuai dengan syarat tersebut maka dianggap gugur).<br></h6>
+
       <div style="margin-top:  50px;">
       </div>
       <h6><b>INFORMASI PENTING:</h6>

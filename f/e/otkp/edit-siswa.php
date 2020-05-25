@@ -323,6 +323,12 @@ if ($_SESSION['status']!="admin") {
          </select>
       </div>
     </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" >Tinggi Badan </label><b>CM</b>
+      <div class="col-sm-2">
+        <input type="number" name="tinggi_bdn" class="form-control" value="<?php echo $d['tinggi_bdn']; ?>" required >
+      </div>
+    </div>
 
 
 <?php

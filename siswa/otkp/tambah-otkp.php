@@ -314,6 +314,7 @@ $no_p = "01-3-032-$no_kk_no_p-$jenis_kelamin_no_p-$kode";
   $bertato = $_POST['bertato'];
   $peminum = $_POST['peminum'];
   $buta_warna = $_POST['buta_warna'];
+  $tinggi_bdn = $_POST['tinggi_bdn'];
   $kompetensi_keahlian_2 = $_POST['kompetensi_keahlian_2'];
 
 
@@ -408,6 +409,7 @@ $enk = md5($C);
                 '$bertato',
                 '$peminum',
                 '$buta_warna',
+                '$tinggi_bdn',
                 '',
                 '',
                 '',
