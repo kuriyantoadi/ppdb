@@ -10,36 +10,12 @@ if ($_SESSION['status']!="admin") {
 <head>
 	<?php
     // $waktu=date('d-m-Y H:i:s');
-    $cetak="TPM_Data_PPDB_SMK_N_1_Kragilan";
     header("Content-type: application/vnd-ms-excel");
-    header("Content-Disposition: attachment; filename=$cetak.xls");
+    header("Content-Disposition: attachment; filename=TPM_Data_PPDB_SMK_N_1_Kragilan.xls");
 ?>
 
 </head>
 <body>
-
-	<style type="text/css">
-		body{
-			font-family: sans-serif;
-		}
-		table{
-			margin: 20px auto;
-			border-collapse: collapse;
-		}
-		table td,
-		table td{
-			border: 1px solid #3c3c3c;
-			padding: 3px 8px;
-		}
-		a{
-			background: blue;
-			color: #fff;
-			padding: 8px 10px;
-			text-decoration: none;
-			border-radius: 2px;
-		}
-		</style>
-
 
 
 	<table border="0 ">
@@ -154,7 +130,7 @@ if ($_SESSION['status']!="admin") {
 		psikotropika,
 		bertato,
 		peminum,
-		buta_warna
+		buta_warna,
 		tinggi_bdn,
 		kompetensi_keahlian_2
 		from f_siswa_mesin");
@@ -174,7 +150,7 @@ if ($_SESSION['status']!="admin") {
 				<td><?php echo $d['tempat_lahir']; ?></td>
 				<td><?php echo $d['tgl_lahir']; ?></td>
 				<td><?php echo $d['tahun_lulus']; ?></td>
-				<td><?php echo $d['no_p']; ?></td>
+				<td><?php echo $d['no_hp']; ?></td>
 				<td><?php echo $d['nik']; ?></td>
 				<td><?php echo $d['no_kk']; ?></td>
 				<td><?php echo $d['tgl_kk']; ?></td>
@@ -215,12 +191,13 @@ if ($_SESSION['status']!="admin") {
 				<td><?php echo $d['tinggi_bdn']; ?></td>
 				<td><?php echo $d['kompetensi_keahlian_2']; ?></td>
 
-
-			</tr>
-			<?php
+        <?php
         }
-        ?>
+          ?>
+			</tr>
+
 
 		</table>
+
 </body>
 </html>

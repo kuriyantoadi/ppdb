@@ -174,7 +174,7 @@ if ($_SESSION['status']!="admin") {
 				<td><?php echo $d['tempat_lahir']; ?></td>
 				<td><?php echo $d['tgl_lahir']; ?></td>
 				<td><?php echo $d['tahun_lulus']; ?></td>
-				<td><?php echo $d['no_p']; ?></td>
+				<td><?php echo $d['no_hp']; ?></td>
 				<td><?php echo $d['nik']; ?></td>
 				<td><?php echo $d['no_kk']; ?></td>
 				<td><?php echo $d['tgl_kk']; ?></td>
